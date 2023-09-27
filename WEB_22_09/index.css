@@ -1,0 +1,268 @@
+/*Page*/
+.page {   
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Header*/
+.container_header {
+    font-weight: bold;
+    padding: 25px;
+    width:100%; 
+}
+
+.menu {
+    left: 0;
+    position: fixed;
+    top:0;
+    width: 100%;
+    box-shadow:0px 4px 3px rgba(0,0,0,.5);
+
+    display: flex;
+    justify-content: space-around;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+    animation-duration: 2s;
+    animation-name: slideindown;
+}
+ 
+.menu li {
+    float: left;;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+/*Separator*/
+hr.separator_1 {
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+hr.separator_2 {
+    border: 1px solid black;
+    border-radius: qpx;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Title*/
+.title {
+    text-align: center;
+    animation-duration: 2s;
+    animation: slideindown;
+}
+
+/*Columnas*/
+.Container_column
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Container_column > div {
+    flex: 1;
+    padding: 10px;
+    width: 33%;
+}
+
+/*carrusel_presentacion*/
+#carrusel_presentacion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#carrusel_presentacion > div {
+    flex: 1;
+    padding: 10px;
+    width: 50%;
+}
+
+#foto_innova {
+    animation-duration: 2s;
+    animation-name: slideinleft;
+    margin-top: 110px;    
+}
+
+#foto_upm {
+    animation-duration: 2s;
+    animation-name: slideinright;
+}
+
+/*Container Column*/
+#Container_column1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#Container_column1 > div {
+    flex: 1;
+    padding: 10px;
+    width: 50%;
+}
+
+/*Container 10*/
+.container_10 {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#Objetivo {
+    padding-top:30px;
+}
+
+#LineaDI {
+    padding-top:30px;
+    text-align: center;
+}
+
+#Presentacion {
+    padding-top:30px;
+    text-align: center;
+}
+
+#Personas {
+    padding-top:30px;
+}
+
+#Personas_carrusel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#Personas_carrusel > div {
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    width: 33%;
+}
+
+#Personas > h2 {
+    text-align: center;
+}
+
+#Empresa {
+    text-align: right;
+    padding-top:30px;
+}
+
+#Actividades {
+    padding-top:30px;
+    text-align: right;
+}
+
+#Contacto {
+    padding-top:30px;
+}
+
+#AvisoLegal {
+    padding-top:30px;
+    text-align: left;
+}
+
+#Noticias {
+    padding-top:30px;
+}
+
+#BasesDP {
+    padding-top:30px;
+    text-align: right;
+}
+
+.menu_smallScreen {
+    display: none;
+}
+
+/*Estilos responsivos*/
+@media screen and (max-width: 1248px) {
+    .menu {
+        display: none;
+    }
+
+    .menu_smallScreen {
+        display: block;
+        position: fixed; 
+        left: 0;
+        top:0;
+        width: 100%;
+        box-shadow:0px 4px 3px rgba(0,0,0,.5);
+        background-color: #333;
+        color: white;
+    }
+}
+
+/*Animation*/
+@keyframes slideinright {
+    from {
+      margin-left: 200%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }
+
+@keyframes slideinleft {
+from {
+    margin-left: -200%;
+}
+
+to {
+    margin-left: 0%;
+}
+}
+
+@keyframes slideindown {
+    from {
+      margin-top: -100%;
+    }
+  
+    to {
+      margin-top: 0%;
+    }
+}
+
+@keyframes slideoutup {
+    from {
+      margin-top: 0%;
+    }
+  
+    to {
+      margin-top: -100%;
+    }
+}
+
+
+
+/*Paragrap*/
+p {
+    text-align: justify;
+    text-indent: 1.Sem;;
+}
+
+/*Images*/
+img {
+    width: 400px;
+    height: auto;
+}
