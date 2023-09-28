@@ -1,0 +1,65 @@
+
+/*HEADER*/
+.containerHeader {
+    font-weight: bold;
+    padding: 25px; /*Necessary to fix distance between menu and title*/
+}
+
+.navigationHeader ul {
+    left: 0; /*Glued to the left margin*/
+    position: fixed; /*Always moving with the scroll*/
+    top: 0; /*Glued to the top*/
+    width: 100%; /*From left to right*/
+
+    display: flex; 
+    justify-content: space-around;
+
+    list-style-type: none; /*Erase the dots of the begginning*/
+    margin-top: 0; /*Eliminate the top margin between top and the ul*/
+    background-color: #333;
+}
+
+.navigationHeader ul li a {
+    display: block; /*The display is like a box*/
+    padding: 14px 16px; /*Padding between boxes*/
+
+    color: white; /*Color of the letters*/
+    
+    text-align: center;
+    text-decoration: none; /*Erase the underline from the links*/
+}
+
+/*TITLE*/
+.containerTitle {
+    text-align: center;
+}
+
+/*WHO WE ARE*/
+.containerBodyWhoWeAre ul {
+    text-align: center;
+
+    display: flex;
+    justify-content: space-around;
+
+    list-style-type: none; /*Erase the dots of the begginning*/
+}
+
+/*OUR PURPOSE*/
+.containerBodyOurPurpose ul {
+    text-align: center;
+
+    display: flex;
+    justify-content: space-around;
+
+    list-style-type: none; /*Erase the dots of the begginning*/
+}
+
+/*TEAM*/
+.containerBodyTeam ul {
+    text-align: center;
+
+    display: flex;
+    justify-content: space-around;
+
+    list-style-type: none; /*Erase the dots of the begginning*/
+}
