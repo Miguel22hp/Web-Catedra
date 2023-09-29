@@ -1,8 +1,15 @@
+/* WEB THINGS (Doesn't matter the section)*/
+
+.sectionTitles{
+    color: #004379;
+}
+
 
 /*HEADER*/
 .containerHeader {
     font-weight: bold;
     padding: 25px; /*Necessary to fix distance between menu and title*/
+    
 }
 
 .navigationHeader ul {
@@ -16,7 +23,7 @@
 
     list-style-type: none; /*Erase the dots of the begginning*/
     margin-top: 0; /*Eliminate the top margin between top and the ul*/
-    background-color: #333;
+    background-color: #004379;
 }
 
 .navigationHeader ul li a {
@@ -63,3 +70,49 @@
 
     list-style-type: none; /*Erase the dots of the begginning*/
 }
+
+.teamName{
+    font-weight: bold;
+}
+/*
+.teamName {
+    font-weight: bold;
+    background-color: #F4B429;
+    color: #004379; 
+    display: inline-block; /* Para que el fondo abarque solo el contenido del elemento */
+    /*padding: 5px 10px; /* Espaciado dentro del recuadro */
+    /*border: 1px solid black; /* Borde negro opcional */
+    /*border-radius: 5px; /* Borde redondeado opcional */
+/*}*/
+
+/*FOOTER*/
+/*CONTACT*/
+.containerFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerFooter ul{
+    list-style: none;
+    text-align: center; /*For centering the diferent content information*/
+}
+
+.containerSocialMediaElements{
+    display: flex; 
+    flex-direction: row; /*Put the elements of the list in a row*/
+}
+
+
+.containerSocialMediaElements li{
+    
+    margin-right: 10px;
+}
+
+.navigationFooter p a{
+    text-decoration: none;
+    color: #F4B429;
+    font-weight: bold;
+}
+
+
