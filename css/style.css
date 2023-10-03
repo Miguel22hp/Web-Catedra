@@ -4,6 +4,16 @@
     color: #004379;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body h2, body h3{
+    padding-left: 10px;
+}
+
 
 /*HEADER*/
 .containerHeader {
@@ -91,11 +101,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:#004379;
+    color: white;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+.containerFooter ul li h3{
+    color: #F4B429;
 }
 
 .containerFooter ul{
     list-style: none;
     text-align: center; /*For centering the diferent content information*/
+}
+
+.containerFooter ul li, 
+.containerFooter ul li p{
+    font-style: normal;
 }
 
 .containerSocialMediaElements{
