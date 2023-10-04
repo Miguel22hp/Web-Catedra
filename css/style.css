@@ -75,7 +75,36 @@ body h2, body h3{
     color: #004379;
 }
 
+.image-container {
+    position: relative; /* Importante para posicionar el tooltip */
+    display: inline-block; /* Para que el tooltip abarque solo el tamaño de la imagen */
+}
 
+/* Estilo del tooltip */
+.tooltip {
+    position: absolute;
+    background-color: grey;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    visibility: hidden; /* Ocultar el tooltip inicialmente */
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /*bottom: 25%; /* Mostrar el tooltip arriba de la imagen */
+    /*right: 60%;
+    transform: translateX(-50%); /* Centrar el tooltip horizontalmente */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo del tooltip cuando se pasa el cursor sobre la imagen */
+.image-container:hover .tooltip {
+    visibility: visible; /* Mostrar el tooltip */
+    opacity: 1;
+}
 
 /*TEAM*/
 .containerBodyTeam ul {
