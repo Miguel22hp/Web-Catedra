@@ -71,6 +71,12 @@ body h2, body h3{
     list-style-type: none; /*Erase the dots of the begginning*/
 }
 
+.purposeTitle{
+    color: #004379;
+}
+
+
+
 /*TEAM*/
 .containerBodyTeam ul {
     text-align: center;
