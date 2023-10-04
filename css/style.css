@@ -16,35 +16,51 @@ body h2, body h3{
 
 
 /*HEADER*/
+
 .containerHeader {
-    font-weight: bold;
-    padding: 25px; /*Necessary to fix distance between menu and title*/
-    
+    font-weight: bold;  
+    background-color: #004379;
+    position: fixed; /*Always moving with the scroll*/
+    top: 0; /*Glued to the top*/
+    width: 100%;
+}
+
+.mainTitle {
+    color: #FFFFFF;
+    text-align: left;   
+    padding-left: 10px;
+    border-bottom: 4px #F4B429;
+    border-bottom-style: solid;
+    width: 24%;
 }
 
 .navigationHeader ul {
     left: 0; /*Glued to the left margin*/
-    position: fixed; /*Always moving with the scroll*/
-    top: 0; /*Glued to the top*/
-    width: 100%; /*From left to right*/
 
     display: flex; 
     justify-content: space-around;
 
     list-style-type: none; /*Erase the dots of the begginning*/
     margin-top: 0; /*Eliminate the top margin between top and the ul*/
-    background-color: #004379;
 }
 
 .navigationHeader ul li a {
+    width: 200px;
+    height: 20px;
+    box-shadow:0px 4px 3px rgba(0,0,0,.5);
+
+    background-color: #115EA3;
+    color: white; /*Color of the letters*/
+
     display: block; /*The display is like a box*/
     padding: 14px 16px; /*Padding between boxes*/
+    border-radius: 6px;
 
-    color: white; /*Color of the letters*/
-    
     text-align: center;
     text-decoration: none; /*Erase the underline from the links*/
 }
+
+
 
 /*TITLE*/
 .containerTitle {
