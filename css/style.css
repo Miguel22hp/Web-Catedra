@@ -95,11 +95,22 @@ body h2, body h3{
     /*border-radius: 5px; /* Borde redondeado opcional */
 /*}*/
 
+/*WHERE TO FIND US*/
+.containerBodyWhereToFindUs p{
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.contactMap {
+    margin: 0 auto;
+    text-align: center; /* Alinea el contenido del div al centro */
+    padding-bottom: 20px;
+}
+
 /*FOOTER*/
-/*CONTACT*/
 .containerFooter{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color:#004379;
     color: white;
@@ -109,35 +120,27 @@ body h2, body h3{
     box-sizing: border-box;
     
 }
-.containerFooter ul li h3{
-    color: #F4B429;
-}
 
-.containerFooter ul{
+.footerInfo{
+    display: flex;
+    flex-direction: row;
     list-style: none;
-    text-align: center; /*For centering the diferent content information*/
+    justify-content: space-between;
 }
 
-.containerFooter ul li, 
-.containerFooter ul li p{
-    font-style: normal;
+.footerInfo li{
 }
 
 .containerSocialMediaElements{
     display: flex; 
     flex-direction: row; /*Put the elements of the list in a row*/
+    list-style: none;
+    align-content: flex-end;
+    justify-content: space-between;
 }
 
 
-.containerSocialMediaElements li{
-    
-    margin-right: 10px;
-}
 
-.navigationFooter p a{
-    text-decoration: none;
-    color: #F4B429;
-    font-weight: bold;
-}
+
 
 
