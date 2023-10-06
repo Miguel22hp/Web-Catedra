@@ -118,29 +118,45 @@ body h2, body h3{
     margin: 0;
     position: relative;
     box-sizing: border-box;
+    /*padding: 20px;*/
     
 }
 
 .footerInfo{
     display: flex;
-    flex-direction: row;
+    /*flex-direction: row;*/
     list-style: none;
     justify-content: space-between;
+    flex-grow: 1;
+
 }
 
-.footerInfo li{
+.footerInfo li p a{
+    color: white;
+    text-decoration: none;
 }
+
+/*.footerInfo li{
+    margin-right: 20px;
+}*/
+
 
 .containerSocialMediaElements{
     display: flex; 
-    flex-direction: row; /*Put the elements of the list in a row*/
+    /*flex-direction: row; /*Put the elements of the list in a row*/
     list-style: none;
     align-content: flex-end;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
+.socialMediaElementsIcons{
+    width: 50px;
+    height: 50px;
+}
 
-
+.containerLinksElements{
+    align-content: center;
+}
 
 
 
