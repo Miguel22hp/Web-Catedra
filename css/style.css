@@ -95,6 +95,60 @@ body h2, body h3{
     /*border-radius: 5px; /* Borde redondeado opcional */
 /*}*/
 
+/*EVENTS*/
+.eventsFrame{
+    width: 90%; /* width of the div */
+    height: 400px; /* height of the div */
+    overflow: auto; /* Allows to scroll in the div */
+    background-color: #EEEEEE;
+    margin-left: 10px; /* Starting 10px to the left of the screen*/
+}
+
+.yearEvents, .monthsEvents, .monthsEventsList{
+    list-style-type: none;
+}
+
+.monthsEventsList {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente fila */
+    list-style: none;
+    padding: 0;
+    
+  }
+
+.events{
+    background-color: #FFFFFF;
+    height: 150px;
+    width: 200px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+/*How to style de years*/
+.yearEvents h3{
+    font-size: 20px;
+    color: #004379;
+}
+
+/*How to style de months*/
+.monthsEvents li h4{
+    font-size: 18px;
+    color: #F4B429;
+}
+
+/*How to style de days and hours*/
+.monthsEventsList li h5{
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hourEvents{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
 /*FOOTER*/
 /*CONTACT*/
 .containerFooter{
