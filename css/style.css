@@ -68,8 +68,6 @@ body h2, body h3{
 
     margin-top: 60%;
 
-    z-index: 1;
-    position: relative;
     animation: slideinright 2.5s ease-in-out;
 }
 
@@ -79,8 +77,6 @@ body h2, body h3{
     margin-top: 20%;
     margin-left: 10%;
 
-    z-index: 1;
-    position: relative;
     animation: slideinleft 2.5s ease-in-out;
 }
 
