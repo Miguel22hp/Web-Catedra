@@ -9,6 +9,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: inter;
 }
 
 body h2, body h3{
@@ -139,10 +140,43 @@ body h2, body h3{
 .containerBodyWhoWeAre ul {
     text-align: center;
 
-    display: flex;
-    justify-content: space-around;
+    display: flex;    
+    justify-content: center;
 
     list-style-type: none; /*Erase the dots of the begginning*/
+    padding: 0;
+}
+
+#LogoInnova{
+    width: 400px;
+
+    margin-top: 60%;
+
+    animation: slideinright 2.5s ease-in-out;
+}
+
+#LogoUpm{    
+    width: 400px;
+
+    margin-top: 20%;
+    margin-left: 10%;
+
+    animation: slideinleft 2.5s ease-in-out;
+}
+
+#LogoCatedra{
+    width: 600px;
+
+    margin: 0;
+
+    animation: fadeIn 3s ease-in-out;
+}
+
+.slogan{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color: #115EA3;
 }
 
 /*OUR PURPOSE*/
@@ -340,5 +374,34 @@ body h2, body h3{
     padding-top: 15px;
 }
 
+/*ANIMATION*/
+@keyframes slideinright {
+    from {
+      margin-left: 200%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }
 
+@keyframes slideinleft {
+    from {
+    margin-left: -350%;
+    }   
+
+    to {
+    margin-left: 10%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
