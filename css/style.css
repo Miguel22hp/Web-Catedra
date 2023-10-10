@@ -19,6 +19,7 @@ body h2, body h3{
 /******************************************/
 /*HEADER*/
 .containerHeader {
+    z-index: 2  ;
     background-color: #004379;
     position: fixed; /*Always moving with the scroll*/
     top: 0; /*Glued to the top*/
@@ -159,6 +160,7 @@ body h2, body h3{
 }
 
 .image-container {
+    z-index: 1;
     position: relative; /* Importante para posicionar el tooltip */
     display: inline-block; /* Para que el tooltip abarque solo el tamaño de la imagen */
 }
