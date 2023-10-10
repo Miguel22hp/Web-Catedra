@@ -180,6 +180,10 @@ body h2, body h3{
 }
 
 /*OUR PURPOSE*/
+.containerBodyOurPurpose {
+    padding-top: 90px;
+}
+
 .containerBodyOurPurpose ul {
     text-align: center;
 
@@ -226,6 +230,10 @@ body h2, body h3{
 }
 
 /*TEAM*/
+.containerBodyTeam {
+    padding-top: 90px;
+}
+
 .containerBodyTeam ul {
     text-align: center;
 
@@ -249,7 +257,17 @@ body h2, body h3{
     /*border-radius: 5px; /* Borde redondeado opcional */
 /*}*/
 
+
+/*LINEOFRESEARCH*/
+.containerBodyLineOfResearch {
+    padding-top: 90px;
+}
+
 /*EVENTS*/
+.containerBodyEvents {
+    padding-top: 90px;
+}
+
 .eventsFrame{
     width: 90%; /* width of the div */
     height: 400px; /* height of the div */
@@ -316,6 +334,16 @@ body h2, body h3{
     margin: 0 auto;
     text-align: center; /* Alinea el contenido del div al centro */
     padding-bottom: 20px;
+}
+
+/*NEWS*/
+.containerBodyNews {
+    padding-top: 90px;
+}
+
+/*WHERETOFINDUS*/
+.containerBodyWhereToFindUs {
+    padding-top: 90px;
 }
 
 /*FOOTER*/
