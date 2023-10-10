@@ -5,6 +5,7 @@
 }
 
 body{
+    font-family: inter;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -15,44 +16,125 @@ body h2, body h3{
 }
 
 
-
+/******************************************/
 /*HEADER*/
 .containerHeader {
-    font-weight: bold;
-    padding: 25px; /*Necessary to fix distance between menu and title*/
-    
-}
-
-.navigationHeader ul {
-    left: 0; /*Glued to the left margin*/
+    background-color: #004379;
     position: fixed; /*Always moving with the scroll*/
     top: 0; /*Glued to the top*/
-    width: 100%; /*From left to right*/
+    width: 100%;    
+}
+
+/*HEADER TITLE*/
+
+.containerTitle ul {
+    margin-top: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: left;
+
+    list-style-type: none;
+}
+
+#SeparatorTitle {
+    background-color: #F4B429;
+    border-color: #F4B429;
+    height: 4px;
+    margin: 0;
+    padding: 0;
+    width: 450px;
+}
+
+.mainTitle {
+    color: #FFFFFF;
+    text-align: left;   
+    padding-left: 10px;
+    margin: 5px;
+}
+
+.menuButton {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #004379;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+/*HEADER SEPARATORS OF THE NAVIGATION HEADER MENU*/
+#SeparatorUL {
+    height: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#SeparatorLI {
+    margin-bottom: 2px;
+    margin-top: 0;
+    border-color: #F4B429;
+    width: 80%;
+    opacity: 0;
+}
+
+/*HEADER NAVIGATION HEADER MENU*/
+.navigationHeader ul {
+    left: 0; /*Glued to the left margin*/
+    padding: 0;
 
     display: flex; 
     justify-content: space-around;
 
     list-style-type: none; /*Erase the dots of the begginning*/
-    margin-top: 0; /*Eliminate the top margin between top and the ul*/
-    background-color: #004379;
 }
 
 .navigationHeader ul li a {
-    display: block; /*The display is like a box*/
-    padding: 14px 16px; /*Padding between boxes*/
-
+    width: 220px;
+    height: 20px;
     color: white; /*Color of the letters*/
-    
+
+    display: block; /*The display is like a box*/
+    border-radius: 6px;
+
     text-align: center;
     text-decoration: none; /*Erase the underline from the links*/
 }
 
-/*TITLE*/
-.containerTitle {
-    text-align: center;
+.navigationHeader ul li a:hover {
+    color: #F4B429; /*Color of the letters when the mouse is over the link*/
+    font-weight: bold;  
+    #SeparatorLI {
+        display:flex;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0.8;
+    }
 }
 
+/*HEADER NAVIGATION HEADER MENU DROPDOWN*/
+@media screen and (max-width: 1248px) {
+    .navigationHeader ul {
+        display: none;
+    }
+
+    #button {
+        display: block;
+    }
+
+
+}
+/******************************************/
+
 /*WHO WE ARE*/
+.containerBodyWhoWeAre {
+    padding-top: 90px;
+    text-align: left;
+}
+
 .containerBodyWhoWeAre ul {
     text-align: center;
 
@@ -255,5 +337,6 @@ body h2, body h3{
 .footerInfo li p{
     padding-top: 15px;
 }
+
 
 
