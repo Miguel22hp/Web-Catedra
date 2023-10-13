@@ -122,18 +122,12 @@ body h2, body h3{
     .navigationHeader ul {
         display: none;
     }
-
-    #button {
-        display: block;
-    }
-
-
 }
 /******************************************/
 
 /*WHO WE ARE*/
 .containerBodyWhoWeAre {
-    padding-top: 90px;
+    padding-top: 100px;
     text-align: left;
 }
 
@@ -144,13 +138,12 @@ body h2, body h3{
     justify-content: center;
 
     list-style-type: none; /*Erase the dots of the begginning*/
-    padding: 0;
 }
 
 #LogoInnova{
     width: 400px;
 
-    margin-top: 60%;
+    margin-top: 70%;
 
     animation: slideinright 2.5s ease-in-out;
 }
@@ -158,7 +151,7 @@ body h2, body h3{
 #LogoUpm{    
     width: 400px;
 
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 10%;
 
     animation: slideinleft 2.5s ease-in-out;
@@ -167,12 +160,15 @@ body h2, body h3{
 #LogoCatedra{
     width: 600px;
 
-    margin: 0;
+    margin-top: -40px;
 
     animation: fadeIn 3s ease-in-out;
 }
 
 .slogan{
+    margin-top: -20px;
+    position: absolute center;
+    font-size: 40px;
     text-align: center;
     font-weight: bold;
     font-style: italic;
