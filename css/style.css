@@ -123,6 +123,7 @@ body h2, body h3{
         display: none;
     }
 }
+
 /******************************************/
 
 /*WHO WE ARE*/
@@ -145,40 +146,67 @@ body h2, body h3{
     width: 33%;
 }
 
+#RectangleLogoInnova {
+    background-color: #F4B429;
+    width: 140%;
+    height: 10%;
+
+    margin-top: 80%;
+    margin-left: 15%;
+    padding: 3%;
+
+    border-radius: 10px;
+
+    animation: slideinrightRectangle 2.5s ease-in-out;
+}
+
 #LogoInnova{
-    width: 100%;
+    width: 50%;
 
-    margin-top: 60%;
+    margin-left: -50%;
 
-    animation: slideinright 2.5s ease-in-out;
+    animation: slideinrightLogo 2.5s ease-in-out;
+}
+
+#RectangleLogoUpm {
+    background-color: #004379;
+    width: 140%;
+    height: 12%;
+
+    margin-left: -40%;
+    margin-right: 40%;
+
+    padding: 3%;
+
+    border-radius: 10px;
+
+    animation: slideinleftRectangle 2.5s ease-in-out;
 }
 
 #LogoUpm{    
-    width: 100%;
+    width: 50%;
 
-    margin-top: 10%;
-    margin-left: 10%;
+    margin-left: 45%;
 
-    animation: slideinleft 2.5s ease-in-out;
+    animation: slideinleftLogo 2.5s ease-in-out;
 }
 
 #LogoCatedra{
-    width: 100%;
+    width: 150%;
 
-    margin: 0;
+    margin-top: -10%;
+    margin-left: -25%;
 
     animation: fadeIn 3s ease-in-out;
 }
 
 .slogan{
-    position: absolute center;
     text-align: center;
-
-    font-size: 40px;
     font-weight: bold;
     font-style: italic;
-
     color: #115EA3;
+
+    margin-top: -5%;
 }
 
 /*OUR PURPOSE*/
@@ -405,23 +433,43 @@ body h2, body h3{
 }
 
 /*ANIMATION*/
-@keyframes slideinright {
+@keyframes slideinrightLogo {
     from {
       margin-left: 200%;
     }
   
     to {
-      margin-left: 0%;
+      margin-left: -50%;
     }
   }
 
-@keyframes slideinleft {
+  @keyframes slideinrightRectangle {
+    from {
+      margin-left: 200%;
+    }
+  
+    to {
+      margin-left: 15%;
+    }
+  }
+
+@keyframes slideinleftLogo {
     from {
     margin-left: -350%;
     }   
 
     to {
-    margin-left: 10%;
+    margin-left: 45%;
+    }
+}
+
+@keyframes slideinleftRectangle {
+    from {
+    margin-left: -350%;
+    }   
+
+    to {
+    margin-left: -40%;
     }
 }
 
@@ -434,4 +482,5 @@ body h2, body h3{
         opacity: 1;
     }
 }
+
 
