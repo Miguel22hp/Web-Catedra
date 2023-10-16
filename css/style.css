@@ -1,5 +1,6 @@
 /* WEB THINGS (Doesn't matter the section)*/
 
+
 .sectionTitles{
     color: #004379;
 }
@@ -148,45 +149,46 @@ body h2, body h3{
 
 #RectangleLogoInnova {
     background-color: #F4B429;
-    width: 140%;
+    width: 80%;
     height: 10%;
 
     margin-top: 80%;
     margin-left: 15%;
     padding: 3%;
 
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
 
     animation: slideinrightRectangle 2.5s ease-in-out;
 }
 
 #LogoInnova{
-    width: 50%;
+    width: 70%;
 
-    margin-left: -50%;
+    margin-left: -30%;
 
     animation: slideinrightLogo 2.5s ease-in-out;
 }
 
 #RectangleLogoUpm {
     background-color: #004379;
-    width: 140%;
+    width: 90%;
     height: 12%;
 
-    margin-left: -40%;
+    margin-top: 15%;
+    margin-left: -5%;
     margin-right: 40%;
 
     padding: 3%;
 
-    border-radius: 10px;
+    border-radius: 0 10px 10px 0;
 
     animation: slideinleftRectangle 2.5s ease-in-out;
 }
 
 #LogoUpm{    
-    width: 50%;
+    width: 70%;
 
-    margin-left: 45%;
+    margin-left: 30%;
 
     animation: slideinleftLogo 2.5s ease-in-out;
 }
@@ -439,7 +441,7 @@ body h2, body h3{
     }
   
     to {
-      margin-left: -50%;
+      margin-left: -30%;
     }
   }
 
@@ -459,7 +461,7 @@ body h2, body h3{
     }   
 
     to {
-    margin-left: 45%;
+    margin-left: 30%;
     }
 }
 
@@ -469,7 +471,7 @@ body h2, body h3{
     }   
 
     to {
-    margin-left: -40%;
+    margin-left: -5%;
     }
 }
 
