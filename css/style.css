@@ -150,7 +150,6 @@ body h2, body h3{
 #RectangleLogoInnova {
     background-color: #F4B429;
     width: 80%;
-    height: 10%;
 
     margin-top: 80%;
     margin-left: 15%;
@@ -172,7 +171,6 @@ body h2, body h3{
 #RectangleLogoUpm {
     background-color: #004379;
     width: 90%;
-    height: 12%;
 
     margin-top: 15%;
     margin-left: -5%;
@@ -204,11 +202,65 @@ body h2, body h3{
 
 .slogan{
     text-align: center;
+
     font-weight: bold;
     font-style: italic;
+    font-size: 35px;
+
     color: #115EA3;
 
     margin-top: -5%;
+}
+
+/*ANIMATION*/
+@keyframes slideinrightLogo {
+    from {
+      margin-left: 200%;
+    }
+  
+    to {
+      margin-left: -30%;
+    }
+  }
+
+  @keyframes slideinrightRectangle {
+    from {
+      margin-left: 200%;
+    }
+  
+    to {
+      margin-left: 15%;
+    }
+  }
+
+@keyframes slideinleftLogo {
+    from {
+    margin-left: -350%;
+    }   
+
+    to {
+    margin-left: 30%;
+    }
+}
+
+@keyframes slideinleftRectangle {
+    from {
+    margin-left: -350%;
+    }   
+
+    to {
+    margin-left: -5%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /*OUR PURPOSE*/
@@ -434,55 +486,6 @@ body h2, body h3{
     padding-top: 15px;
 }
 
-/*ANIMATION*/
-@keyframes slideinrightLogo {
-    from {
-      margin-left: 200%;
-    }
-  
-    to {
-      margin-left: -30%;
-    }
-  }
 
-  @keyframes slideinrightRectangle {
-    from {
-      margin-left: 200%;
-    }
-  
-    to {
-      margin-left: 15%;
-    }
-  }
-
-@keyframes slideinleftLogo {
-    from {
-    margin-left: -350%;
-    }   
-
-    to {
-    margin-left: 30%;
-    }
-}
-
-@keyframes slideinleftRectangle {
-    from {
-    margin-left: -350%;
-    }   
-
-    to {
-    margin-left: -5%;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 
