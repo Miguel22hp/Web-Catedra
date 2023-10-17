@@ -253,14 +253,6 @@ body h2, body h3{
     border-radius: 10px;
 }
 
-/*Vertical Separator*/
-.liVerticalSeparator {
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-    width: 0.18%;
-    background-color: #F4B429;
-}
-
 .liTeamPhotosGroup {
     width: 100%;
     height: 100%;
@@ -270,7 +262,6 @@ body h2, body h3{
     background-color: #004379;
 }
 
- /*Group photo*/
 #TeamPhotosGroup {
     width: 100%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);    
@@ -285,6 +276,14 @@ body h2, body h3{
 .teamPhotos {
     width: 100%;
     height: 100%;
+}
+
+/*Vertical Separator*/
+.liVerticalSeparator {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    width: 0.18%;
+    background-color: #F4B429;
 }
 
 /*Person photo*/
