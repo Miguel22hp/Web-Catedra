@@ -210,6 +210,8 @@ body h2, body h3{
     color: #115EA3;
 
     margin-top: -5%;
+
+    animation: fadeIn 3s ease-in-out;
 }
 
 /*ANIMATION*/
