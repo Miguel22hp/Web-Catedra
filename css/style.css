@@ -281,7 +281,6 @@ body h2, body h3{
     list-style-type: none; /*Erase the dots of the begginning*/
 }
 
-
 .purposeTitle{
     color: #004379;
 }
@@ -414,12 +413,16 @@ body h2, body h3{
     font-size: 300%;
     color: white;
 
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     background-color: #0a5a9c;
 
     border-color: #004379;
     border-radius: 5px;
     border-width: 1.5px;
+
+    @media screen and (max-width: 1080px) {
+        height: 50%;
+        font-size: 100%;
+    };
 }
 
 .containerBodyTeam ul li:nth-child(3) ul li:nth-child(2) {
@@ -428,6 +431,9 @@ body h2, body h3{
 
 #TeamPhotosPerson {
     width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 #TeamPhotosPersonFig {
@@ -444,6 +450,10 @@ body h2, body h3{
 
     background-color: #004379;
     border-radius: 10px;
+}
+
+.liTeamPhotosPerson ul {
+    padding: 3%;
 }
 
 .containerBodyTeam ul li:nth-child(3) ul li:nth-child(3) {
@@ -465,6 +475,11 @@ body h2, body h3{
     border-color: #004379;
     border-radius: 5px;
     border-width: 1.5px;
+
+    @media screen and (max-width: 1080px) {
+        height: 50%;
+        font-size: 100%;
+    };
 }
 
 
@@ -617,7 +632,12 @@ body h2, body h3{
 
 /*WHERETOFINDUS*/
 .containerBodyWhereToFindUs {
-    padding-top: 90px;
+    padding-top: 100px;
+}
+
+.whereToFindUsParagraph {
+    margin-left: 6%;
+
 }
 
 /*FOOTER*/
