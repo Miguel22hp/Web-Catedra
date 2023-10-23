@@ -534,6 +534,11 @@ body h2, body h3{
     margin-right: 50px;
     margin-bottom: 30px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+}
+
+.events .eventDescription{
+    flex: 1;
 }
 
 /*How to style de years*/
