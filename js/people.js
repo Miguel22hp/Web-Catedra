@@ -34,6 +34,11 @@ var teamData = [
         name: "Rosario Guerra",
         description: ""
     },
+    {
+        image: "/images/people/Nuria.png",
+        name: "Nuria",
+        description: ""
+    },
 ];
 
 var currentIndex = 0;
