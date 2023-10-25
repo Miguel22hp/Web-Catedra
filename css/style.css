@@ -152,7 +152,7 @@ body h2, body h3{
     background-color: #F4B429;
     width: 80%;
 
-    margin-top: 80%;
+    margin-top: 60%;
     margin-left: 15%;
     padding: 3%;
 
@@ -210,7 +210,6 @@ body h2, body h3{
 
     color: #115EA3;
 
-    margin-top: -5%;
 
     animation: fadeIn 3s ease-in-out;
 }
