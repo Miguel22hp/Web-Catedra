@@ -20,7 +20,7 @@ var teamData = [
         description: ""
     },
     {
-        image: "/images/people/Juan Ignacio_mapa.jpg",
+        image: "/images/people/Juan Ignacio_sinfondo.png",
         name: "Juan Ignacio",
         description: ""
     },
@@ -37,30 +37,35 @@ var teamData = [
 ];
 
 var currentIndex = 0;
+var isTransitioning = false;
 
 function updateContent() {
+    isTransitioning = true;
     var photo = document.getElementById("TeamPhotosPerson");
     var title = document.querySelector("#TeamPhotosPersonFig h3");
     var description = document.querySelector("#TeamPhotosPersonFig p");
 
-    photo.src = teamData[currentIndex].image;
-    title.textContent = teamData[currentIndex].name;
-    description.textContent = teamData[currentIndex].description;
+    photo.style.opacity = 0;
+    title.style.opacity = 0;
+    description.style.opacity = 0;  
+
+    setTimeout(function () {
+        photo.src = teamData[currentIndex].image;
+        title.textContent = teamData[currentIndex].name;
+        description.textContent = teamData[currentIndex].description;
+        photo.style.opacity = 1;
+        title.style.opacity = 1;
+        description.style.opacity = 1;
+        isTransitioning = false;
+    }, 500);
 }
 
 document.getElementById("ButtonLeft").addEventListener("click", function () {
-    console.log("Left button clicked");
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateContent();
-    }
+    currentIndex = (currentIndex - 1 + teamData.length) % teamData.length;
+    updateContent();
 });
 
 document.getElementById("ButtonRight").addEventListener("click", function () {
-    if (currentIndex < teamData.length - 1) {
-        currentIndex++;
-        updateContent();
-    }
+    currentIndex = (currentIndex + 1) % teamData.length;
+    updateContent();
 });
-
-updateContent();
