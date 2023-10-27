@@ -343,7 +343,8 @@ body h2, body h3{
 /* Estilo del tooltip */
 .tooltip {
     position: absolute;
-    background-color: #EEEEEE;
+    /*background-color: #EEEEEE;*/
+    background-color: #004379;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -362,6 +363,10 @@ body h2, body h3{
     align-items: center;
 }
 
+.tooltip p {
+    color: #FFFFFF;
+}
+
 /* Estilo del tooltip cuando se pasa el cursor sobre la imagen */
 .image-container:hover .tooltip {
     visibility: visible; /* Mostrar el tooltip */
@@ -372,6 +377,14 @@ body h2, body h3{
     height: 90%;
     width: 90%;
 }
+
+.highlightY{
+    font-weight: bold;
+    color: #F4B429;
+    font-size: 20px;
+}
+
+
 
 /*TEAM*/
 .containerBodyTeam {
