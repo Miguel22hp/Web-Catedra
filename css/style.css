@@ -1,5 +1,11 @@
 /* WEB THINGS (Doesn't matter the section)*/
-
+@font-face {
+    font-family: 'Inter';
+    src: url('ruta-a-tu-archivo-de-fuente/Inter-Regular.woff2') format('woff2'),
+         url('ruta-a-tu-archivo-de-fuente/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }  
 
 .sectionTitles{
     padding-left: 6%;
@@ -8,11 +14,10 @@
 }
 
 body{
-    font-family: inter;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: inter;
 }
 
 body h2, body h3{
@@ -190,9 +195,7 @@ body h2, body h3{
     border-radius: 10px;
     color: #004379;
 
-
-
-    padding-bottom: 0px;
+    padding-top: 5px;
     padding-right: 7px;
 }
 
@@ -207,7 +210,7 @@ body h2, body h3{
     right: 0;
     background-color: #F4B429;
     width: 500px;
-    height: 450px;
+    height: 40px;
 
     padding-left: 15px;
     padding-right: 15px;
@@ -216,7 +219,11 @@ body h2, body h3{
     opacity: 0;
 }
 
-
+#linkInnova {
+    color: #004379;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 #LogoInnova{
     width: 70%;
