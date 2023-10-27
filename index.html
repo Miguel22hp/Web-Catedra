@@ -4,11 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="images/CatedraLogo.png">
+        <link rel="icon" href="images/CatedraLogo_sinLetras.svg">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Catedra Innova-tsn UPM</title>
     </head>
     <body>
-        <header class="containerHeader">
+        <header class="containerHeader" data-aos="fade-down" data-aos-duration="1500">
             <div class="containerTitle">
                 <ul>
                     <li><h1 class="mainTitle">Cátedra Innova-TSN UPM</h1>
@@ -41,29 +42,82 @@
 
         <div class="containerBody">
             <section id="WhoWeAre" class="containerBodyWhoWeAre">
-                <h2 class="sectionTitles" id="WhoWeAreTitle">¿Quienes somos?</h2>
+                <video autoplay muted loop id="VideoWhoWeAre">
+                    <source src="video/bc_WhoWeAre.mp4" type="video/mp4">
+                </video>
+                <h2 class="sectionTitles" id="WhoWeAreTitle" data-aos="fade-right">¿Quienes somos?</h2>
                 <ul>
                     <li>
-                        <figure id="RectangleLogoUpm">
+                        <figure data-aos="fade-right" data-aos-duration="1500" id="RectangleLogoUpm">
                             <img id="LogoUpm" src="images/BarraPolit.svg" alt="Logo Upm">                        
                         </figure>
                     </li>
                     <li>
-                        <figure id="RectangleLogoCatedra">
+                        <figure id="RectangleLogoCatedra" data-aos="fade-down" data-aos-duration="1500" onmouseover="showIntroduction()" onmouseout="hideIntroduction()">
                             <img id="LogoCatedra" src="/images/CatedraLogo.png" alt="Logo de la cátedra Innova-TSN UPM">
                         </figure>
+                        <script src="js/logoAnimation.js"></script>
                     </li>
                     <li>
-                        <figure id="RectangleLogoInnova">
+                        <figure data-aos="fade-right" data-aos-duration="1500" id="RectangleLogoInnova">
                             <img id="LogoInnova" src="/images/InnovaLogo.png" alt="Logo de Innova-TSN">
+                            <div id="InnovaKnowMore" onclick="clickInnova()">
+                                <h3>Saber más sobre Innova-TSN</h3>
+                            </div>   
+                            <script src="js/InnovaKnowMore.js"></script>
                         </figure>
                     </li>
                 </ul>
-                <h2 class="slogan">"Dónde los datos contruyen la historia"</h2>
+                <div onmouseout="hoverOutInnova()" id="InnovaKnowMoreText">
+                    <p>Innova-tsn es una compañía fundada hace casi 20 años como experta en soluciones 
+                        tecnológicas e inteligentes de negocio, que ha crecido hasta posicionarse como uno 
+                        de los líderes indiscutibles del sector en el diseño e implementación de Analítica 
+                        Avanzada.
+                        <br><br>
+                        Dedicada y especializada en las áreas de Cloud Strategy & Implementation, 
+                        Inteligencia Artificial, Data Analytics & Modern B.I. entre otras, Innova-tsn provee 
+                        soluciones end-to-end desde la provisión de infraestructura o instancias cloud hasta la 
+                        ejecución de proyecto o provisión de servicios de consultoría especializados.
+                        Con sede central en Madrid, Innova-tsn se ha expandido de manera sostenida y ahora 
+                        presta también sus servicios desde Barcelona, Santander, Londres, Bogotá y Ciudad de 
+                        México.
+                        <br><br>
+                        Si algo define a Innova-tsn como empresa es su compromiso con sus clientes y con la 
+                        excelencia en su trabajo, aplicando una visión de negocio y de futuro, que le permite 
+                        alcanzar los mejores resultados.</p>
+                </div>
+                <script src="js/InnovaKnowMore.js"></script>
+                <div id="IntroductionContainer" data-aos-duration="1000" data-aos="fade-up">
+                    <h2><span style="color: #004379;"><strong>Introduccion</strong>:</span></h2>
+                    <p id="Introduction">                                
+                        <strong>Innova-tsn y la Universidad Politécnica de Madrid</strong> nos hemos unido para crear la 
+                        <strong>Cátedra de Analítica en la Sociedad Digital: donde los datos hacen historia.</strong> Esta 
+                        colaboración <strong><span style="color: #F4B429">integra la experiencia de la industria y la excelencia académica,</span></strong>
+                        <strong><span style="color: #F4B429">promoviendo</span></strong> la <span style="color: #F4B429"><strong>sinergia</strong></span> de la <span style="color: #F4B429"><strong>investigación de datos y la tecnología.</strong></span> La investigación 
+                        certificada y de calidad de la UPM en analítica de datos, combinada con la 
+                        experiencia práctica de Innova-tsn, nos permite canalizar iniciativas de investigación y 
+                        traducir el conocimiento teórico en soluciones para el mundo real. <span style="color: #004379"><strong>Con esta 
+                        combinación, impulsaremos una innovación que beneficiará a la sociedad y nos 
+                        mantendrá a la vanguardia de los avances tecnológicos.</span></strong> <br><br>
+
+                        Adicionalmente, esta <span style="color: #004379;"> asociación fomenta el impacto en la comunidad reforzando el 
+                        papel de la Universidad Politécnica de Madrid como centro de conocimiento a través 
+                        de iniciativas conjuntas de investigación, talleres y seminarios que abordan retos de la 
+                        industria tecnológica.</span> <br><br>
+                        
+                        Además, <strong><span style="color: #004379;"> ofreceremos a los jóvenes talentos una experiencia de formación 
+                        enriquecida con aplicaciones prácticas.</span></strong> Juntos, formamos una alianza dinámica que 
+                        está preparada para impulsar la innovación, aprovechar las sinergias de investigación, 
+                        potenciar el talento y tener un impacto duradero en la sociedad.</p>
+                </div>
+                <div id="SloganContainer">
+                    <img id="SloganBC" src="images/SloganBc.jpg" alt="Slogan de la cátedra">
+                    <h2 class="slogan" data-aos="zoom-in-up" data-aos-offset="300" data-aos-duration="1500">"Dónde los datos contruyen la historia"</h2>     
+                </div>
             </section>
             <section id="OurPurpose" class="containerBodyOurPurpose">
-                <h2 class="sectionTitles">Nuestro Proposito</h2>
-                <ul>
+                <h2 class="sectionTitles" data-aos="fade-right">Nuestro Proposito</h2>
+                <ul data-aos="fade-right">
                     <li>
                         <figure class="image-container">
                             <img src="images/loupe_color.svg" alt="Imagen referente a Investigación" class="iconsOurPurpose">
@@ -157,16 +211,16 @@
                 
             </section>
             <section id="Team" class="containerBodyTeam">
-                <h2 class="sectionTitles">Equipo</h2>
+                <h2 class="sectionTitles" data-aos="fade-right">Equipo</h2>
                 <ul>
-                    <li class="liTeamPhotosGroup">
+                    <li class="liTeamPhotosGroup" data-aos="fade-right">
                         <img id="TeamPhotosGroup" src="/images/Group.png" alt="Foto del equipo completo">
                             <figcaption id="TeamPhotosGroupFig">
                                 <h3>Equipo Cátedra INNOVA-tsn UPM</h3>
                             </figcaption>
                     </li>
-                    <li class="liVerticalSeparator"></li>
-                    <li class="liTeamPhotosPerson">
+                    <li class="liVerticalSeparator" data-aos="fade-right"></li>
+                    <li class="liTeamPhotosPerson" data-aos="fade-right">
                         <h3>Personas del Equipo de la Cátedra</h3>
                         <ul>
                             <li><button id="ButtonLeft"><</button></li>
@@ -190,8 +244,8 @@
                 <h2 class="sectionTitles">Linea de Investigación</h2>
             </section>-->
             <section id="Events" class="containerBodyEvents">
-                <h2 class="sectionTitles">Eventos</h2>
-                <div class="eventsFrame">
+                <h2 class="sectionTitles" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="500">Eventos</h2>
+                <div class="eventsFrame" data-aos="fade-down-right" data-aos-duration="1500" data-aos-offset="500">
                     <ul class="yearEvents">
                         <li>
                             <h3>2023</h3>
@@ -262,8 +316,8 @@
                 </div>
             </section>
             <section id="News" class="containerBodyNews">
-                <h2 class="sectionTitles">Actualidad</h2>
-                <div class="eventsFrame">
+                <h2 class="sectionTitles" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="500">Actualidad</h2>
+                <div class="eventsFrame" data-aos="fade-down-right" data-aos-duration="1500" data-aos-offset="500">
                     <ul class="listNews">
                         <!-- for adding a new do the folowwing-->
                         <a href="https://www.innova-tsn.com/hackathon-sas-2022/" >
@@ -293,14 +347,14 @@
                 </div>
             </section>
 
-            <section id="WhereToFindUs" class="containerBodyWhereToFindUs">
+            <section id="WhereToFindUs" data-aos="fade-right" data-aos-duration="2000" class="containerBodyWhereToFindUs">
                 <h2 class="sectionTitles">Donde Encontranos</h2>
                 <p class="whereToFindUsParagraph">
                     La cátedra disponde de una oficina en el bloque 5, 
                     planta 1, despacho 5101 en los edificios de la 
                     ETSIInf de la UPM en el Campus de Montegancedo. 
                 </p>
-                <div class="contactMap">
+                <div class="contactMap" data-aos="zoom-in-down" data-aos-duration="2000">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1312.6728272182859!2d-3.838931971549967!3d40.405243550873166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418f2f1521500d%3A0x7ac343cecc06a4f3!2sBloque%205!5e0!3m2!1ses!2ses!4v1696336941876!5m2!1ses!2ses" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 
@@ -356,5 +410,13 @@
                 </li>
             </ul>
         </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
+
+
+<!--<a href="https://www.freepik.es/video-gratis/grupo-multietnico-jovenes-disenadores-usando-muestras-discutiendo-opciones-color-proyectos-juntos_170860#fromView=search&term=innovacion&page=1&position=4&track=ais">Vídeo de freepik</a>
+<a href="https://www.freepik.es/foto-gratis/primer-plano-pluma-sobre-investigacion-mercado_868228.htm#query=datos&position=5&from_view=search&track=sph">Imagen de pressfoto</a> en Freepik-->
