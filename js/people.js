@@ -1,5 +1,3 @@
-imagePath = "../images/people/";
-
 var teamData = [
     {
         image: "images/People/Javier_Sanchez.png",
@@ -17,32 +15,32 @@ var teamData = [
         description: ""
     },
     {
-        image: "images/people/Begoña_Vega.png",
+        image: "images/People/Begoña_Vega.png",
         name: "Begoña Vega",
         description: ""
     },
     {
-        image: "images/people/Jose_Ignacio_Bernaldo.png",
+        image: "images/People/Jose_Ignacio_Bernaldo.png",
         name: "Jose Ignacio Bernaldo",
         description: ""
     },
     {
-        image: "images/people/Juan_Ignacio_sinfondo.png",
+        image: "images/People/Juan_Ignacio_sinfondo.png",
         name: "Juan Ignacio",
         description: ""
     },
     {
-        image: "images/people/Mencía_Vega.png",
+        image: "images/People/Mencía_Vega.png",
         name: "Mencía Vega",
         description: ""
     },
     {
-        image: "images/people/Rosario_Guerra.png",
+        image: "images/People/Rosario_Guerra.png",
         name: "Rosario Guerra",
         description: ""
     },
     {
-        image: "images/people/Nuria.png",
+        image: "images/People/Nuria_1.png",
         name: "Nuria",
         description: ""
     },
