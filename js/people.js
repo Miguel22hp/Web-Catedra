@@ -1,46 +1,48 @@
+imagePath = "../images/people/";
+
 var teamData = [
     {
-        image: "../images/people/ME.png",
+        image: "images/People/Javier_Sanchez.png",
         name: "Javier Sánchez Tirados",
         description: "Alumno de la Universidad Politécnica de Madrid y becario de la Cátedra INNOVA-tsn UPM."
     },
     {
-        image: "../images/people/Miguel.jpeg",
+        image: "images/People/Miguel_Hernando.jpeg",
         name: "Miguel Hernando Padilla",
         description: ""
     },
     {
-        image: "../images/people/Ana María Niño.jpg",
+        image: "images/People/Ana_Maria_Niño.jpg",
         name: "Ana María Niño",
         description: ""
     },
     {
-        image: "../images/people/Begoña Vega.png",
+        image: "images/people/Begoña_Vega.png",
         name: "Begoña Vega",
         description: ""
     },
     {
-        image: "../images/people/Jose Ignacio Bernaldo.png",
+        image: "images/people/Jose_Ignacio_Bernaldo.png",
         name: "Jose Ignacio Bernaldo",
         description: ""
     },
     {
-        image: "../images/people/Juan Ignacio_sinfondo.png",
+        image: "images/people/Juan_Ignacio_sinfondo.png",
         name: "Juan Ignacio",
         description: ""
     },
     {
-        image: "../images/people/Mencía Vega.png",
+        image: "images/people/Mencía_Vega.png",
         name: "Mencía Vega",
         description: ""
     },
     {
-        image: "../images/people/Rosario Guerra.png",
+        image: "images/people/Rosario_Guerra.png",
         name: "Rosario Guerra",
         description: ""
     },
     {
-        image: "../images/people/Nuria.png",
+        image: "images/people/Nuria.png",
         name: "Nuria",
         description: ""
     },
