@@ -5,7 +5,7 @@
          url('ruta-a-tu-archivo-de-fuente/Inter-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
-  }  
+  }   
 
 .sectionTitles{
     padding-left: 6%;
@@ -28,12 +28,11 @@ body h2, body h3{
 /******************************************/
 /*HEADER*/
 .containerHeader {
-    z-index: 2  ;
+    z-index: 3;
     background-color: #004379;
     position: fixed; /*Always moving with the scroll*/
     top: 0; /*Glued to the top*/
     width: 100%;   
-
 }
 
 /*HEADER TITLE*/
@@ -199,6 +198,12 @@ body h2, body h3{
     padding-right: 7px;
 }
 
+@media screen and (max-width: 1248px) {
+    #InnovaKnowMore {
+        display: none;
+    }
+}
+
 #InnovaKnowMore:hover {
     cursor: pointer;
 }
@@ -280,6 +285,12 @@ body h2, body h3{
     text-align: justify;
 }
 
+@media screen and (max-width: 1248px) {
+    #Introduction{
+        font-size: 10px;
+    }
+}
+
 #SloganContainer {
     z-index: 1;
     padding-top: 50px;
@@ -293,11 +304,20 @@ body h2, body h3{
     font-style: italic;
     font-size: 55px;
 
-    color: #F4B429;
+    color: #004379;
 
     padding-top:350px;
     padding-bottom: 100px;
     animation: fadeIn 3s ease-in-out;
+}
+
+@media screen and (max-width: 1248px) {
+    .slogan{
+        font-size: 40px;
+        padding-top: 200px;
+        padding-bottom: 70px;
+        background-color: #004379;
+    }
 }
 
 #SloganBC {
@@ -309,11 +329,6 @@ body h2, body h3{
 }
 
 @media screen and (max-width: 1248px) {
-    .slogan {
-        padding-top: 600px;
-        background-color: #004379;
-    }
-
     #SloganBC {
         display: none;
     }
