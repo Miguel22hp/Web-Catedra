@@ -80,10 +80,44 @@ function createEvents() {
   }
   
   document.addEventListener("DOMContentLoaded", function () {
+    //Obtengo la fecha de hoy
+    let date = new Date();
+
+    let day = date.getDate();
+    console.log("Dia " + day);
+    let month = date.getMonth() + 1;
+    console.log("Mes " + month);
+    let year = date.getFullYear();
+    console.log("Año "+ year);
+
+
+    
+    if(month < 10){
+      //console.log(`${day}-0${month}-${year}`)
+      var hoy = `${year}-0${month}-${day}`;
+      console.log(hoy);
+    }else{
+      var hoy = `${year}-${month}-${day}`;
+      console.log(hoy);
+    }
+
     createEvents()
       .then(eventos => {
+        
         console.log(eventos); // Accedes a los eventos desde aqui
         //Añadir los eventos a su correspondiente posición en el calendario de eventos, y que no se muestren si la fecha actual es posterior a su fecha
+        eventos.forEach((elementLI)=> {
+          const fecha = elementLI.dataset.fecha;
+          console.log(fecha);
+          if(hoy > fecha)
+            comtinue;
+          else
+          {
+            console.log("Elemento de fecha menor");
+            
+
+          }
+        });
       })
       .catch(error => {
         console.error(error);
