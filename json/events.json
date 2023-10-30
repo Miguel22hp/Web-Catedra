@@ -1,0 +1,25 @@
+{
+    "eventos": [
+      {
+        "fecha": "2023-11-03",
+        "anio": 2023,
+        "mes": 11,
+        "dia": 3,
+        "hora_inicio": "10:00",
+        "hora_fin": "14:00",
+        "titulo": "Electricity Market Transformation with Digitalization and AI: Session 1",
+        "descripcion": "Redefining the Electricity Market Agent's Experience through Digitalization and AI. Estudiantes del máster MUID-HCID. Session 1."
+      },
+      {
+        "fecha": "2023-11-24",
+        "anio": 2023,
+        "mes": 11,
+        "dia": 24,
+        "hora_inicio": "10:00",
+        "hora_fin": "14:00",
+        "titulo": "Electricity Market Transformation with Digitalization and AI: Session 1",
+        "descripcion": "Redefining the Electricity Market Agent's Experience through Digitalization and AI. Estudiantes del máster MUID-HCID. Session 2."
+      }
+      // Agrega más eventos según sea necesario
+    ]
+  }
