@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     yearList.className = "yearEvents";
     eventsFrame.appendChild(yearList);
     var yearItem = document.createElement("li");
+    yearItem.id = currentYear;
     yearList.appendChild(yearItem); // Añades el año que corresponda
     var monthlist = document.createElement("ul");
     var yearHeading = document.createElement("h3");
@@ -35,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var monthName = meses[monthIndex];
 
         var monthItem = document.createElement("li");
+        var añomes = currentYear + "-" + (monthIndex + 1);
+        monthItem.id = añomes;
         monthlist.appendChild(monthItem);
 
         var monthHeading = document.createElement("h4");
@@ -59,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             //yearList.className = "yearEvents";
             //eventsFrame.appendChild(yearList);
             var yearItem = document.createElement("li");
+            yearItem.id = currentYear;
             yearList.appendChild(hr);
             yearList.appendChild(yearItem); // Añades el año que corresponda
             var monthlist = document.createElement("ul");

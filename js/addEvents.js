@@ -48,6 +48,7 @@ function createEvents() {
                 nuevoEventoLi.dataset.anio = anio;
                 nuevoEventoLi.dataset.fecha = fecha;
                 nuevoEventoLi.dataset.mes = mes;
+                nuevoEventoLi.dataset.dia = dia;
                 nuevoEventoLi.innerHTML = `
                 <h5>${dia} ${mesLetra}</h5>
                 <p class="hourEvents">${horaInicio}-${horaFin} Europe/Madrid</p>
@@ -95,10 +96,10 @@ function createEvents() {
     if(month < 10){
       //console.log(`${day}-0${month}-${year}`)
       var hoy = `${year}-0${month}-${day}`;
-      console.log(hoy);
+      //console.log(hoy);
     }else{
       var hoy = `${year}-${month}-${day}`;
-      console.log(hoy);
+      //console.log(hoy);
     }
 
     createEvents()
@@ -109,12 +110,22 @@ function createEvents() {
         eventos.forEach((elementLI)=> {
           const fecha = elementLI.dataset.fecha;
           console.log(fecha);
-          if(hoy > fecha)
-            comtinue;
-          else
+          if(hoy <= fecha)
           {
             console.log("Elemento de fecha menor");
             
+            
+            var idMes = elementLI.dataset.anio + "-" + (elementLI.dataset.mes);
+            if (liMesAñadir !== null) {
+              //console.log(idMes);
+              //Selecciono el li con el identificador del mes y año que corresponden a este evento
+              var liMesAñadir = document.getElementById(idMes);
+
+              //Seleccionas la lista de ese mes en la que se añaden sus elementos y añado el elemento
+              var ulDentroLi = liMesAñadir.querySelector('ul');
+              ulDentroLi.appendChild(elementLI);
+            }
+
 
           }
         });
