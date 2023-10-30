@@ -33,7 +33,6 @@ body h2, body h3{
     position: fixed; /*Always moving with the scroll*/
     top: 0; /*Glued to the top*/
     width: 100%;   
-
 }
 
 /*HEADER TITLE*/
