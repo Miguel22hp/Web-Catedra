@@ -510,9 +510,14 @@ body h2, body h3{
     height: 400px; /* height of the div */
     overflow: auto; /* Allows to scroll in the div */
     background-color: #EEEEEE;
-    /*margin-left: 10px; /* Starting 10px to the left of the screen*/
+    background-color: #004379;
     margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.eventsFrame::-webkit-scrollbar
+{
+    width: 0;
 }
 
 .yearEvents, .monthsEvents, .monthsEventsList{
@@ -528,7 +533,7 @@ body h2, body h3{
   }
 
 .events{
-    background-color: #FFFFFF;
+    background-color: #F4B429;
     height: 150px;
     width: 200px;
     margin-right: 50px;
@@ -550,10 +555,15 @@ body h2, body h3{
     flex: 1;
 }
 
+.eventsLine{
+    border-color: #F4B429; /*Color de las lineas que separan meses y años*/
+}
+
 /*How to style de years*/
 .yearEvents h3{
     font-size: 20px;
-    color: #004379;
+    color: #F4B429;
+    font-weight: bold;
 }
 
 /*How to style de months*/
@@ -567,11 +577,20 @@ body h2, body h3{
     font-size: 16px;
     margin-bottom: 0;
     padding-bottom: 0;
+    color: #004379;
+    margin-left: 3px;
 }
 
 .hourEvents{
     font-weight: bold;
     font-size: 15px;
+    color: #004379;
+    margin-left: 3px;
+}
+
+.events p{
+    margin-left: 3px;
+     
 }
 
 
@@ -603,6 +622,7 @@ body h2, body h3{
     color: black;
     text-decoration: none;
     background-color: #FFFFFF;
+    background-color: #F4B429;
     height: 150px;
     width: 95%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -637,7 +657,7 @@ body h2, body h3{
 }
 
 .dateNews{
-    color: #F4B429;
+    /*color: #F4B429;*/
 }
 
 .newsStructure li h3{

@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if(monthIndex === 10)
         {
             var hr = document.createElement("hr");
+            hr.className = "eventsLine";
             monthlist.appendChild(hr);
         }
 
@@ -75,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         console.log("Mes que toca es " + monthName);
         var hr = document.createElement("hr");
+        hr.className = "eventsLine";
         monthlist.appendChild(hr);
 
     }

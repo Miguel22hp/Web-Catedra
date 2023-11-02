@@ -1,5 +1,4 @@
 function createEvents() {
-    //const jsonFile = 'https://mobilesdevices.000webhostapp.com/json_anuncios/json_events.json';
     const jsonFile = 'https://raw.githubusercontent.com/Miguel22hp/json_events_repo/main/events.json';
   
     return new Promise((resolve, reject) => {
@@ -13,10 +12,8 @@ function createEvents() {
       request.onload = function () {
         console.log(request.status);
         if (request.status === 200) {
-          console.log("HOLA2")
           try {
             const data = JSON.parse(request.responseText);
-            console.log(data)
             // "data" contendrá el JSON analizado
     
             // Acceder a la lista de eventos
@@ -32,7 +29,6 @@ function createEvents() {
                 const horaFin = evento.hora_fin;
                 const titulo = evento.titulo;
                 const descripcion = evento.descripcion;
-                console.log(dia);
     
                 // Convierte el mes numérico en una abreviatura de tres letras
                 const mesNumero = parseInt(mes, 10);
@@ -85,42 +81,43 @@ function createEvents() {
     let date = new Date();
 
     let day = date.getDate();
-    console.log("Dia " + day);
     let month = date.getMonth() + 1;
-    console.log("Mes " + month);
     let year = date.getFullYear();
-    console.log("Año "+ year);
 
-
+    
     
     if(month < 10){
       //console.log(`${day}-0${month}-${year}`)
-      var hoy = `${year}-0${month}-${day}`;
+      if(day < 10)
+        var hoy = `${year}-0${month}-0${day}`;
+      else
+        var hoy = `${year}-0${month}-${day}`;
       //console.log(hoy);
     }else{
-      var hoy = `${year}-${month}-${day}`;
+      if(day < 10)
+        var hoy = `${year}-${month}-0${day}`;
+      else
+        var hoy = `${year}-${month}-${day}`;
       //console.log(hoy);
     }
+    console.log("Fecha del hoy" + hoy);
 
     createEvents()
       .then(eventos => {
         
-        console.log(eventos); // Accedes a los eventos desde aqui
         //Añadir los eventos a su correspondiente posición en el calendario de eventos, y que no se muestren si la fecha actual es posterior a su fecha
         eventos.forEach((elementLI)=> {
           const fecha = elementLI.dataset.fecha;
-          console.log(fecha);
+          console.log("Fecha del li" + fecha);
           if(hoy <= fecha)
-          {
-            console.log("Elemento de fecha menor");
-            
-            
+          {            
+            console.log("Despliega el li con fecha" + fecha);
             var idMes = elementLI.dataset.anio + "-" + (elementLI.dataset.mes);
-            if (liMesAñadir !== null) {
-              //console.log(idMes);
-              //Selecciono el li con el identificador del mes y año que corresponden a este evento
-              var liMesAñadir = document.getElementById(idMes);
 
+            //Selecciono el li con el identificador del mes y año que corresponden a este evento
+            var liMesAñadir = document.getElementById(idMes);
+
+            if (liMesAñadir !== null) {              
               //Seleccionas la lista de ese mes en la que se añaden sus elementos y añado el elemento
               var ulDentroLi = liMesAñadir.querySelector('ul');
               ulDentroLi.appendChild(elementLI);
