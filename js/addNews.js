@@ -1,5 +1,5 @@
 function createNews() {
-    const jsonFile = 'https://raw.githubusercontent.com/Miguel22hp/json_events_repo/main/news.json';
+    const jsonFile = 'https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/main/json/news.json';
   
     return new Promise((resolve, reject) => {
       const newsArray = []; // Array para almacenar las noticias
