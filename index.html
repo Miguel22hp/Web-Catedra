@@ -7,6 +7,9 @@
         <link rel="icon" href="images/CatedraLogo_sinLetras.svg">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Catedra Innova-tsn UPM</title>
+        <script src="js/eventsYearMonths.js"></script>
+        <script src="js/addEvents.js"></script>
+        <script src="js/addNews.js"></script>
     </head>
     <body>
         <header class="containerHeader" data-aos="fade-down" data-aos-duration="1500">
@@ -269,105 +272,15 @@
                 <h2 class="sectionTitles">Linea de Investigación</h2>
             </section>-->
             <section id="Events" class="containerBodyEvents">
-                <h2 class="sectionTitles" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="500">Eventos</h2>
-                <div class="eventsFrame" data-aos="fade-down-right" data-aos-duration="1500" data-aos-offset="500">
-                    <ul class="yearEvents">
-                        <li>
-                            <h3>2023</h3>
-                            <ul class="monthsEvents">
-                                <!-- Ir borrando los meses según van pasando-->
-                                <li>
-                                    <h4>Octubre</h4>
-                                    <ul class="monthsEventsList">
-                                    </ul>
-                                </li>
-                                <hr>
-                                <li>
-                                    <h4>Noviembre</h4>
-                                    <ul class="monthsEventsList">
-                                        <li class="events">
-                                            <h5>3 NOV</h5>
-                                            <p class="hourEvents">
-                                                10:00-14:00 Madrid
-                                            </p>
-                                            <p class="eventDescription">
-                                                Redefining the Electricity Market Agent's Experience through Digitalization and AI.
-                                                <br>
-                                                Estudiantes del máster MUID-HCID. Session 1.
-                                            </p>
-                                        </li>
-                                        <li class="events">
-                                            <h5>24 NOV</h5>
-                                            <p class="hourEvents">
-                                                10:00-14:00 Madrid
-                                            </p>
-                                            <p class="eventDescription">
-                                                Redefining the Electricity Market Agent's Experience through Digitalization and AI.
-                                                <br>
-                                                Estudiantes del máster MUID-HCID. Session 2.
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <hr>
-                                <li>
-                                    <h4>Diciembre</h4>
-                                </li>
-                                <!-- Añadir el siguiente mes.-->
-                            </ul>
-                        </li>
-                        
-                        <!-- Añadir el siguiente año.-->
-                        <!--
-                        <hr>
-                        <li>
-                            <h3>2024</h3>
-                            <ul class="monthsEvents">
-                                <li>
-                                    <h4>Enero</h4>
-                                </li>
-                                <hr>
-                                <li>
-                                    <h4>Febrero</h4>
-                                </li>
-                                <hr>
-                                <li>
-                                    <h4>Marzo</h4>
-                                </li>
-                            </ul>
-                        </li>
-                        -->
-                    </ul>
+                <h2 class="sectionTitles">Eventos</h2>
+                <div class="eventsFrame">
                 </div>
             </section>
             <section id="News" class="containerBodyNews">
-                <h2 class="sectionTitles" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="500">Actualidad</h2>
-                <div class="eventsFrame" data-aos="fade-down-right" data-aos-duration="1500" data-aos-offset="500">
-                    <ul class="listNews">
-                        <!-- for adding a new do the folowwing-->
-                        <a href="https://www.innova-tsn.com/hackathon-sas-2022/" >
-                            <div class="newsPanel">
-                                <ul class="newsStructure">
-                                    <li>
-                                        <h3>
-                                            Innova-tsn gana la categoría de Energía del Hackathon de 
-                                            SAS por mejorar el servicio de bicicletas de Madrid
-                                        </h3>
-                                        <p class="dateNews">Junio 2022</p>
-                                    </li>
-                                    <li>
-                                        <p class="extraNewsInfo"> 
-                                            Con un proyecto enfocado en fomentar el transporte sostenible
-                                            y mejorar el servicio de BiciMAD, Innova Data Hub ha sido el
-                                            único equipo español en ganar una de las 13 categorías.
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <img src="images/Innova_Hackathon2022_Winner_BLOG-300x169.png" alt="Imagen sobre la noticia" class="newsImages">
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
+                <h2 class="sectionTitles">Actualidad</h2>
+                <div class="eventsFrame">
+                    <ul class="listNews" id="NewsList">
+
                     </ul>
                 </div>
             </section>
