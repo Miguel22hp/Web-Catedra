@@ -1,17 +1,23 @@
 /* WEB THINGS (Doesn't matter the section)*/
-
+@font-face {
+    font-family: 'Inter';
+    src: url('ruta-a-tu-archivo-de-fuente/Inter-Regular.woff2') format('woff2'),
+         url('ruta-a-tu-archivo-de-fuente/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }   
 
 .sectionTitles{
     padding-left: 6%;
     color: #004379;
+    font-size: 40px;
 }
 
 body{
-    font-family: inter;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: inter;
 }
 
 body h2, body h3{
@@ -22,15 +28,14 @@ body h2, body h3{
 /******************************************/
 /*HEADER*/
 .containerHeader {
-    z-index: 2  ;
+    z-index: 3;
     background-color: #004379;
     position: fixed; /*Always moving with the scroll*/
     top: 0; /*Glued to the top*/
-    width: 100%;    
+    width: 100%;   
 }
 
 /*HEADER TITLE*/
-
 .containerTitle ul {
     margin-top: 0;
     padding-left: 0;
@@ -134,6 +139,27 @@ body h2, body h3{
     text-align: left;
 }
 
+#WhoWeAreTitle {
+    opacity: 0;
+}
+
+#VideoWhoWeAre {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    filter: blur(5px);
+    filter:brightness(0.5);
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1248px) {
+    #VideoWhoWeAre {
+        display: none;
+    }
+}
+
 .containerBodyWhoWeAre ul {
     text-align: center;
 
@@ -152,13 +178,56 @@ body h2, body h3{
     background-color: #F4B429;
     width: 80%;
 
-    margin-top: 80%;
+    margin-top: 60%;
     margin-left: 15%;
     padding: 3%;
 
     border-radius: 10px 0 0 10px;
 
     animation: slideinrightRectangle 2.5s ease-in-out;
+}
+
+#InnovaKnowMore {
+    position: absolute;
+
+    background-color: #F4B429;
+    border-radius: 10px;
+    color: #004379;
+
+    padding-top: 5px;
+    padding-right: 7px;
+}
+
+@media screen and (max-width: 1248px) {
+    #InnovaKnowMore {
+        display: none;
+    }
+}
+
+#InnovaKnowMore:hover {
+    cursor: pointer;
+}
+
+#InnovaKnowMoreText {
+    z-index: -1;
+    position: absolute;
+    top: 250px;
+    right: 0;
+    background-color: #F4B429;
+    width: 500px;
+    height: 450px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-radius: 10px 0 0 10px;
+    opacity: 0;
+}
+
+#linkInnova {
+    color: #004379;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #LogoInnova{
@@ -198,7 +267,34 @@ body h2, body h3{
     margin-top: -10%;
     margin-left: -25%;
 
-    animation: fadeIn 3s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#IntroductionContainer {
+    z-index: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    background-color: white;
+}
+
+#Introduction {
+    z-index: 2;
+    padding: 20px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1248px) {
+    #Introduction{
+        font-size: 10px;
+    }
+}
+
+#SloganContainer {
+    z-index: 1;
+    padding-top: 50px;
+    margin-bottom: 0;
 }
 
 .slogan{
@@ -206,69 +302,42 @@ body h2, body h3{
 
     font-weight: bold;
     font-style: italic;
-    font-size: 35px;
+    font-size: 55px;
 
-    color: #115EA3;
+    color: #004379;
 
-    margin-top: -5%;
-
+    padding-top:350px;
+    padding-bottom: 100px;
     animation: fadeIn 3s ease-in-out;
 }
 
-/*ANIMATION*/
-@keyframes slideinrightLogo {
-    from {
-      margin-left: 200%;
-    }
-  
-    to {
-      margin-left: -30%;
-    }
-  }
-
-  @keyframes slideinrightRectangle {
-    from {
-      margin-left: 200%;
-    }
-  
-    to {
-      margin-left: 15%;
-    }
-  }
-
-@keyframes slideinleftLogo {
-    from {
-    margin-left: -350%;
-    }   
-
-    to {
-    margin-left: 30%;
+@media screen and (max-width: 1248px) {
+    .slogan{
+        font-size: 40px;
+        padding-top: 200px;
+        padding-bottom: 70px;
+        background-color: #004379;
     }
 }
 
-@keyframes slideinleftRectangle {
-    from {
-    margin-left: -350%;
-    }   
-
-    to {
-    margin-left: -5%;
-    }
+#SloganBC {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    filter: blur(3px);
+    
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
+@media screen and (max-width: 1248px) {
+    #SloganBC {
+        display: none;
     }
 }
 
 /*OUR PURPOSE*/
 .containerBodyOurPurpose {
     padding-top: 100px;
+    background-color: white
 }
 
 .containerBodyOurPurpose ul {
@@ -289,14 +358,15 @@ body h2, body h3{
     z-index: 1;
     position: relative; /* Importante para posicionar el tooltip */
     display: inline-block; /* Para que el tooltip abarque solo el tamaño de la imagen */
-    height: 200px;
-    width: 300px;
+    height: 325px;
+    width: 325px;
 }
 
 /* Estilo del tooltip */
 .tooltip {
     position: absolute;
-    background-color: #EEEEEE;
+    /*background-color: #EEEEEE;*/
+    background-color: #004379;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -309,9 +379,15 @@ body h2, body h3{
     right: 0;
     width: 100%;
     height: 100%;
+    overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
-
+.tooltip p {
+    color: #FFFFFF;
+}
 
 /* Estilo del tooltip cuando se pasa el cursor sobre la imagen */
 .image-container:hover .tooltip {
@@ -320,9 +396,17 @@ body h2, body h3{
 }
 
 .iconsOurPurpose{
-    height: 150px;
-    width: 150px;
+    height: 90%;
+    width: 90%;
 }
+
+.highlightY{
+    font-weight: bold;
+    color: #F4B429;
+    font-size: 20px;
+}
+
+
 
 /*TEAM*/
 .containerBodyTeam {
@@ -387,7 +471,7 @@ body h2, body h3{
 }
 
 .containerBodyTeam ul li:nth-child(3) {
-    width: 30%;
+    max-width: 30%;
     margin: 0;
 }
 
@@ -420,8 +504,8 @@ body h2, body h3{
     border-width: 1.5px;
 
     @media screen and (max-width: 1080px) {
-        height: 50%;
-        font-size: 100%;
+        height: 100%;
+        font-size: 150%;
     };
 }
 
@@ -434,12 +518,18 @@ body h2, body h3{
     display: flex;
     align-items: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 #TeamPhotosPersonFig {
     color: white;
     display: block;
     text-align: center;
+    
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 .liTeamPhotosPerson {
@@ -477,22 +567,29 @@ body h2, body h3{
     border-width: 1.5px;
 
     @media screen and (max-width: 1080px) {
-        height: 50%;
-        font-size: 100%;
+        height: 100%;
+        font-size: 150%;
     };
 }
 
 
-/*
-.teamName {
-    font-weight: bold;
-    background-color: #F4B429;
-    color: #004379; 
-    display: inline-block; /* Para que el fondo abarque solo el contenido del elemento */
-    /*padding: 5px 10px; /* Espaciado dentro del recuadro */
-    /*border: 1px solid black; /* Borde negro opcional */
-    /*border-radius: 5px; /* Borde redondeado opcional */
-/*}*/
+@media screen and (max-width: 1080px) {
+    .liTeamPhotosGroup {
+        display: none;
+    }
+
+    .liVerticalSeparator {
+        display: none;
+    }
+
+    .containerBodyTeam ul li:nth-child(3) {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+}
+
 
 
 /*LINEOFRESEARCH*/

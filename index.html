@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="images/CatedraLogo.png">
+        <link rel="icon" href="images/CatedraLogo_sinLetras.svg">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Catedra Innova-tsn UPM</title>
         <script src="js/eventsYearMonths.js"></script>
         <script src="js/addEvents.js"></script>
         <script src="js/addNews.js"></script>
     </head>
     <body>
-        <header class="containerHeader">
+        <header class="containerHeader" data-aos="fade-down" data-aos-duration="1500">
             <div class="containerTitle">
                 <ul>
                     <li><h1 class="mainTitle">Cátedra Innova-TSN UPM</h1>
@@ -29,7 +30,7 @@
                     <li><a href="#Team">Equipo<hr id="SeparatorLI"></a></li>
                     <hr id="SeparatorUL">
                     <!--<li><a href="#LineOfResearch">Linea de Investigación<hr id="SeparatorLI"></a></li>-->
-                    <hr id="SeparatorUL">
+                    <!--<hr id="SeparatorUL">-->
                     <li><a href="#Events">Eventos<hr id="SeparatorLI"></a></li>
                     <hr id="SeparatorUL">
                     <li><a href="#News">Actualidad<hr id="SeparatorLI"></a></li>
@@ -44,38 +45,104 @@
 
         <div class="containerBody">
             <section id="WhoWeAre" class="containerBodyWhoWeAre">
-                <h2 class="sectionTitles" id="WhoWeAreTitle">¿Quienes somos?</h2>
+                <video autoplay muted loop id="VideoWhoWeAre">
+                    <source src="video/bc_WhoWeAre.mp4" type="video/mp4">
+                </video>
+                <h2 class="sectionTitles" id="WhoWeAreTitle" data-aos="fade-right">¿Quienes somos?</h2>
                 <ul>
                     <li>
-                        <figure id="RectangleLogoUpm">
-                            <img id="LogoUpm" src="/images/UPMLogo.png" alt="Logo de la UPM">
+                        <figure data-aos="fade-right" data-aos-duration="1500" id="RectangleLogoUpm">
+                            <img id="LogoUpm" src="images/BarraPolit.svg" alt="Logo Upm">                        
                         </figure>
                     </li>
                     <li>
-                        <figure id="RectangleLogoCatedra">
-                            <img id="LogoCatedra" src="/images/CatedraLogo.png" alt="Logo de la cátedra Innova-TSN UPM">
+                        <figure id="RectangleLogoCatedra" data-aos="fade-down" data-aos-duration="1500" onmouseover="showIntroduction()" onmouseout="hideIntroduction()">
+                            <img id="LogoCatedra" src="images/CatedraLogo.png" alt="Logo de la cátedra Innova-TSN UPM">
                         </figure>
+                        <script src="js/logoAnimation.js"></script>
                     </li>
                     <li>
-                        <figure id="RectangleLogoInnova">
-                            <img id="LogoInnova" src="/images/InnovaLogo.png" alt="Logo de Innova-TSN">
+
+                        <figure data-aos="fade-left" data-aos-duration="1500" id="RectangleLogoInnova">
+                            <img id="LogoInnova" src="images/InnovaLogo.png" alt="Logo de Innova-TSN">
+                            <div id="InnovaKnowMore" onclick="clickInnova()">
+                                <h3>Saber más sobre Innova-TSN</h3>
+                            </div>   
                         </figure>
                     </li>
                 </ul>
-                <h2 class="slogan">"Dónde los datos contruyen la historia"</h2>
+                <div onmouseout="hoverOutInnova()" id="InnovaKnowMoreText">
+                    <h3>¿Innova-tsn?</h3>
+                    <p>Innova-tsn es una compañía fundada hace casi 20 años como experta en soluciones 
+                        tecnológicas e inteligentes de negocio, que ha crecido hasta posicionarse como uno 
+                        de los líderes indiscutibles del sector en el diseño e implementación de Analítica 
+                        Avanzada.
+                        <br><br>
+                        Dedicada y especializada en las áreas de Cloud Strategy & Implementation, 
+                        Inteligencia Artificial, Data Analytics & Modern B.I. entre otras, Innova-tsn provee 
+                        soluciones end-to-end desde la provisión de infraestructura o instancias cloud hasta la 
+                        ejecución de proyecto o provisión de servicios de consultoría especializados.
+                        Con sede central en Madrid, Innova-tsn se ha expandido de manera sostenida y ahora 
+                        presta también sus servicios desde Barcelona, Santander, Londres, Bogotá y Ciudad de 
+                        México.
+                        <br><br>
+                        Si algo define a Innova-tsn como empresa es su compromiso con sus clientes y con la 
+                        excelencia en su trabajo, aplicando una visión de negocio y de futuro, que le permite 
+                        alcanzar los mejores resultados.</p>
+                        <br>
+                        <br>
+                        <a id="linkInnova" target="_blank" href="https://www.innova-tsn.com/en/">Web de Innova-tsn</a>
+                </div>
+                <script src="js/InnovaKnowMore.js"></script>
+                <div id="IntroductionContainer" data-aos-duration="1000" data-aos="fade-up">
+                    <h2><span style="color: #004379;"><strong>Introduccion</strong>:</span></h2>
+                    <p id="Introduction">                                
+                        <strong>Innova-tsn y la Universidad Politécnica de Madrid</strong> nos hemos unido para crear la 
+                        <strong>Cátedra de Analítica en la Sociedad Digital: donde los datos hacen historia.</strong> Esta 
+                        colaboración <strong><span style="color: #F4B429">integra la experiencia de la industria y la excelencia académica,</span></strong>
+                        <strong><span style="color: #F4B429">promoviendo</span></strong> la <span style="color: #F4B429"><strong>sinergia</strong></span> de la <span style="color: #F4B429"><strong>investigación de datos y la tecnología.</strong></span> La investigación 
+                        certificada y de calidad de la UPM en analítica de datos, combinada con la 
+                        experiencia práctica de Innova-tsn, nos permite canalizar iniciativas de investigación y 
+                        traducir el conocimiento teórico en soluciones para el mundo real. <span style="color: #004379"><strong>Con esta 
+                        combinación, impulsaremos una innovación que beneficiará a la sociedad y nos 
+                        mantendrá a la vanguardia de los avances tecnológicos.</span></strong> <br><br>
+
+                        Adicionalmente, esta <span style="color: #004379;"> asociación fomenta el impacto en la comunidad reforzando el 
+                        papel de la Universidad Politécnica de Madrid como centro de conocimiento a través 
+                        de iniciativas conjuntas de investigación, talleres y seminarios que abordan retos de la 
+                        industria tecnológica.</span> <br><br>
+                        
+                        Además, <strong><span style="color: #004379;"> ofreceremos a los jóvenes talentos una experiencia de formación 
+                        enriquecida con aplicaciones prácticas.</span></strong> Juntos, formamos una alianza dinámica que 
+                        está preparada para impulsar la innovación, aprovechar las sinergias de investigación, 
+                        potenciar el talento y tener un impacto duradero en la sociedad.</p>
+                </div>
+                <div id="SloganContainer">
+                    <img id="SloganBC" src="images/slogan_bc.jpg" alt="Slogan de la cátedra">
+                    <h2 class="slogan" data-aos="zoom-in-up" data-aos-offset="300" data-aos-duration="1500">"Dónde los datos contruyen la historia"</h2>     
+                </div>
             </section>
             <section id="OurPurpose" class="containerBodyOurPurpose">
-                <h2 class="sectionTitles">Nuestro Proposito</h2>
-                <ul>
+                <h2 class="sectionTitles" data-aos="fade-right">Nuestro Proposito</h2>
+                <ul data-aos="fade-right">
                     <li>
                         <figure class="image-container">
                             <img src="images/loupe_color.svg" alt="Imagen referente a Investigación" class="iconsOurPurpose">
                             <figcaption>
-                                <h3 class="purposeTitle">Investigación</h3>
+                                <h3 class="purposeTitle">I+D+I para la sociedad</h3>
                             </figcaption>
                             <div class="tooltip">
                                 <p>
-                                    Texto acerca del apartado de Aplicación Práctica
+                                    La Universidad Politécnica de Madrid es conocida por su
+                                    investigación pionera en análisis de datos,
+                                    estudios y métodos técnicos y científicos. <span class="highlightY">
+                                    asociación de Innova-tsn con la Universidad</span>
+                                    proporciona acceso a los últimos avances
+                                    en estas áreas, garantizando que 
+                                    <span class="highlightY">las dos 
+                                    partes se mantengan a la vanguardia de la
+                                    innovación tecnológica y consoliden 
+                                    resultados relevantes para la sociedad.</span>
                                 </p>
                             </div>
                         </figure>
@@ -85,11 +152,19 @@
                         <figure class="image-container">
                             <img src="images/mortarboard_color.svg" alt="Imagen referente a Formación de Estudiantes y Talento" class="iconsOurPurpose">
                             <figcaption>
-                                <h3 class="purposeTitle">Formación de Estudiantes y Talento</h3>
+                                <h3 class="purposeTitle">Fomento del talento</h3>
                             </figcaption>
                             <div class="tooltip">
                                 <p>
-                                    Texto acerca del apartado de Aplicación Práctica
+                                    La Cátedra fomenta <span class="highlightY">un entorno de aprendizaje
+                                    dinámico</span> en el que los estudiantes de la Universidad
+                                    Politécnica de Madrid pueden interactuar directamente 
+                                    con proyectos reales y profesionales del sector de
+                                    Innova-tsn.
+                                    Esta exposición complementa su aprendizaje académico y les
+                                    <span class="highlightY"> dota de habilidades técnicas
+                                    y prácticas</span> que les permiten estar a la 
+                                    vanguardia del mercado laboral.
                                 </p>
                             </div>
                         </figure>
@@ -99,11 +174,18 @@
                         <figure class="image-container">
                             <img src="images/worldwide_color.svg" alt="Imagen referente a Impacto en la Sociedad y en el Mundo" class="iconsOurPurpose">
                             <figcaption>
-                                <h3 class="purposeTitle">Impacto en la Sociedad y en el Mundo</h3>
+                                <h3 class="purposeTitle">Impacto en la comunidad</h3>
                             </figcaption>
                             <div class="tooltip">
                                 <p>
-                                    Texto acerca del apartado de Aplicación Práctica
+                                    Esta asociación refuerza el papel de la Universidad como
+                                    nexo para la difusión del conocimiento, canalización 
+                                    de iniciativas científicas y de investigación, y el 
+                                    compromiso de la comunidad. Los proyectos de estudio, 
+                                    talleres y seminarios conjuntos ayudarán a resolver problemas 
+                                    del mundo real y a avanzar en el campo más amplio de análisis
+                                    sobre datos e ingeniería, todo ello bajo el lema <span class="highlightY">"Donde
+                                    los datos construyen la historia".</span>
                                 </p>
                             </div>
                         </figure>
@@ -116,7 +198,19 @@
                             </figcaption>
                             <div class="tooltip">
                                 <p>
-                                    Texto acerca del apartado de Aplicación Práctica
+                                    Componente fundamental de la asociación
+                                    entre Innova-tsn y la UPM.
+                                    <span class="highlightY">Profesionales experimentados actuarán como
+                                    mentores </span>, guiando a los estudiantes
+                                    para hacer puente entre el mundo académico 
+                                    y la industria. A través de escenarios
+                                    de formación y proyectos de colaboración,
+                                    los estudiantes adquirirán herramientas
+                                    que les permitirán aplicar sus conocimientos
+                                    académicos en contextos reales. Esta
+                                    Cátedra busca nutrir a la sociedad de nuevas
+                                    generaciones de profesionales capaces
+                                    de abordar cualquier reto tecnológico.
                                 </p>
                             </div>
                         </figure>
@@ -125,11 +219,19 @@
                         <figure class="image-container">
                             <img src="images/pc_color.svg" alt="Imagen referente a Aplicación Práctica " class="iconsOurPurpose">
                             <figcaption>
-                                <h3 class="purposeTitle">Aplicación Práctica</h3>
+                                <h3 class="purposeTitle">Aplicación en el mundo real</h3>
                             </figcaption>
                             <div class="tooltip">
                                 <p>
-                                    Texto acerca del apartado de Aplicación Práctica
+                                    La experiencia de Innova-tsn 
+                                    en la aplicación práctica de
+                                    datos y tecnología <span class="highlightY">complementa 
+                                    a la perfección el enfoque académico de la
+                                    Universidad Politécnica de Madrid.</span> 
+                                    Esta asociación permite la transferencia de los
+                                    resultados de investigación en soluciones 
+                                    del mundo real que benefician a la industria,
+                                    la academia y a la sociedad en general.
                                 </p>
                             </div>
                         </figure>
@@ -138,21 +240,21 @@
                 
             </section>
             <section id="Team" class="containerBodyTeam">
-                <h2 class="sectionTitles">Equipo</h2>
+                <h2 class="sectionTitles" data-aos="fade-right">Equipo</h2>
                 <ul>
-                    <li class="liTeamPhotosGroup">
-                        <img id="TeamPhotosGroup" src="/images/Group.png" alt="Foto del equipo completo">
+                    <li class="liTeamPhotosGroup" data-aos="fade-right">
+                        <img id="TeamPhotosGroup" src="images/Group.png" alt="Foto del equipo completo">
                             <figcaption id="TeamPhotosGroupFig">
                                 <h3>Equipo Cátedra INNOVA-tsn UPM</h3>
                             </figcaption>
                     </li>
-                    <li class="liVerticalSeparator"></li>
-                    <li class="liTeamPhotosPerson">
+                    <li class="liVerticalSeparator" data-aos="fade-right"></li>
+                    <li class="liTeamPhotosPerson" data-aos="fade-right">
                         <h3>Personas del Equipo de la Cátedra</h3>
                         <ul>
                             <li><button id="ButtonLeft"><</button></li>
                             <li>
-                                <img id="TeamPhotosPerson" src="/images/ME.png" alt="Foto de un miembro del equipo">
+                                <img id="TeamPhotosPerson" src="images/People/Javier_Sanchez.png" alt="Foto de un miembro del equipo">
                                 <figcaption id="TeamPhotosPersonFig">
                                     <h3>Javier Sánchez Tirados</h3>
                                     <hr>
@@ -161,8 +263,7 @@
                             </li>
                             <li><button id="ButtonRight">></button></li>
                         </ul>
-                        <h3></h3>
-                        <p></p>
+                        <script src="js/people.js"></script>
                     </li> 
                 </ul>      
             </section>
@@ -179,18 +280,19 @@
                 <h2 class="sectionTitles">Actualidad</h2>
                 <div class="eventsFrame">
                     <ul class="listNews" id="NewsList">
+
                     </ul>
                 </div>
             </section>
 
-            <section id="WhereToFindUs" class="containerBodyWhereToFindUs">
+            <section id="WhereToFindUs" data-aos="fade-right" data-aos-duration="2000" class="containerBodyWhereToFindUs">
                 <h2 class="sectionTitles">Donde Encontranos</h2>
                 <p class="whereToFindUsParagraph">
                     La cátedra disponde de una oficina en el bloque 5, 
                     planta 1, despacho 5101 en los edificios de la 
                     ETSIInf de la UPM en el Campus de Montegancedo. 
                 </p>
-                <div class="contactMap">
+                <div class="contactMap" data-aos="zoom-in-down" data-aos-duration="2000">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1312.6728272182859!2d-3.838931971549967!3d40.405243550873166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418f2f1521500d%3A0x7ac343cecc06a4f3!2sBloque%205!5e0!3m2!1ses!2ses!4v1696336941876!5m2!1ses!2ses" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 
@@ -245,6 +347,10 @@
                     </ul>
                 </li>
             </ul>
-        </footer>
+        </footer> 
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
