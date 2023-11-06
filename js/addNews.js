@@ -1,5 +1,6 @@
 function createNews() {
     const jsonFile = 'https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/main/json/news.json';
+    const routeImages = 'https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/main/images/'
   
     return new Promise((resolve, reject) => {
       const newsArray = []; // Array para almacenar las noticias
@@ -24,7 +25,8 @@ function createNews() {
                 const titulo = aNew.titulo;
                 const descripcion = aNew.descripcion;
                 const imagen1 = aNew.imagen_source;
-                const imagen = "https://raw.githubusercontent.com/Miguel22hp/json_events_repo/main/" + imagen1;
+                const imagen = routeImages + imagen1;
+                console.log(imagen);
                 const link = aNew.link_noticia;
                 const descp_img = aNew.descripcion_imagen;
 

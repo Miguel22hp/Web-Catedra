@@ -7,10 +7,7 @@ function createEvents() {
       const request = new XMLHttpRequest();
   
       request.open('GET', jsonFile, true);
-      //request.responseType = 'json';
-      console.log("HOLA")
       request.onload = function () {
-        console.log(request.status);
         if (request.status === 200) {
           try {
             const data = JSON.parse(request.responseText);
@@ -87,20 +84,16 @@ function createEvents() {
     
     
     if(month < 10){
-      //console.log(`${day}-0${month}-${year}`)
       if(day < 10)
         var hoy = `${year}-0${month}-0${day}`;
       else
         var hoy = `${year}-0${month}-${day}`;
-      //console.log(hoy);
     }else{
       if(day < 10)
         var hoy = `${year}-${month}-0${day}`;
       else
         var hoy = `${year}-${month}-${day}`;
-      //console.log(hoy);
     }
-    console.log("Fecha del hoy" + hoy);
 
     createEvents()
       .then(eventos => {
@@ -108,10 +101,8 @@ function createEvents() {
         //Añadir los eventos a su correspondiente posición en el calendario de eventos, y que no se muestren si la fecha actual es posterior a su fecha
         eventos.forEach((elementLI)=> {
           const fecha = elementLI.dataset.fecha;
-          console.log("Fecha del li" + fecha);
           if(hoy <= fecha)
           {            
-            console.log("Despliega el li con fecha" + fecha);
             var idMes = elementLI.dataset.anio + "-" + (elementLI.dataset.mes);
 
             //Selecciono el li con el identificador del mes y año que corresponden a este evento

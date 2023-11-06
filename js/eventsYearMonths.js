@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
             yearItem.appendChild(monthlist);
             continue;
         }
-        console.log("Mes que toca es " + monthName);
         var hr = document.createElement("hr");
         hr.className = "eventsLine";
         monthlist.appendChild(hr);
