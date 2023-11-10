@@ -5,12 +5,12 @@ var teamData = [
         description: "Alumno de la Universidad Politécnica de Madrid y becario de la Cátedra INNOVA-tsn UPM."
     },
     {
-        image: "images/People/Miguel_Hernando.jpeg",
+        image: "images/People/Miguel_Hernando.png",
         name: "Miguel Hernando Padilla",
         description: ""
     },
     {
-        image: "images/People/Ana_Maria_Niño.jpg",
+        image: "images/People/Ana_Maria_Niño.png",
         name: "Ana María Niño",
         description: ""
     },

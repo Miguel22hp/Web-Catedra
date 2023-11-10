@@ -12,7 +12,7 @@
         <script src="js/addNews.js"></script>
     </head>
     <body>
-        <header class="containerHeader" data-aos="fade-down" data-aos-duration="1500">
+        <header id="containerHeader" data-aos="fade-down" data-aos-duration="1500">
             <div class="containerTitle">
                 <ul>
                     <li><h1 class="mainTitle">Cátedra Innova-TSN UPM</h1>
@@ -20,7 +20,7 @@
                 </ul>
             </div>
 
-            <nav class="navigationHeader">
+            <nav id="navigationHeader">
                 <ul>
                     <hr id="SeparatorUL">
                     <li><a href="#WhoWeAre">¿Quienes somos?<hr id="SeparatorLI"></a></li>
@@ -41,7 +41,7 @@
             </nav>
         </header>
 
-
+        <script src="js/Header.js"></script>
 
         <div class="containerBody">
             <section id="WhoWeAre" class="containerBodyWhoWeAre">
@@ -272,15 +272,105 @@
                 <h2 class="sectionTitles">Linea de Investigación</h2>
             </section>-->
             <section id="Events" class="containerBodyEvents">
-                <h2 class="sectionTitles">Eventos</h2>
-                <div class="eventsFrame">
+                <h2 class="sectionTitles" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="200">Eventos</h2>
+                <div class="eventsFrame" data-aos="fade-down-right" data-aos-duration="1500" data-aos-offset="200">
+                    <ul class="yearEvents">
+                        <li>
+                            <h3>2023</h3>
+                            <ul class="monthsEvents">
+                                <!-- Ir borrando los meses según van pasando-->
+                                <li>
+                                    <h4>Octubre</h4>
+                                    <ul class="monthsEventsList">
+                                    </ul>
+                                </li>
+                                <hr>
+                                <li>
+                                    <h4>Noviembre</h4>
+                                    <ul class="monthsEventsList">
+                                        <li class="events">
+                                            <h5>3 NOV</h5>
+                                            <p class="hourEvents">
+                                                10:00-14:00 Madrid
+                                            </p>
+                                            <p class="eventDescription">
+                                                Redefining the Electricity Market Agent's Experience through Digitalization and AI.
+                                                <br>
+                                                Estudiantes del máster MUID-HCID. Session 1.
+                                            </p>
+                                        </li>
+                                        <li class="events">
+                                            <h5>24 NOV</h5>
+                                            <p class="hourEvents">
+                                                10:00-14:00 Madrid
+                                            </p>
+                                            <p class="eventDescription">
+                                                Redefining the Electricity Market Agent's Experience through Digitalization and AI.
+                                                <br>
+                                                Estudiantes del máster MUID-HCID. Session 2.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <hr>
+                                <li>
+                                    <h4>Diciembre</h4>
+                                </li>
+                                <!-- Añadir el siguiente mes.-->
+                            </ul>
+                        </li>
+                        
+                        <!-- Añadir el siguiente año.-->
+                        <!--
+                        <hr>
+                        <li>
+                            <h3>2024</h3>
+                            <ul class="monthsEvents">
+                                <li>
+                                    <h4>Enero</h4>
+                                </li>
+                                <hr>
+                                <li>
+                                    <h4>Febrero</h4>
+                                </li>
+                                <hr>
+                                <li>
+                                    <h4>Marzo</h4>
+                                </li>
+                            </ul>
+                        </li>
+                        -->
+                    </ul>
                 </div>
             </section>
             <section id="News" class="containerBodyNews">
-                <h2 class="sectionTitles">Actualidad</h2>
-                <div class="eventsFrame">
-                    <ul class="listNews" id="NewsList">
-
+                <h2 class="sectionTitles" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="200">Actualidad</h2>
+                <div class="eventsFrame" data-aos="fade-down-right" data-aos-duration="1500" data-aos-offset="200">
+                    <ul class="listNews">
+                        <!-- for adding a new do the folowwing-->
+                        <a href="https://www.innova-tsn.com/hackathon-sas-2022/" >
+                            <div class="newsPanel">
+                                <ul class="newsStructure">
+                                    <li>
+                                        <h3>
+                                            Innova-tsn gana la categoría de Energía del Hackathon de 
+                                            SAS por mejorar el servicio de bicicletas de Madrid
+                                        </h3>
+                                        <p class="dateNews">Junio 2022</p>
+                                    </li>
+                                    <li>
+                                        <p class="extraNewsInfo"> 
+                                            Con un proyecto enfocado en fomentar el transporte sostenible
+                                            y mejorar el servicio de BiciMAD, Innova Data Hub ha sido el
+                                            único equipo español en ganar una de las 13 categorías.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <img src="images/Innova_Hackathon2022_Winner_BLOG-300x169.png" alt="Imagen sobre la noticia" class="newsImages">
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
                     </ul>
                 </div>
             </section>
@@ -292,7 +382,7 @@
                     planta 1, despacho 5101 en los edificios de la 
                     ETSIInf de la UPM en el Campus de Montegancedo. 
                 </p>
-                <div class="contactMap" data-aos="zoom-in-down" data-aos-duration="2000">
+                <div class="contactMap" data-aos="zoom-in-down" data-aos-duration="1500">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1312.6728272182859!2d-3.838931971549967!3d40.405243550873166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418f2f1521500d%3A0x7ac343cecc06a4f3!2sBloque%205!5e0!3m2!1ses!2ses!4v1696336941876!5m2!1ses!2ses" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 
