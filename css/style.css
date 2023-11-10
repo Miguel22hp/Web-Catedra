@@ -26,360 +26,317 @@ body h2, body h3{
 
 
 /******************************************/
-/*NAVIGATION HEADER*/
-#ContainerHeader {
-    /*Position*/
-    position: fixed; 
-    top: 0; 
+/*HEADER*/
+.containerHeader {
     z-index: 3;
-
-    /*Size*/
-    width: 100%;   
-
-    /*Color*/
     background-color: #004379;
-
-    /*Animation*/
-    transition: top 0.3s;
+    position: fixed; /*Always moving with the scroll*/
+    top: 0; /*Glued to the top*/
+    width: 100%;   
 }
 
-
-/*NAVIGATION HEADER TITLE*/
+/*HEADER TITLE*/
 .containerTitle ul {
-    /*Position*/
     margin-top: 0;
     padding-left: 0;
-
-    /*Display*/
     display: flex;
     justify-content: left;
 
-    /*Text*/
     list-style-type: none;
 }
-/*NAVIGATION HEADER TITLE SEPARATOR*/
+
 #SeparatorTitle {
-    /*Position*/
+    background-color: #F4B429;
+    border-color: #F4B429;
     height: 4px;
     margin: 0;
     padding: 0;
-
-    /*Size*/
     width: 450px;
-
-    /*Color*/
-    background-color: #F4B429;
-    border-color: #F4B429;
 }
-/*NAVIGATION HEADER MAIN TITLE*/
+
 .mainTitle {
-    /*Position*/
+    color: #FFFFFF;
+    text-align: left;   
     padding-left: 10px;
     margin: 5px;
-
-    /*Color*/
-    color: #FFFFFF;
-
-    /*Text*/
-    text-align: left;   
 }
 
-
-/*NAVIGATION HEADER MENU*/
-/*HEADER NAVIGATION HEADER MENU*/
-#NavigationHeader ul {
-    /*Position*/
-    left: 0; 
+.menuButton {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin: 0;
     padding: 0;
-
-    /*Display*/
-    display: flex; 
-    justify-content: space-around;
-
-    /*Text*/
-    list-style-type: none; 
-}
-/*HEADER NAVIGATION HEADER MENU LINKS*/
-#NavigationHeader ul li a {
-    /*Position*/
-    width: 220px;
-    height: 20px;
-
-    /*Color*/
-    color: white;
-    border-radius: 6px;
-
-    /*Display*/
-    display: block; 
-
-    /*Text*/
-    text-align: center;
-    text-decoration: none; 
-    font-weight: bold;
-
+    background-color: #004379;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
 }
 
 /*HEADER SEPARATORS OF THE NAVIGATION HEADER MENU*/
 #SeparatorUL {
-    /*Position*/
     height: 18px;
     margin-top: 0;
     margin-bottom: 0;
 }
-/*HEADER SEPARATOR OF THE NAVIGATION HEADER MENU*/
+
 #SeparatorLI {
-    /*Position*/
     margin-bottom: 2px;
     margin-top: 0;
-
-    /*Size*/
-    width: 80%;
-
-    /*Color*/
     border-color: #F4B429;
+    width: 80%;
     opacity: 0;
+}
+
+/*HEADER NAVIGATION HEADER MENU*/
+.navigationHeader ul {
+    left: 0; /*Glued to the left margin*/
+    padding: 0;
+
+    display: flex; 
+    justify-content: space-around;
+
+    list-style-type: none; /*Erase the dots of the begginning*/
+}
+
+.navigationHeader ul li a {
+    width: 220px;
+    height: 20px;
+    color: white; /*Color of the letters*/
+
+    display: block; /*The display is like a box*/
+    border-radius: 6px;
+
+    text-align: center;
+    text-decoration: none; /*Erase the underline from the links*/
+}
+
+.navigationHeader ul li a:hover {
+    color: #F4B429; /*Color of the letters when the mouse is over the link*/
+    font-weight: bold;  
+    #SeparatorLI {
+        display:flex;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0.8;
+    }
+}
+
+/*HEADER NAVIGATION HEADER MENU DROPDOWN*/
+@media screen and (max-width: 1248px) {
+    .navigationHeader ul {
+        display: none;
+    }
 }
 
 /******************************************/
+
 /*WHO WE ARE*/
 .containerBodyWhoWeAre {
-    /*Position*/
     padding-top: 100px;
-
-    /*Text*/
     text-align: left;
 }
 
-/*WHO WE ARE MAIN TITLE*/
 #WhoWeAreTitle {
-    /*Color*/
     opacity: 0;
 }
 
-/*WHO WE ARE BACKGROUND VIDEO*/
 #VideoWhoWeAre {
-    /*Position*/
     z-index: -1;
     position: absolute;
     left: 0;
     top: 0;
-
-    /*Size*/
     width: 100%;
-
-    /*Color*/
-    filter:brightness(0.8) blur(10px);
+    filter: blur(5px);
+    filter:brightness(0.5);
     opacity: 0.8;
 }
 
-/*WHO WE ARE LOGOS*/
-.containerBodyWhoWeAre ul {
-    /*Position*/
-    padding: 0;
-    margin-bottom: 0;
+@media screen and (max-width: 1248px) {
+    #VideoWhoWeAre {
+        display: none;
+    }
+}
 
-    /*Display*/
+.containerBodyWhoWeAre ul {
+    text-align: center;
+
     display: flex;    
     justify-content: center;
 
-    /*Text*/
-    text-align: center;
-    list-style-type: none; 
+    list-style-type: none; /*Erase the dots of the begginning*/
+    padding: 0;
 }
-/*WHO WE ARE LOGOS SIZE*/
+
 .containerBodyWhoWeAre ul li {
-    /*Size*/
     width: 33%;
 }
-/*WHO WE ARE LOGOINNOVA*/
+
 #RectangleLogoInnova {
-    /*Position*/
+    background-color: #F4B429;
+    width: 80%;
+
     margin-top: 60%;
     margin-left: 15%;
     padding: 3%;
 
-    /*Size*/
-    width: 80%;
-
-    /*Color*/
-    background-color: #F4B429;
     border-radius: 10px 0 0 10px;
 
-    /*Animation*/
     animation: slideinrightRectangle 2.5s ease-in-out;
 }
 
-/*WHO WE ARE INNOVA CLICK*/
 #InnovaKnowMore {
-    /*Position*/
     position: absolute;
-    padding-top: 5px;
-    padding-right: 7px;
 
-    /*Color*/
     background-color: #F4B429;
     border-radius: 10px;
     color: #004379;
+
+    padding-top: 5px;
+    padding-right: 7px;
 }
-/*WHO WE ARE INNOVA TEXT HOVER*/
+
+@media screen and (max-width: 1248px) {
+    #InnovaKnowMore {
+        display: none;
+    }
+}
+
 #InnovaKnowMore:hover {
     cursor: pointer;
 }
-/*WHO WE ARE INNOVA TEXT*/
+
 #InnovaKnowMoreText {
-    /*Position*/
     z-index: -1;
     position: absolute;
     top: 250px;
     right: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    /*Size*/
+    background-color: #F4B429;
     width: 500px;
     height: 450px;
 
-    /*Color*/
-    background-color: #F4B429;
+    padding-left: 15px;
+    padding-right: 15px;
+
     border-radius: 10px 0 0 10px;
     opacity: 0;
 }
-/*LINK TO INNOVA'S PAGE*/
-#LinkInnova {
-    /*Color*/
-    color: #004379;
 
-    /*Text*/
+#linkInnova {
+    color: #004379;
     text-decoration: none;
     font-weight: bold;
 }
-/*LINK TO INNOVA'S PAGE HOVER*/
-#LinkInnova:hover {
-    cursor: pointer;
-}
 
-/*WHO WE ARE LOGOINNOVA*/
 #LogoInnova{
-    /*Position*/
-    margin-left: -30%;
-
-    /*Size*/
     width: 70%;
 
-    /*Animation*/
+    margin-left: -30%;
+
     animation: slideinrightLogo 2.5s ease-in-out;
 }
 
-/*WHO WE ARE CONTAINER LOGOUPM*/
 #RectangleLogoUpm {
-    /*Position*/
+    background-color: #004379;
+    width: 90%;
+
     margin-top: 15%;
     margin-left: -5%;
     margin-right: 40%;
+
     padding: 3%;
 
-    /*Size*/
-    width: 90%;
-
-    /*Color*/
-    background-color: #004379;
     border-radius: 0 10px 10px 0;
 
-    /*Animation*/
     animation: slideinleftRectangle 2.5s ease-in-out;
 }
-/*WHO WE ARE LOGOUPM*/
-#LogoUpm{    
-    /*Position*/
-    margin-left: 30%;
 
-    /*Size*/
+#LogoUpm{    
     width: 70%;
 
-    /*Animation*/
+    margin-left: 30%;
+
     animation: slideinleftLogo 2.5s ease-in-out;
 }
 
-/*WHO WE ARE LOGOCATEDRA*/
 #LogoCatedra{
-    /*Position*/
+    width: 150%;
+
     margin-top: -10%;
     margin-left: -25%;
 
-    /*Size*/
-    width: 150%;
-
-    /*Animation*/
     transition: opacity 0.5s ease-in-out;
 }
 
-/*WHO WE ARE INTROCUTION CONTAINER*/
 #IntroductionContainer {
-    /*Position*/
     z-index: 2;
     padding-left: 20px;
     padding-right: 20px;
-    position: absolute;
-
-    /*Color*/
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
     background-color: white;
 }
-/*WHO WE ARE INTRODUCTION*/
+
 #Introduction {
-    /*Position*/
     z-index: 2;
     padding: 20px;
-
-    /*Text*/
     text-align: justify;
 }
 
-/*WHO WE ARE SLOGAN CONTAINER*/
-#SloganContainer {
-    /*Position*/
-    z-index: 1;
-    padding-top: 50px;  
-    margin-bottom: 0;
-
-    /*Color*/
-    border-bottom: 5px solid #004379;
+@media screen and (max-width: 1248px) {
+    #Introduction{
+        font-size: 10px;
+    }
 }
-/*WHO WE ARE SLOGAN*/
-#Slogan{
-    /*Position*/
-    padding-top:350px;
-    padding-bottom: 100px;
 
-    /*Color*/
-    color: #004379;
+#SloganContainer {
+    z-index: 1;
+    padding-top: 50px;
+    margin-bottom: 0;
+}
 
-    /*Text*/
+.slogan{
+    text-align: center;
+
     font-weight: bold;
     font-style: italic;
     font-size: 55px;
-    text-align: center;
 
-    /*Animation*/
+    color: #004379;
+
+    padding-top:350px;
+    padding-bottom: 100px;
     animation: fadeIn 3s ease-in-out;
 }
-/*WHO WE ARE SLOGAN BACKGROUND*/
-#SloganBC {
-    /*Position*/
-    z-index: -1;
-    position: absolute;
-    
-    /*Size*/
-    width: 100%;
 
-    /*Color*/
-    filter: blur(5px);  
+@media screen and (max-width: 1248px) {
+    .slogan{
+        font-size: 40px;
+        padding-top: 200px;
+        padding-bottom: 70px;
+        background-color: #004379;
+    }
 }
 
-/******************************************/
+#SloganBC {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    filter: blur(3px);
+    
+}
+
+@media screen and (max-width: 1248px) {
+    #SloganBC {
+        display: none;
+    }
+}
+
 /*OUR PURPOSE*/
 .containerBodyOurPurpose {
-    padding-top: 20px;
+    padding-top: 100px;
     background-color: white
 }
 
@@ -450,63 +407,56 @@ body h2, body h3{
 }
 
 
-/******************************************/
+
 /*TEAM*/
 .containerBodyTeam {
-    /*Position*/
-    padding-top: 20px;
+    padding-top: 100px;
     margin-left: -10px;
 }
 
-/*TEAM CONTAINER*/
 .containerBodyTeam ul {
-    /*Position*/
     padding-top: 30px;
     padding-left: 0px;
+    text-align: center;
 
-    /*Display*/
     display: flex;
     justify-content: space-around;
 
-    /*Text*/
-    text-align: center;
     list-style-type: none; /*Erase the dots of the begginning*/
 }
-/*TEAM CONTAINER CHILD ONE = TEAM GROUP PHOTO*/
-.liTeamPhotosGroup {
-    /*Position*/
-    padding: 20px;
-    padding-left: 10%;
-
-    /*Size*/
+ /*Group photo*/
+.containerBodyTeam ul li:nth-child(1) {
     width: 66%;
-    height: 100%;
-
-    /*Color*/
-    background-color: #004379;
+    padding-left: 10%;
     border-radius: 10px;
 }
-/*TEAM PHOTO GROUP*/
-#TeamPhotosGroup {
-    /*Size*/
-    width: 100%;
 
-    /*Color*/
+.liTeamPhotosGroup {
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    background-color: #004379;
+}
+
+#TeamPhotosGroup {
+    width: 100%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);    
 }
-/*TEAM PHOTO TEXT*/
+
 #TeamPhotosGroupFig {
-    /*Display*/
-    display: block;
-
-    /*Color*/
     color: white;
-
-    /*Text*/
+    display: block;
     text-align: center;
 }
 
-/*TEAM VERTICAL SEPARATOR*/
+.teamPhotos {
+    width: 100%;
+    height: 100%;
+}
+
+/*Vertical Separator*/
 .liVerticalSeparator {
     margin-left: 1.5%;
     margin-right: 1.5%;
@@ -516,29 +466,22 @@ body h2, body h3{
 
 /*Person photo*/
 .liTeamPhotosPerson h3 {
-    /*Position*/
-    margin:0;
-
-    /*Color*/
-    color: white;
+   color: white;
+   margin:0;
 }
 
 .containerBodyTeam ul li:nth-child(3) {
-    /*Position*/
     max-width: 30%;
     margin: 0;
 }
 
 .containerBodyTeam ul li:nth-child(3) ul {
-    /*Display*/
+    text-align: center;
+
     display: flex;
     justify-content: space-around;
 
-    /*Color*/
     list-style-type: none; /*Erase the dots of the begginning*/
-
-    /*Text*/
-    text-align: center;
 }
 
 .containerBodyTeam ul li:nth-child(3) ul li:nth-child(1) {
@@ -647,43 +590,16 @@ body h2, body h3{
 
 }
 
-/******************************************/
-/*EXALUMNI*/
-.containerBodyUPM {
-    padding-top: 20px;
-}
-
-.containerBodyUPM ul{
-    display: flex;
-    flex-direction: row;
-}
-
-.containerBodyUPM ul li{
-    list-style-type: none;
-}
-
-.containerBodyUPM ul li p{
-    margin-left: 15px;
-}
-
-#bck_Exalumni{
-    background-color: #004379;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    box-sizing: border-box;
-    z-index: -1;
-}
 
 
 /*LINEOFRESEARCH*/
 .containerBodyLineOfResearch {
-    padding-top: 20px;
+    padding-top: 100px;
 }
 
 /*EVENTS*/
 .containerBodyEvents {
-    padding-top: 20px;
+    padding-top: 100px;
 }
 
 .eventsFrame{
@@ -789,7 +705,7 @@ body h2, body h3{
 
 /*NEWS*/
 .containerBodyNews {
-    padding-top: 20px;
+    padding-top: 100px;
 }
 
 .listNews a{
@@ -851,7 +767,7 @@ body h2, body h3{
 
 /*WHERETOFINDUS*/
 .containerBodyWhereToFindUs {
-    padding-top: 20px;
+    padding-top: 100px;
 }
 
 .whereToFindUsParagraph {
