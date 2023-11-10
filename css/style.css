@@ -385,6 +385,10 @@ body h2, body h3{
     align-items: center;
 }
 
+.tooltip::-webkit-scrollbar {
+    width: 0;
+}
+
 .tooltip p {
     color: #FFFFFF;
 }
