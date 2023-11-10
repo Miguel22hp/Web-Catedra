@@ -691,14 +691,9 @@ body h2, body h3{
     height: 400px; /* height of the div */
     overflow: auto; /* Allows to scroll in the div */
     background-color: #EEEEEE;
-    background-color: #004379;
+    /*margin-left: 10px; /* Starting 10px to the left of the screen*/
     margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.eventsFrame::-webkit-scrollbar
-{
-    width: 0;
 }
 
 .yearEvents, .monthsEvents, .monthsEventsList{
@@ -714,37 +709,23 @@ body h2, body h3{
   }
 
 .events{
-    background-color: #F4B429;
+    background-color: #FFFFFF;
     height: 150px;
     width: 200px;
     margin-right: 50px;
     margin-bottom: 30px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Oculta cualquier desbordamiento del contenido */
-    position: relative; /* Añade posición relativa al botón */
-}
-
-.events:hover {
-    overflow: auto; /* Activa el desplazamiento interno al pasar el mouse */
-}
-
-.events::-webkit-scrollbar {
-    width: 0; /* Oculta las barras de desplazamiento de WebKit (Chrome, Safari, etc.) */
+    overflow: auto;
 }
 
 .events .eventDescription{
     flex: 1;
 }
 
-.eventsLine{
-    border-color: #F4B429; /*Color de las lineas que separan meses y años*/
-}
-
 /*How to style de years*/
 .yearEvents h3{
     font-size: 20px;
-    color: #F4B429;
-    font-weight: bold;
+    color: #004379;
 }
 
 /*How to style de months*/
@@ -758,20 +739,11 @@ body h2, body h3{
     font-size: 16px;
     margin-bottom: 0;
     padding-bottom: 0;
-    color: #004379;
-    margin-left: 3px;
 }
 
 .hourEvents{
     font-weight: bold;
     font-size: 15px;
-    color: #004379;
-    margin-left: 3px;
-}
-
-.events p{
-    margin-left: 3px;
-
 }
 
 
@@ -799,15 +771,10 @@ body h2, body h3{
     justify-content: center;
 }
 
-.listNews{
-    list-style-type: none;
-}
-
 .newsPanel{
     color: black;
     text-decoration: none;
     background-color: #FFFFFF;
-    background-color: #F4B429;
     height: 150px;
     width: 95%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -842,7 +809,7 @@ body h2, body h3{
 }
 
 .dateNews{
-    /*color: #F4B429;*/
+    color: #F4B429;
 }
 
 .newsStructure li h3{
