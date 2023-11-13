@@ -11,16 +11,17 @@
         <script src="js/addEvents.js"></script>
         <script src="js/addNews.js"></script>
     </head>
+
     <body>
-        <header class="containerHeader" data-aos="fade-down" data-aos-duration="1500">
-            <div class="containerTitle">
-                <ul>
+        <header id="ContainerHeader" data-aos="fade-down" data-aos-duration="1500">
+            <div>
+                <ul id="MainTitle">
                     <li><h1 class="mainTitle">Cátedra Innova-TSN UPM</h1>
                         <hr id="SeparatorTitle"></li>
                 </ul>
             </div>
 
-            <nav class="navigationHeader">
+            <nav id="NavigationHeader">
                 <ul>
                     <hr id="SeparatorUL">
                     <li><a href="#WhoWeAre">¿Quienes somos?<hr id="SeparatorLI"></a></li>
@@ -28,6 +29,8 @@
                     <li><a href="#OurPurpose">Nuestro Proposito<hr id="SeparatorLI"></a></li>
                     <hr id="SeparatorUL">
                     <li><a href="#Team">Equipo<hr id="SeparatorLI"></a></li>
+                    <hr id="SeparatorUL">
+                    <li><a href="#Exalumni">UPM<hr id="SeparatorLI"></a></li>
                     <hr id="SeparatorUL">
                     <!--<li><a href="#LineOfResearch">Linea de Investigación<hr id="SeparatorLI"></a></li>-->
                     <!--<hr id="SeparatorUL">-->
@@ -41,7 +44,7 @@
             </nav>
         </header>
 
-
+        <script src="js/Header.js"></script>
 
         <div class="containerBody">
             <section id="WhoWeAre" class="containerBodyWhoWeAre">
@@ -73,7 +76,8 @@
                 </ul>
                 <div onmouseout="hoverOutInnova()" id="InnovaKnowMoreText">
                     <h3>¿Innova-tsn?</h3>
-                    <p>Innova-tsn es una compañía fundada hace casi 20 años como experta en soluciones 
+                    <p>
+                        Innova-tsn es una compañía fundada hace casi 20 años como experta en soluciones 
                         tecnológicas e inteligentes de negocio, que ha crecido hasta posicionarse como uno 
                         de los líderes indiscutibles del sector en el diseño e implementación de Analítica 
                         Avanzada.
@@ -88,12 +92,15 @@
                         <br><br>
                         Si algo define a Innova-tsn como empresa es su compromiso con sus clientes y con la 
                         excelencia en su trabajo, aplicando una visión de negocio y de futuro, que le permite 
-                        alcanzar los mejores resultados.</p>
-                        <br>
-                        <br>
-                        <a id="linkInnova" target="_blank" href="https://www.innova-tsn.com/en/">Web de Innova-tsn</a>
+                        alcanzar los mejores resultados.
+                    </p>
+                    <br>
+                    <br>
+                    <a id="linkInnova" target="_blank" href="https://www.innova-tsn.com/en/">Web de Innova-tsn</a>
                 </div>
+                
                 <script src="js/InnovaKnowMore.js"></script>
+
                 <div id="IntroductionContainer" data-aos-duration="1000" data-aos="fade-up">
                     <h2><span style="color: #004379;"><strong>Introduccion</strong>:</span></h2>
                     <p id="Introduction">                                
@@ -119,7 +126,7 @@
                 </div>
                 <div id="SloganContainer">
                     <img id="SloganBC" src="images/slogan_bc.jpg" alt="Slogan de la cátedra">
-                    <h2 class="slogan" data-aos="zoom-in-up" data-aos-offset="300" data-aos-duration="1500">"Dónde los datos contruyen la historia"</h2>     
+                    <h2 id="Slogan" data-aos="zoom-in-up" data-aos-offset="300" data-aos-duration="1500">"Dónde los datos contruyen la historia"</h2>     
                 </div>
             </section>
             <section id="OurPurpose" class="containerBodyOurPurpose">
