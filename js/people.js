@@ -5,12 +5,12 @@ var teamData = [
         description: "Alumno de la Universidad Politécnica de Madrid y becario de la Cátedra INNOVA-tsn UPM."
     },
     {
-        image: "images/People/Miguel_Hernando.png",
+        image: "images/People/Miguel_Hernando.jpeg",
         name: "Miguel Hernando Padilla",
         description: ""
     },
     {
-        image: "images/People/Ana_Maria_Niño.png",
+        image: "images/People/Ana_Maria_Niño.jpg",
         name: "Ana María Niño",
         description: ""
     },
@@ -25,7 +25,7 @@ var teamData = [
         description: ""
     },
     {
-        image: "images/People/Juan_Ignacio.png",
+        image: "images/People/Juan_Ignacio_sinfondo.png",
         name: "Juan Ignacio",
         description: ""
     },
@@ -40,46 +40,10 @@ var teamData = [
         description: ""
     },
     {
-        image: "images/People/Nuria.png",
+        image: "images/People/Nuria_1.png",
         name: "Nuria",
         description: ""
     },
-    {
-        image: "images/People/Jaime.png",
-        name: "Jaime",
-        description: ""
-    },
-    {
-        image: "images/People/Elena.png",
-        name: "Elena",
-        description: ""
-    },
-    {
-        image: "images/People/Cristian.png",
-        name: "Cristian",
-        description: ""
-    },
-    {
-        image: "images/People/Angelica.png",
-        name: "Angelica",
-        description: ""
-    },
-    {
-        image: "images/People/Jose_Maria.png",
-        name: "Jose_Maria",
-        description: ""
-    },
-    {
-        image: "images/People/Loic.png",
-        name: "Loic",
-        description: ""
-    },
-    {
-        image: "images/People/Ricardo.png",
-        name: "Ricardo",
-        description: ""
-    },
-
 ];
 
 var currentIndex = 0;
