@@ -13,9 +13,6 @@ const oldLogoUPM = LogoAdaptUPM.style.display;
 const LogoAdaptInnova = document.getElementById("LogoAdaptInnova");
 const oldLogoInnova = LogoAdaptInnova.style.display;
 
-const LogoAdaptCatedra = document.getElementById("LogoAdaptCatedra");
-const oldLogoCatedra = LogoAdaptCatedra.style.display;
-
 const Intro = document.getElementById("IntroductionContainer");
 
 const slogan = document.getElementById("Slogan");

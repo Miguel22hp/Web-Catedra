@@ -196,9 +196,6 @@ body h2, body h3{
     /*Color*/
     background-color: #F4B429;
     border-radius: 10px 0 0 10px;
-
-    /*Animation*/
-    animation: slideinrightRectangle 2.5s ease-in-out;
 }
 
 /*WHO WE ARE INNOVA CLICK*/
@@ -469,7 +466,7 @@ body h2, body h3{
     list-style-type: none; /*Erase the dots of the begginning*/
 }
 /*TEAM CONTAINER CHILD ONE = TEAM GROUP PHOTO*/
-.liTeamPhotosGroup {
+#liTeamPhotosGroup {
     /*Position*/
     padding: 20px;
     padding-left: 10%;
@@ -503,15 +500,20 @@ body h2, body h3{
 }
 
 /*TEAM VERTICAL SEPARATOR*/
-.liVerticalSeparator {
+#liVerticalSeparator {
+    /*Position*/
     margin-left: 1.5%;
     margin-right: 1.5%;
+
+    /*Size*/
     width: 0.18%;
+
+    /*Color*/
     background-color: #F4B429;
 }
 
 /*Person photo*/
-.liTeamPhotosPerson h3 {
+#liTeamPhotosPerson h3 {
     /*Position*/
     margin:0;
 
@@ -538,109 +540,105 @@ body h2, body h3{
 }
 
 .containerBodyTeam ul li:nth-child(3) ul li:nth-child(1) {
+    /*Position*/
     margin-left: 0;
     padding-left: 0;
     padding-right: 10px;
+
+    /*Size*/
     width: 10%;
 }
 
 #ButtonLeft {
+    /*Size*/
     height: 100%;
 
+    /*Text*/
     font-size: 300%;
     color: white;
 
+    /*Color*/
     background-color: #0a5a9c;
-
     border-color: #004379;
     border-radius: 5px;
     border-width: 1.5px;
-
-    @media screen and (max-width: 1080px) {
-        height: 100%;
-        font-size: 150%;
-    };
 }
 
 .containerBodyTeam ul li:nth-child(3) ul li:nth-child(2) {
+    /*Size*/
     width: 80%;
 }
 
 #TeamPhotosPerson {
+    /*Size*/
     width: 100%;
+
+    /*Display*/
     display: flex;
     align-items: center;
 
+    /*Color*/
     opacity: 1;
-    transition: opacity 0.5s;
 }
 
 #TeamPhotosPersonFig {
-    color: white;
+    /*Display*/
     display: block;
-    text-align: center;
-    padding-top: 5px;
-    
+
+    /*Color*/
+    color: white;
     opacity: 1;
-    transition: opacity 0.5s;
+
+    /*Text*/
+    text-align: center;
+
+    /*Position*/
+    padding-top: 5px;
 }
 
-.liTeamPhotosPerson {
+#liTeamPhotosPerson {
+    /*Size*/
     width: 100%;
     height: 100%;
 
+    /*Position*/
     padding: 20px;
 
+    /*Color*/
     background-color: #004379;
     border-radius: 10px;
 }
 
-.liTeamPhotosPerson ul {
+#liTeamPhotosPerson ul {
+    /*Position*/
     padding: 3%;
 }
 
 .containerBodyTeam ul li:nth-child(3) ul li:nth-child(3) {
-    width: 10%;
+    /*Position*/
     margin-left: 0;
     padding-right: 0;
     padding-left: 10px;
+
+    /*Size*/
+    width: 10%;
 }
 
 #ButtonRight {
+    /*Size*/
     height: 100%;
 
+    /*Text*/
     font-size: 300%;
     color: white;
 
+    /*Color*/
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     background-color: #0a5a9c;
 
     border-color: #004379;
     border-radius: 5px;
     border-width: 1.5px;
-
-    @media screen and (max-width: 1080px) {
-        height: 100%;
-        font-size: 150%;
-    };
-}
-
-
-@media screen and (max-width: 1080px) {
-    .liTeamPhotosGroup {
-        display: none;
-    }
-
-    .liVerticalSeparator {
-        display: none;
-    }
-
-    .containerBodyTeam ul li:nth-child(3) {
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 100%;
-    }
-
 }
 
 /******************************************/
