@@ -45,9 +45,6 @@ links.forEach(link => {
   });
 });
 
-window.addEventListener("resize", HeaderWidth);
-
-
 function HeaderWidth() {  
   if (window.innerWidth < 1248) {
     navigationHeader.style.display = "none";
@@ -58,3 +55,5 @@ function HeaderWidth() {
   }
 }
 
+window.addEventListener("resize", HeaderWidth);
+document.addEventListener('DOMContentLoaded', HeaderWidth);
