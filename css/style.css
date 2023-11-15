@@ -38,12 +38,12 @@ body h2, body h3{
 /*NAVIGATION HEADER TITLE SEPARATOR*/
 #SeparatorTitle {
     /*Position*/
-    height: 4px;
+    height: 0.3vh;
     margin: 0;
     padding: 0;
 
     /*Size*/
-    width: 450px;
+    width: 50vh;
 
     /*Color*/
     background-color: #F4B429;
@@ -62,9 +62,9 @@ body h2, body h3{
     /*Text*/
     list-style-type: none;
 }
-.mainTitle {
+
+#MainTitle h1 {
     /*Position*/
-    padding-left: 10px;
     margin: 5px;
 
     /*Color*/
@@ -73,6 +73,7 @@ body h2, body h3{
     /*Text*/
     text-align: left; 
     list-style-type: none;  
+    font-size: 4vh;
 }
 
 
