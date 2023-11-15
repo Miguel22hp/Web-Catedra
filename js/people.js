@@ -7,56 +7,56 @@ var teamData = [
     {
         image: "images/People/Miguel_Hernando.png",
         name: "Miguel Hernando Padilla",
-        description: ""
+        description: "Alumno de la unIVersidad Politécnica de Madrid y becario de la Cátedra INNOVA-tsn UPM."
     },
     {
         image: "images/People/Ana_Maria_Niño.png",
         name: "Ana María Niño",
-        description: ""
+        description: "Coordinadora de la Cátedra INNOVA-tsn UPM por parte de Innova-tsn."
     },
     {
         image: "images/People/Begoña_Vega.png",
         name: "Begoña Vega",
-        description: ""
+        description: "Head of AI Models & Applications AI Solutions & Strategy en Innova-tsn."
     },
     {
         image: "images/People/Jose_Ignacio_Bernaldo.png",
         name: "Jose Ignacio Bernaldo",
-        description: ""
+        description: "Advance Analytics Manager en Innova-tsn."
     },
     {
         image: "images/People/Juan_Ignacio.png",
         name: "Juan Ignacio",
-        description: ""
+        description: "UK Country Manager & Global Head of AI en Innova-tsn."
     },
     {
         image: "images/People/Mencía_Vega.png",
         name: "Mencía Vega",
-        description: ""
+        description: "Talento y Cultura en Innova-tsn."
     },
     {
         image: "images/People/Rosario_Guerra.png",
         name: "Rosario Guerra",
-        description: ""
+        description: "Directora de la Cátedra INNOVA-tsn UPM por parte de Innova-tsn."
     },
     {
         image: "images/People/Nuria.png",
-        name: "Nuria",
-        description: ""
+        name: "Nuria Estebas",
+        description: "Marketing  & Communication Manager en Innova-tsn."
     },
     {
         image: "images/People/Jaime.png",
-        name: "Jaime",
+        name: "Jaime Ramírez",
         description: ""
     },
     {
         image: "images/People/Elena.png",
-        name: "Elena",
-        description: ""
+        name: "Elena Villalba",
+        description: "Directora de la Cátedra INNOVA-tsn UPM por parte de la Universidad Politécnica de Madrid."
     },
     {
         image: "images/People/Cristian.png",
-        name: "Cristian",
+        name: "Cristian Moral",
         description: ""
     },
     {
