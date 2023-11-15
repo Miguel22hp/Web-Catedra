@@ -3,6 +3,7 @@ const navbar = document.getElementById("ContainerHeader");
 const navigationHeader = document.getElementById("NavigationHeader");
 const navHeader = document.getElementById("NavigationHeaderUl");
 const links = navigationHeader.querySelectorAll("li a");
+const oldNav = navigationHeader.style.display;
 
 // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
 window.onscroll = function() {
@@ -45,3 +46,15 @@ links.forEach(link => {
 });
 
 window.addEventListener("resize", HeaderWidth);
+
+
+function HeaderWidth() {  
+  if (window.innerWidth < 1248) {
+    navigationHeader.style.display = "none";
+  }
+  else
+  {
+    navigationHeader.style.display = oldNav || "";
+  }
+}
+
