@@ -6,8 +6,7 @@
  */
 function createFormerStudent(){
     const jsonFile = "https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/17-add-ex-alumnos/json/exAlumnos.json";
-    //const jsonFile = "https://raw.githubusercontent.com/Miguel22hp/json_events_repo/main/exAlumnos.json";
-    const routeImages = "https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/17-add-ex-alumnos/images/People/Javier_Sanchez.png";
+    const routeImages = 'https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/17-add-ex-alumnos/images/'
 
     return new Promise((resolve, reject) => {
         const formerStudent = []
@@ -75,7 +74,9 @@ function createFormerStudent(){
                         image.alt = "Foto del exAlumno con nombre " + exAlumno.nombre_Alumno;
                         image.className = "exAlummniPhoto";
                         //image.src = exAlumno.link_photo;
-                        image.src = routeImages;
+                        var imagesCompleted = routeImages + exAlumno.link_photo;
+                        image.src = imagesCompleted;
+                        console.log(image.src);
                         photo.appendChild(image);
 
 
@@ -139,9 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            console.log("Número de botones izquierdos: " + buttonsIzq.length);
-            console.log("Número de botones derechos: " + buttonsRight.length);
-
             formerStudents = students;
             let continueLoop = true;
             let index = 0;
@@ -163,14 +161,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             buttonsIzq.forEach(buttonIzq => {
                 buttonIzq.addEventListener("click", function () {
-                    console.log("Pulsado botón izquierdo");
                     handleButtonClick("left");
                 });
             });
 
             buttonsRight.forEach(buttonRight1 => {
                 buttonRight1.addEventListener("click", function () {
-                    console.log("Pulsado botón derecho");
                     handleButtonClick("right");
                 });
             });
@@ -182,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function handleButtonClick(direction)
         {
-            console.log("H.Pulsado botón " + direction);
             var actualExAlumni = document.querySelector(".exAlumni");
             var id = actualExAlumni.dataset.id;
             var newId;
