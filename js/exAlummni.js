@@ -7,6 +7,7 @@
 function createFormerStudent(){
     const jsonFile = "https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/17-add-ex-alumnos/json/exAlumnos.json";
     //const jsonFile = "https://raw.githubusercontent.com/Miguel22hp/json_events_repo/main/exAlumnos.json";
+    const routeImages = "https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/17-add-ex-alumnos/images/People/Javier_Sanchez.png";
 
     return new Promise((resolve, reject) => {
         const formerStudent = []
@@ -30,16 +31,16 @@ function createFormerStudent(){
                         //Creating the left button
                         const buttonLeftLi = document.createElement('li');
                         const buttonLeft = document.createElement('button');
-                        buttonLeft.id = "ButtonLeftExAlumni";
-                        buttonLeft.className = "buttonExAlumni";
+                        //buttonLeft.id = "ButtonLeftExAlumni";
+                        buttonLeft.className = "buttonExAlumni buttonLeftExAlumni";
                         buttonLeft.textContent = "<";
                         buttonLeftLi.appendChild(buttonLeft);
                         
                         //Creating the right button
                         const buttonRightLi = document.createElement('li');
                         const buttonRight = document.createElement('button');
-                        buttonRight.id = "ButtonRightExAlumni";
-                        buttonRight.className = "buttonExAlumni";
+                        //buttonRight.id = "ButtonRightExAlumni";
+                        buttonRight.className = "buttonExAlumni buttonRightExAlumni";
                         buttonRight.textContent = ">";
                         buttonRightLi.appendChild(buttonRight);
 
@@ -73,7 +74,8 @@ function createFormerStudent(){
                         const image = document.createElement('img');
                         image.alt = "Foto del exAlumno con nombre " + exAlumno.nombre_Alumno;
                         image.className = "exAlummniPhoto";
-                        image.src = exAlumno.link_photo;
+                        //image.src = exAlumno.link_photo;
+                        image.src = routeImages;
                         photo.appendChild(image);
 
 
@@ -119,9 +121,27 @@ function createFormerStudent(){
  */
 document.addEventListener("DOMContentLoaded", function () {
     let formerStudents;
+    let buttonsIzq = [];
+    let buttonsRight = [];
 
     createFormerStudent()
         .then(students => {
+            students.forEach(exStudent => {
+                var buttonizq1 = exStudent.querySelector(".buttonExAlumni");
+                var buttonright1 = exStudent.querySelector(".buttonRightExAlumni");
+
+                if (buttonizq1) {
+                    buttonsIzq.push(buttonizq1);
+                }
+
+                if (buttonright1) {
+                    buttonsRight.push(buttonright1);
+                }
+            });
+
+            console.log("Número de botones izquierdos: " + buttonsIzq.length);
+            console.log("Número de botones derechos: " + buttonsRight.length);
+
             formerStudents = students;
             let continueLoop = true;
             let index = 0;
@@ -140,12 +160,64 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Incrementa el índice para pasar al siguiente estudiante
                 index++;
             }
+
+            buttonsIzq.forEach(buttonIzq => {
+                buttonIzq.addEventListener("click", function () {
+                    console.log("Pulsado botón izquierdo");
+                    handleButtonClick("left");
+                });
+            });
+
+            buttonsRight.forEach(buttonRight1 => {
+                buttonRight1.addEventListener("click", function () {
+                    console.log("Pulsado botón derecho");
+                    handleButtonClick("right");
+                });
+            });
+
         })
         .catch(error => {
             console.error(error);
         });
 
+        function handleButtonClick(direction)
+        {
+            console.log("H.Pulsado botón " + direction);
+            var actualExAlumni = document.querySelector(".exAlumni");
+            var id = actualExAlumni.dataset.id;
+            var newId;
+
+            if (direction === "left") {
+                console.log(id);
+                newId = id == 0 ? formerStudents.length - 1 : id - 1;
+                console.log(newId);
+            } else {
+                console.log(id);
+                newId = id == formerStudents.length - 1 ? 0 : parseInt(id) + 1;
+                console.log(newId);
+            }
+
+            let continueLoop = true;
+            let index = 0;
+            var infoExAlumni = document.getElementById("ExAlumniContainer");
+
+            while (continueLoop && index < formerStudents.length) {
+                const currentStudent = formerStudents[index];
+
+                if (currentStudent.dataset.id == newId) {
+                    continueLoop = false;
+                    infoExAlumni.innerHTML = '';
+                    infoExAlumni.appendChild(currentStudent);
+                }
+
+                index++;
+            }
+        }
+        
+
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
