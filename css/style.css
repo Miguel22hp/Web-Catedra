@@ -666,7 +666,7 @@ body h2, body h3{
     display: flex;
     flex-direction: row;
     background-color: #004379;
-    /*justify-content: space-around;*/
+    justify-content: space-around;
     /*align-items: center;*/
     color: #FFFFFF;
     font-size: 16px;
