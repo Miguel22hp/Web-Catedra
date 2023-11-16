@@ -77,7 +77,7 @@ function WhoWeAreWidth() {
     text.style.display = oldText || "";
     LogoAdaptInnova.style.display = oldLogoInnova || "";
     LogoAdaptUPM.style.display = oldLogoUPM || "";
-    LogoAdaptCatedra.style.display = oldLogoCatedra || "";
+    //LogoAdaptCatedra.style.display = oldLogoCatedra || "";
 
     section.style.paddingTop = "100px";
 
