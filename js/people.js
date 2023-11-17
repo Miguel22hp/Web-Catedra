@@ -47,37 +47,37 @@ var teamData = [
     {
         image: "images/People/Jaime.png",
         name: "Jaime Ramírez",
-        description: ""
+        description: "Salud, eLearning y psicología en la UPM."
     },
     {
         image: "images/People/Elena.png",
         name: "Elena Villalba",
-        description: "Directora de la Cátedra INNOVA-tsn UPM por parte de la Universidad Politécnica de Madrid."
+        description: "Directora de la Cátedra INNOVA-tsn UPM por parte de la Universidad Politécnica de Madrid. Human-Computer Interaction/User Experience, personas mayores y salud  en la UPM."
     },
     {
         image: "images/People/Cristian.png",
         name: "Cristian Moral",
-        description: ""
+        description: "Human-Computer Interaction/User Experience, Virtual Reality en la UPM."
     },
     {
         image: "images/People/Angelica.png",
-        name: "Angelica",
-        description: ""
+        name: "Angélica de Antonio",
+        description: "Human-Computer Interaction/User Experience, Virtual Reality, eLearning y Psicología en la UPM."
     },
     {
         image: "images/People/Jose_Maria.png",
-        name: "Jose_Maria",
-        description: ""
+        name: "Jose María Barambones",
+        description: "Human-Computer Interaction/User Experience, Virtual Reality, Games and AI  en la UPM."
     },
     {
         image: "images/People/Loic.png",
-        name: "Loic",
-        description: ""
+        name: "Loic Martínez",
+        description: "Human-Computer Interaction/User Experience y accesibilidad en la UPM."
     },
     {
         image: "images/People/Ricardo.png",
-        name: "Ricardo",
-        description: ""
+        name: "Ricardo Imbert",
+        description: "Human-Computer Interaction/User Experience y agentes en la UPM."
     },
 
 ];

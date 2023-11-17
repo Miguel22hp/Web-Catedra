@@ -570,10 +570,10 @@ body h2, body h3{
 
 #liTeamPhotosPerson {
     /*Size*/
-    height: 620px;
+    height: 640px;
     width: 30%;
     max-width: 30%;
-    max-height: 620px;
+    max-height: 640px;
     margin: 0;
 
     /*Position*/
