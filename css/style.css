@@ -521,37 +521,9 @@ body h2, body h3{
     color: white;
 }
 
-.containerBodyTeam ul li:nth-child(3) {
-    /*Position*/
-    max-width: 30%;
-    margin: 0;
-}
-
-.containerBodyTeam ul li:nth-child(3) ul {
-    /*Display*/
-    display: flex;
-    justify-content: space-around;
-
-    /*Color*/
-    list-style-type: none; /*Erase the dots of the begginning*/
-
-    /*Text*/
-    text-align: center;
-}
-
-.containerBodyTeam ul li:nth-child(3) ul li:nth-child(1) {
-    /*Position*/
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 10px;
-
-    /*Size*/
-    width: 10%;
-}
-
 #ButtonLeft {
     /*Size*/
-    height: 100%;
+    height: 600px;
 
     /*Text*/
     font-size: 300%;
@@ -598,8 +570,11 @@ body h2, body h3{
 
 #liTeamPhotosPerson {
     /*Size*/
-    width: 100%;
-    height: 100%;
+    height: 620px;
+    width: 30%;
+    max-width: 30%;
+    max-height: 620px;
+    margin: 0;
 
     /*Position*/
     padding: 20px;
@@ -614,26 +589,15 @@ body h2, body h3{
     padding: 3%;
 }
 
-.containerBodyTeam ul li:nth-child(3) ul li:nth-child(3) {
-    /*Position*/
-    margin-left: 0;
-    padding-right: 0;
-    padding-left: 10px;
-
-    /*Size*/
-    width: 10%;
-}
-
 #ButtonRight {
     /*Size*/
-    height: 100%;
+    height: 600px;
 
     /*Text*/
     font-size: 300%;
     color: white;
 
     /*Color*/
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     background-color: #0a5a9c;
 
     border-color: #004379;

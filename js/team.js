@@ -15,17 +15,22 @@ const oldButtonLeft = buttonLeft.style.display;
 
 function teamWidth() {
     if (window.innerWidth < 1248) {
+
+        photos.style.height="520px";
+
         teamPhotos.style.display = "none"
         verticalSeparator.style.display = "none";
 
-        buttonRight.style.height = "100%";
+        buttonRight.style.height = "500px";
         buttonRight.style.fontSize = "150%";
 
-        buttonLeft.style.height = "100%";
+        buttonLeft.style.height = "500px";
         buttonLeft.style.fontSize = "150%";
     }
     else
     {
+        photos.style.height="620px";
+
         teamPhotos.style.display = oldTeamPhotos || "";
         verticalSeparator.style.display = oldVerticalSeparator || "";
 
