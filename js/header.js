@@ -5,6 +5,22 @@ const navHeader = document.getElementById("NavigationHeaderUl");
 const links = navigationHeader.querySelectorAll("li a");
 const oldNav = navigationHeader.style.display;
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetElement = document.querySelector(this.getAttribute('href'));
+      const targetPosition = targetElement.offsetTop;
+      const duration = 1000; // Duración de la animación en milisegundos (puedes ajustarla)
+
+      window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+      });
+  });
+});
+
+
 // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
 window.onscroll = function() {
     const currentScrollPos = window.scrollY;
