@@ -24,12 +24,6 @@ const oldBckg = bckg.style.backgroundImage;
 const bckgSlogan = document.getElementById("SloganBC");
 const oldBckgSlogan = bckgSlogan.style.backgroundImage;
 
-const btnDerecha = document.getElementById("ButtonRight");
-const oldbtnDerecha = btnDerecha.style.display;
-
-const btnIzquierda = document.getElementById("ButtonLeft");
-const oldbtnIzquierda = btnIzquierda.style.display;
-
 // When users click on the text "Know More", It shows the text.
 function clickInnova() {
   var PopUp = document.getElementById("InnovaKnowMoreText");
@@ -77,8 +71,6 @@ function WhoWeAreWidth() {
     bckgSlogan.style.display = "none";
 
     slogan.style.paddingTop = "0px";
-
-    btnDerecha.style.minHeight = "300px";
   }
   else
   {
@@ -95,8 +87,6 @@ function WhoWeAreWidth() {
     bckgSlogan.style.display = oldBckgSlogan || "";
 
     slogan.style.paddingTop = "350px";
-
-    btnDerecha.style.display = oldbtnDerecha || "";
   }
 }
 
