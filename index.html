@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="images/CatedraLogo_sinLetras.svg">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <title>Catedra Innova-tsn UPM</title>
+        <title>Cátedra Innova-tsn UPM</title>
         <script src="js/eventsYearMonths.js"></script>
         <script src="js/addEvents.js"></script>
         <script src="js/addNews.js"></script>
@@ -16,10 +16,12 @@
         <header id="ContainerHeader" data-aos="fade-down" data-aos-duration="1500">
             <div>
                 <ul id="MainTitle">
-                    <li><h1 class="mainTitle">Cátedra Innova-TSN UPM</h1>
-                        <hr id="SeparatorTitle"></li>
+                    <li>
+                        <h1>Cátedra Innova-TSN UPM</h1>
+                        <hr id="SeparatorTitle">
+                    </li>
                 </ul>
-            </div>
+            </div> 
 
             <nav id="NavigationHeader">
                 <ul>
@@ -47,25 +49,26 @@
         <script src="js/header.js"></script>
 
         <div class="containerBody">
-            <section id="WhoWeAre" class="containerBodyWhoWeAre">
+            <section id="WhoWeAre"  class="containerBodyWhoWeAre">
+
                 <video autoplay muted loop id="VideoWhoWeAre">
                     <source src="video/bc_WhoWeAre.mp4" type="video/mp4">
                 </video>
+
                 <h2 class="sectionTitles" id="WhoWeAreTitle" data-aos="fade-right">¿Quienes somos?</h2>
+                
                 <ul>
-                    <li>
+                    <li id="LogoAdaptUPM">
                         <figure data-aos="fade-right" data-aos-duration="1500" id="RectangleLogoUpm">
                             <img id="LogoUpm" src="images/BarraPolit.svg" alt="Logo Upm">                        
                         </figure>
                     </li>
-                    <li>
-                        <figure id="RectangleLogoCatedra" data-aos="fade-down" data-aos-duration="1500" onmouseover="showIntroduction()" onmouseout="hideIntroduction()">
+                    <li id="LogoAdaptCated">
+                        <figure id="RectangleLogoCatedra" data-aos="fade-down" data-aos-duration="1500">
                             <img id="LogoCatedra" src="images/CatedraLogo.png" alt="Logo de la cátedra Innova-TSN UPM">
                         </figure>
-                        <script src="js/logoAnimation.js"></script>
                     </li>
-                    <li>
-
+                    <li id="LogoAdaptInnova">
                         <figure data-aos="fade-left" data-aos-duration="1500" id="RectangleLogoInnova">
                             <img id="LogoInnova" src="images/InnovaLogo.png" alt="Logo de Innova-TSN">
                             <div id="InnovaKnowMore" onclick="clickInnova()">
@@ -74,6 +77,7 @@
                         </figure>
                     </li>
                 </ul>
+                
                 <div onmouseout="hoverOutInnova()" id="InnovaKnowMoreText">
                     <h3>¿Innova-tsn?</h3>
                     <p>
@@ -98,8 +102,6 @@
                     <br>
                     <a id="linkInnova" target="_blank" href="https://www.innova-tsn.com/en/">Web de Innova-tsn</a>
                 </div>
-                
-                <script src="js/InnovaKnowMore.js"></script>
 
                 <div id="IntroductionContainer" data-aos-duration="1000" data-aos="fade-up">
                     <h2><span style="color: #004379;"><strong>Introduccion</strong>:</span></h2>
@@ -124,11 +126,16 @@
                         está preparada para impulsar la innovación, aprovechar las sinergias de investigación, 
                         potenciar el talento y tener un impacto duradero en la sociedad.</p>
                 </div>
+
                 <div id="SloganContainer">
-                    <img id="SloganBC" src="images/slogan_bc.jpg" alt="Slogan de la cátedra">
+                    <img id="SloganBC" style="display: none;" src="images/slogan_bc.jpg" alt="Slogan de la cátedra">
                     <h2 id="Slogan" data-aos="zoom-in-up" data-aos-offset="300" data-aos-duration="1500">"Dónde los datos contruyen la historia"</h2>     
                 </div>
+
+                <script src="js/whoWeAre.js"></script>
+
             </section>
+
             <section id="OurPurpose" class="containerBodyOurPurpose">
                 <h2 class="sectionTitles" data-aos="fade-right">Nuestro Proposito</h2>
                 <ul data-aos="fade-right">
@@ -246,21 +253,21 @@
                 </ul>
                 
             </section>
+
             <section id="Team" class="containerBodyTeam">
                 <h2 class="sectionTitles" data-aos="fade-right">Equipo</h2>
                 <ul>
-                    <li class="liTeamPhotosGroup" data-aos="fade-right">
+                    <li id="liTeamPhotosGroup" data-aos="fade-right">
                         <img id="TeamPhotosGroup" src="images/Group.png" alt="Foto del equipo completo">
-                            <figcaption id="TeamPhotosGroupFig">
-                                <h3>Equipo Cátedra INNOVA-tsn UPM</h3>
-                            </figcaption>
+                        <figcaption id="TeamPhotosGroupFig">
+                            <h3>Equipo Cátedra INNOVA-tsn UPM</h3>
+                        </figcaption>
                     </li>
-                    <li class="liVerticalSeparator" data-aos="fade-right"></li>
-                    <li class="liTeamPhotosPerson" data-aos="fade-right">
-                        <h3>Personas del Equipo de la Cátedra</h3>
+                    <li id="liVerticalSeparator" data-aos="fade-right"></li>
+                    <li id="liTeamPhotosPerson" data-aos="fade-right">
                         <ul>
                             <li><button id="ButtonLeft"><</button></li>
-                            <li>
+                            <li id="AdaptPeople">
                                 <img id="TeamPhotosPerson" src="images/People/Javier_Sanchez.png" alt="Foto de un miembro del equipo">
                                 <figcaption id="TeamPhotosPersonFig">
                                     <h3>Javier Sánchez Tirados</h3>
@@ -272,7 +279,10 @@
                         </ul>
                         <script src="js/people.js"></script>
                     </li> 
-                </ul>      
+                </ul>  
+
+                <script src="js/team.js"></script>
+                
             </section>
 
             <!--<section id="LineOfResearch" class="containerBodyLineOfResearch">
