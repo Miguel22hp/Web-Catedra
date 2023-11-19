@@ -21,8 +21,6 @@ const oldSlogan = slogan.style.display;
 const bckg = document.getElementById("VideoWhoWeAre");
 const oldBckg = bckg.style.backgroundImage;
 
-const bckgSlogan = document.getElementById("SloganBC");
-const oldBckgSlogan = bckgSlogan.style.backgroundImage;
 
 // When users click on the text "Know More", It shows the text.
 function clickInnova() {
@@ -68,7 +66,6 @@ function WhoWeAreWidth() {
     Intro.style.position = "relative";
 
     bckg.style.display = "none";
-    bckgSlogan.style.display = "none";
 
     slogan.style.paddingTop = "0px";
   }
@@ -84,7 +81,6 @@ function WhoWeAreWidth() {
     Intro.style.position = "absolute";
 
     bckg.style.display = oldBckg || "";
-    bckgSlogan.style.display = oldBckgSlogan || "";
 
     slogan.style.paddingTop = "350px";
   }

@@ -473,7 +473,7 @@ body h2, body h3{
 
     /*Size*/
     width: 66%;
-    height: 640px;
+    height: 720px;
 
     /*Color*/
     background-color: #004379;
@@ -544,6 +544,7 @@ body h2, body h3{
 #TeamPhotosPerson {
     /*Size*/
     width: 100%;
+    max-width: 100%;
 
     /*Display*/
     display: flex;
@@ -570,10 +571,10 @@ body h2, body h3{
 
 #liTeamPhotosPerson {
     /*Size*/
-    height: 640px;
+    height: 720px;
     width: 30%;
     max-width: 30%;
-    max-height: 640px;
+    max-height: 720px;
     margin: 0;
 
     /*Position*/
