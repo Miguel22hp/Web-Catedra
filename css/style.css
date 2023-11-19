@@ -131,7 +131,6 @@ body h2, body h3{
     border-color: #F4B429;
     opacity: 0;
 }
-
 /******************************************/
 /*WHO WE ARE*/
 .containerBodyWhoWeAre {
@@ -362,6 +361,7 @@ body h2, body h3{
     width: 100%;
 
     /*Color*/
+    display: none;
     filter: blur(5px);  
 }
 
