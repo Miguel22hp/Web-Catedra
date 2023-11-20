@@ -100,7 +100,22 @@ function createEvents() {
         
         //Añadir los eventos a su correspondiente posición en el calendario de eventos, y que no se muestren si la fecha actual es posterior a su fecha
         eventos.forEach((elementLI)=> {
-          const fecha = elementLI.dataset.fecha;
+          const mes = elementLI.dataset.mes;
+          if(month <= mes)
+          {
+            var idMes = elementLI.dataset.anio + "-" + (elementLI.dataset.mes);
+
+            //Selecciono el li con el identificador del mes y año que corresponden a este evento
+            var liMesAñadir = document.getElementById(idMes);
+
+            if (liMesAñadir !== null) {              
+              //Seleccionas la lista de ese mes en la que se añaden sus elementos y añado el elemento
+              var ulDentroLi = liMesAñadir.querySelector('ul');
+              ulDentroLi.appendChild(elementLI);
+            }
+          }
+          
+          /*const fecha = elementLI.dataset.fecha;
           if(hoy <= fecha)
           {            
             var idMes = elementLI.dataset.anio + "-" + (elementLI.dataset.mes);
@@ -115,7 +130,8 @@ function createEvents() {
             }
 
 
-          }
+          }*/
+
         });
       })
       .catch(error => {
