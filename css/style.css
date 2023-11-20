@@ -641,6 +641,10 @@ body h2, body h3{
     margin-right: 2%;
 }
 
+.exAlumniPhotoContainer, .experienceInnova-TSNContainer, .personalInfoExAlumni{
+    width: 30%;
+}
+
 .exAlumniPhotoContainer{
     display: flex;
     align-items: center; /* Agrega esta línea para centrar verticalmente la imagen */
@@ -654,6 +658,7 @@ body h2, body h3{
 .personalInfoExAlumni{
     margin: 0;
     text-align: left;
+    width: auto;
 }
 
 .personalInfoExAlumni h4{
@@ -680,14 +685,10 @@ body h2, body h3{
     font-style: italic;
 }
 
-.buttonRightLi {
+.buttonRightLi, .buttonLeftLi {
     display: flex;
     align-items: center;
-}
-
-.buttonLeftLi {
-    display: flex;
-    align-items: center;
+    width: 5%;
 }
 
 .buttonExAlumni
