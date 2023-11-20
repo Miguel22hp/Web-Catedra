@@ -688,7 +688,6 @@ body h2, body h3{
 .buttonRightLi, .buttonLeftLi {
     display: flex;
     align-items: center;
-    width: 5%;
 }
 
 .buttonExAlumni
