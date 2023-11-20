@@ -454,7 +454,7 @@ body h2, body h3{
 /*TEAM CONTAINER*/
 .containerBodyTeam ul {
     /*Position*/
-    padding-top: 30px;
+    /*padding-top: 30px;/*TODO:*/
     padding-left: 0px;
 
     /*Display*/
@@ -609,7 +609,6 @@ body h2, body h3{
 /******************************************/
 /*EXALUMNI*/
 .containerBodyUPM {
-    padding-top: 20px;
     margin-top: 5%;
 }
 .exAlumniInfoContainer{
@@ -626,22 +625,20 @@ body h2, body h3{
 }
 
 .exAlumniInfoContainer ul{
-    /*height: 100%; /* Otra altura adecuada */
     display: flex;
     flex-direction: row;
     background-color: #004379;
-    justify-content: space-around;
-    /*align-items: center;*/
     color: #FFFFFF;
     font-size: 16px;
-    
+    margin: 0;
+    height: 100%;
 }
 
 
 .exAlumniInfoContainer ul li{
     list-style-type: none;
-    height: auto;
-
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .exAlumniPhotoContainer{
@@ -651,8 +648,6 @@ body h2, body h3{
 
 .exAlummniPhoto{
     margin-bottom: 10%;
-    max-width: 100%; /* Ajusta el ancho de la imagen según sea necesario */
-    max-height: 100%; /* Ajusta la altura de la imagen según sea necesario */
 
 }
 
@@ -685,6 +680,16 @@ body h2, body h3{
     font-style: italic;
 }
 
+.buttonRightLi {
+    display: flex;
+    align-items: center;
+}
+
+.buttonLeftLi {
+    display: flex;
+    align-items: center;
+}
+
 .buttonExAlumni
 {
     height: 50%;
@@ -698,7 +703,7 @@ body h2, body h3{
     border-color: #004379;
     border-radius: 5px;
     border-width: 1.5px;
-    margin-top: 300%;
+
 }
 
 #ButtonLeftExAlumni{

@@ -29,6 +29,7 @@ function createFormerStudent(){
                         const ulExAlumni = document.createElement('ul');
                         //Creating the left button
                         const buttonLeftLi = document.createElement('li');
+                        buttonLeftLi.className = "buttonLeftLi";
                         const buttonLeft = document.createElement('button');
                         //buttonLeft.id = "ButtonLeftExAlumni";
                         buttonLeft.className = "buttonExAlumni buttonLeftExAlumni";
@@ -37,6 +38,7 @@ function createFormerStudent(){
                         
                         //Creating the right button
                         const buttonRightLi = document.createElement('li');
+                        buttonRightLi.className = "buttonRightLi";
                         const buttonRight = document.createElement('button');
                         //buttonRight.id = "ButtonRightExAlumni";
                         buttonRight.className = "buttonExAlumni buttonRightExAlumni";
