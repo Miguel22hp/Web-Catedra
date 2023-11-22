@@ -5,8 +5,8 @@
  * @returns an array with all the strucutres of the former Student
  */
 function createFormerStudent(){
-    const jsonFile = "https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/17-add-ex-alumnos/json/exAlumnos.json";
-    const routeImages = 'https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/17-add-ex-alumnos/images/'
+    const jsonFile = "https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/main/json/exAlumnos.json";
+    const routeImages = 'https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/main/images/'
 
     return new Promise((resolve, reject) => {
         const formerStudent = []

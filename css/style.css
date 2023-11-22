@@ -641,18 +641,18 @@ body h2, body h3{
     margin-right: 2%;
 }
 
-.experienceInnova-TSNContainer, .personalInfoExAlumni{
+.experienceInnova-TSNContainer, .personalInfoExAlumni, .exAlumniPhotoContainer{
     width: 30%;
 }
 
 .exAlumniPhotoContainer{
     display: flex;
     align-items: center; /* Agrega esta línea para centrar verticalmente la imagen */
+    justify-content: center;
 }
 
 .exAlummniPhoto{
     margin-bottom: 10%;
-
 }
 
 .personalInfoExAlumni{
