@@ -773,9 +773,6 @@ body h2, body h3{
     position: relative; /* Añade posición relativa al botón */
 }
 
-.events::-webkit-scrollbar {
-    width: 0; /* Oculta las barras de desplazamiento de WebKit (Chrome, Safari, etc.) */
-}
 .events .eventDescription{
     flex: 1;
 }
