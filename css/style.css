@@ -797,21 +797,46 @@ body h2, body h3{
 }
 /*How to style de days and hours*/
 .monthsEventsList li h5{
-    font-size: 16px;
-    margin-bottom: 0;
+    font-size: 12px;
+    margin-bottom: 5%;
     padding-bottom: 0;
     color: #004379;
-    margin-left: 3px;
-}
-.hourEvents{
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 3%;
     font-weight: bold;
-    font-size: 15px;
-    color: #004379;
-    margin-left: 3px;
 }
+
 .events p{
-    margin-left: 3px;
+    color: #004379;
+    margin-left: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    margin-right: 3%;
+    font-weight: normal;
 }
+
+.events div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    
+}
+
+.eventsButton{
+    background-color:#004379;
+    color: #FFFFFF;
+    height: 100%;
+    width: 75%;
+    text-align: center;
+    border-radius: 5px; /*Redondear los bordes*/
+}
+
+
+
 /*WHERE TO FIND US*/
 .containerBodyWhereToFindUs p{
     padding-left: 10px;

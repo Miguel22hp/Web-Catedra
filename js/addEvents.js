@@ -43,10 +43,14 @@ function createEvents() {
                 nuevoEventoLi.dataset.mes = mes;
                 nuevoEventoLi.dataset.dia = dia;
                 nuevoEventoLi.innerHTML = `
-                <h5>${dia} ${mesLetra}</h5>
+                <h5>${titulo}</h5>
+                <p>${dia} ${mesLetra}</p>
                 <p class="hourEvents">${horaInicio}-${horaFin} Europe/Madrid</p>
-                <p>${descripcion}</p>
+                <div>
+                  <button class="eventsButton">Ver más </button>
+                </div>
                 `;
+                nuevoEventoLi.id = fecha+"-TI"+horaInicio+"-TF"+horaFin;
     
                 eventosArray.push(nuevoEventoLi);
             });
