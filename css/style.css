@@ -772,9 +772,7 @@ body h2, body h3{
     overflow: hidden; /* Oculta cualquier desbordamiento del contenido */
     position: relative; /* Añade posición relativa al botón */
 }
-.events:hover {
-    overflow: auto; /* Activa el desplazamiento interno al pasar el mouse */
-}
+
 .events::-webkit-scrollbar {
     width: 0; /* Oculta las barras de desplazamiento de WebKit (Chrome, Safari, etc.) */
 }
