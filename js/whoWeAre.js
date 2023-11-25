@@ -66,7 +66,6 @@ function WhoWeAreWidth() {
   }
   else
   {
-    text.style.display = oldText || "";
     LogoAdaptInnova.style.display = oldLogoInnova || "";
     LogoAdaptUPM.style.display = oldLogoUPM || "";
 
