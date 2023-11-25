@@ -159,7 +159,7 @@ body h2, body h3{
     width: 100%;
 
     /*Color*/
-    filter:brightness(0.8) blur(10px);
+    filter:brightness(0.3) blur(7px);
     opacity: 0.8;
 }
 
@@ -193,7 +193,7 @@ body h2, body h3{
     width: 80%;
 
     /*Color*/
-    background-color: #F4B429;
+    background-color: #dbdbdb;
     border-radius: 10px 0 0 10px;
 }
 
@@ -205,7 +205,6 @@ body h2, body h3{
     padding-right: 7px;
 
     /*Color*/
-    background-color: #F4B429;
     border-radius: 10px;
     color: #004379;
 }
@@ -270,7 +269,7 @@ body h2, body h3{
     width: 90%;
 
     /*Color*/
-    background-color: #004379;
+    background-color: #dbdbdb;
     border-radius: 0 10px 10px 0;
 
     /*Animation*/
@@ -326,8 +325,7 @@ body h2, body h3{
 /*WHO WE ARE SLOGAN CONTAINER*/
 #SloganContainer {
     /*Position*/
-    z-index: 1;
-    padding-top: 50px;  
+    z-index: 1; 
     margin-bottom: 0;
 
     /*Color*/
@@ -350,19 +348,6 @@ body h2, body h3{
 
     /*Animation*/
     animation: fadeIn 3s ease-in-out;
-}
-/*WHO WE ARE SLOGAN BACKGROUND*/
-#SloganBC {
-    /*Position*/
-    z-index: -1;
-    position: absolute;
-    
-    /*Size*/
-    width: 100%;
-
-    /*Color*/
-    display: none;
-    filter: blur(5px);  
 }
 
 /******************************************/
