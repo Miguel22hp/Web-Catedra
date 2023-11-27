@@ -32,105 +32,104 @@ body h2, body h3{
     background-color: #004379;
 
     /*Animation*/
-    transition: top 0.3s;
+    transform: translateY(0%);
+    transition: transform 0.5s ease-in-out;
 }
 
-/*NAVIGATION HEADER TITLE SEPARATOR*/
-#SeparatorTitle {
+#ContainerHeader ul {
     /*Position*/
-    height: 0.3vh;
-    margin: 0;
     padding: 0;
-
-    /*Size*/
-    width: 50vh;
-
-    /*Color*/
-    background-color: #F4B429;
-    border-color: #F4B429;
-}
-/*NAVIGATION HEADER MAIN TITLE*/
-#MainTitle {
-    /*Position*/
-    margin-top: 0;
-    padding-left: 0;
+    margin: 0;
 
     /*Display*/
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+    align-items: center;
+
+    /*Text*/
+    list-style-type: none; /*Erase the dots of the begginning*/
+}
+
+#MainTitle {
+    /*Position*/
+    margin-top: 0;
+    padding-left: 20px;
     
     /*Text*/
-    list-style-type: none;
+    color: white;
 }
 
-#MainTitle h1 {
+#HamburguerMenu {
     /*Position*/
-    margin: 5px;
+    padding-right: 20px;
+}
+
+#HamburguerMenu:hover {
+    cursor: pointer;
+}
+
+.line {
+    /*Size*/
+    width: 35px;
+    height: 4px;
 
     /*Color*/
-    color: #FFFFFF;
+    background-color: white;
 
-    /*Text*/
-    text-align: left; 
-    list-style-type: none;  
-    font-size: 4vh;
+    /*Position*/
+    margin: 6px 0;
 }
-
 
 /*NAVIGATION HEADER MENU*/
-/*HEADER NAVIGATION HEADER MENU*/
-#NavigationHeader ul {
-    /*Position*/
-    left: 0; 
-    padding: 0;
+#NavigationHeader {
+    display: block; 
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden; 
 
-    /*Display*/
-    display: flex; 
-    justify-content: space-around;
-
-    /*Text*/
-    list-style-type: none; 
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
 }
-/*HEADER NAVIGATION HEADER MENU LINKS*/
-#NavigationHeader ul li a {
-    /*Position*/
-    width: 220px;
-    height: 20px;
 
-    /*Color*/
-    color: white;
-    border-radius: 6px;
-
+#NavigationHeader ul {
     /*Display*/
     display: block; 
 
     /*Text*/
-    text-align: center;
-    text-decoration: none; 
-    font-weight: bold;
+    list-style: none; 
+    text-align: left;
 
-}
-
-/*HEADER SEPARATORS OF THE NAVIGATION HEADER MENU*/
-#SeparatorUL {
     /*Position*/
-    height: 18px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-/*HEADER SEPARATOR OF THE NAVIGATION HEADER MENU*/
-#SeparatorLI {
-    /*Position*/
-    margin-bottom: 2px;
-    margin-top: 0;
+    padding: 5px; 
+    margin: 0;
 
     /*Size*/
-    width: 80%;
-
-    /*Color*/
-    border-color: #F4B429;
-    opacity: 0;
+    width: 100%; 
 }
+
+#NavigationHeader li {
+    /*Display*/
+    display: block; 
+
+    /*Size*/
+    width: 100%;
+
+    /*Text*/
+    text-align: left; 
+    color: white;
+    font-size: 2vh;
+
+    /*Position*/
+    padding: 10px;
+    padding-left: 30px;
+}
+
+#NavigationHeader a {
+    display: block;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+
 /******************************************/
 /*WHO WE ARE*/
 .containerBodyWhoWeAre {
@@ -159,7 +158,7 @@ body h2, body h3{
     width: 100%;
 
     /*Color*/
-    filter:brightness(0.3) blur(7px);
+    filter:brightness(0.5) blur(7px);
     opacity: 0.8;
 }
 

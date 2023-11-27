@@ -1,75 +1,28 @@
-let prevScrollPos = window.scrollY;
-const navbar = document.getElementById("ContainerHeader");
+const headerContainer = document.getElementById("ContainerHeader");
 const navigationHeader = document.getElementById("NavigationHeader");
-const navHeader = document.getElementById("NavigationHeaderUl");
-const links = navigationHeader.querySelectorAll("li a");
-const oldNav = navigationHeader.style.display;
+const hamburguerMenu = document.getElementById('HamburguerMenu');
+const superiorLine = document.getElementById('SuperiorLine');
+const middleLine = document.getElementById('MiddleLine');
+const oldMiddleLine = middleLine.style.display;
+const inferiorLine = document.getElementById('InferiorLine');
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    hamburguerMenu.addEventListener('click', function() {
+        if (navigationHeader.style.opacity === "0" || navigationHeader.style.opacity === "") {
 
-      const targetElement = document.querySelector(this.getAttribute('href'));
-      const targetPosition = targetElement.offsetTop;
-      const duration = 1000; // Duración de la animación en milisegundos (puedes ajustarla)
+          superiorLine.style.transform = "rotate(45deg)";
+          middleLine.style.display = "none";
+          inferiorLine.style.transform = "rotate(-45deg)";
 
-      window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-      });
-  });
+          navigationHeader.style.opacity = "1";
+          navigationHeader.style.maxHeight = "100%";
+        } else {
+          superiorLine.style.transform = "rotate(0deg)";
+          middleLine.style.display = oldMiddleLine;
+          inferiorLine.style.transform = "rotate(0deg)";
+
+          navigationHeader.style.opacity = "0";
+          navigationHeader.style.maxHeight = "0";
+        }
+    });
 });
-
-
-// When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
-window.onscroll = function() {
-    const currentScrollPos = window.scrollY;
-    if (prevScrollPos > currentScrollPos) {
-        navbar.style.top = "0";
-    } else {
-        navbar.style.top = "-100px";
-    }
-    prevScrollPos = currentScrollPos;
-};
-
-// When the users screen width is less than 1248px, hide the navbar-menu
-function HeaderWidth() {
-    if (window.innerWidth < 1248) {
-      navHeader.style.display = "none";
-    }
-    else
-    {
-        navHeader.style.padding = "0px";
-        navHeader.style.left = "0px";
-        navHeader.style.display = "flex"; 
-        navHeader.style.justifyContent = "space-around";
-    }
-}
-
-// When hover over the links, It changes the color
-links.forEach(link => {
-  link.addEventListener("mouseover", () => {
-    link.style.transition = "opacity 0.5s ease-in-out";
-    link.style.opacity = "0.8";
-    link.style.color = "#F4B429";
-  });
-  
-  link.addEventListener("mouseout", () => {
-    link.style.transition = "opacity 0.5s ease-in-out";
-    link.style.opacity = "1";
-    link.style.color = "white"; 
-  });
-});
-
-function HeaderWidth() {  
-  if (window.innerWidth < 1248) {
-    navigationHeader.style.display = "none";
-  }
-  else
-  {
-    navigationHeader.style.display = oldNav || "";
-  }
-}
-
-window.addEventListener("resize", HeaderWidth);
-document.addEventListener('DOMContentLoaded', HeaderWidth);

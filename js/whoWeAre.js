@@ -4,9 +4,6 @@ var startTime=0;
 
 const section = document.getElementById("WhoWeAre");
 
-const text =  document.getElementById("InnovaKnowMore");
-const oldText = text.style.display;
-
 const LogoAdaptUPM = document.getElementById("LogoAdaptUPM");
 const oldLogoUPM = LogoAdaptUPM.style.display;
 
@@ -56,9 +53,7 @@ function hoverOutInnova(){
 // If the screen is bigger than 1248px text will not be shown.
 function WhoWeAreWidth() {
   if (window.innerWidth < 1248) {
-    text.style.display = "none";
     LogoAdaptInnova.style.display = "none";
-    //LogoAdaptCatedra.style.width = "80%";
     LogoAdaptUPM.style.display = "none";
 
     section.style.paddingTop = "0px";
@@ -71,10 +66,8 @@ function WhoWeAreWidth() {
   }
   else
   {
-    text.style.display = oldText || "";
     LogoAdaptInnova.style.display = oldLogoInnova || "";
     LogoAdaptUPM.style.display = oldLogoUPM || "";
-    //LogoAdaptCatedra.style.display = oldLogoCatedra || "";
 
     section.style.paddingTop = "100px";
 
