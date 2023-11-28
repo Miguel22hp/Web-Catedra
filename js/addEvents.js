@@ -43,6 +43,9 @@ function createEvents() {
                 nuevoEventoLi.dataset.mes = mes;
                 nuevoEventoLi.dataset.dia = dia;
                 nuevoEventoLi.dataset.descripcion = descripcion;
+                nuevoEventoLi.dataset.titulo = titulo;
+                nuevoEventoLi.dataset.horaInicio = horaInicio;
+                nuevoEventoLi.dataset.horaFin = horaFin;
                 nuevoEventoLi.id = fecha+"-TI"+horaInicio+"-TF"+horaFin;
                 buttonId = "Button-" + fecha+"-TI"+horaInicio+"-TF"+horaFin;
                 nuevoEventoLi.innerHTML = `
@@ -143,8 +146,6 @@ function createEvents() {
               var ulDentroLi = liMesAñadir.querySelector('ul');
               ulDentroLi.appendChild(elementLI);
             }
-
-
           }*/
 
         });
@@ -157,21 +158,25 @@ function createEvents() {
 
 function buttonClick(elementLI){
   document.getElementById("RealBody").style.opacity = 0.5;
+  //document.getElementById("RealBody").style.position = fixed;
+
   const popup = document.createElement('div');
   popup.className = 'popupEventos';
-  popup.innerHTML = '<p>Contenido del popup</p><button onclick="closePopup()">Cerrar</button>';
-  document.body.appendChild(popup);
+  //popup.innerHTML = '<p>Contenido del popup</p><button onclick="closePopup()">Cerrar</button>';
+  let titlePopUp = document.createElement('h6');
+  titlePopUp.className = "titlePopUp";
+  titlePopUp.textContent = elementLI.dataset.titulo;
+  popup.appendChild(titlePopUp);
 
-  // Centrar el popup en la pantalla
-  /*
-  const topPosition = window.innerHeight / 2 - popup.offsetHeight / 2;
-  //console.log()
-  const leftPosition = window.innerWidth / 2 - popup.offsetWidth / 2;
-  popup.style.top = `${topPosition}px`;
-  popup.style.left = `${leftPosition}px`; 
-  // Establecer el tamaño del popup en 85x85
-  popup.style.width = '85%';
-  popup.style.height = '85%';*/
+  let buttonClose = document.createElement('button');
+  buttonClose.className = "buttonClosePopUp";
+  buttonClose.addEventListener('click', function() {
+    closePopup(); 
+  });
+  buttonClose.textContent = "x";
+  popup.appendChild(buttonClose)
+
+  document.body.appendChild(popup);
 
   
 }
