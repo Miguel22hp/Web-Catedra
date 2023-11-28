@@ -42,6 +42,7 @@ function createEvents() {
                 nuevoEventoLi.dataset.fecha = fecha;
                 nuevoEventoLi.dataset.mes = mes;
                 nuevoEventoLi.dataset.dia = dia;
+                nuevoEventoLi.dataset.descripcion = descripcion;
                 nuevoEventoLi.id = fecha+"-TI"+horaInicio+"-TF"+horaFin;
                 buttonId = "Button-" + fecha+"-TI"+horaInicio+"-TF"+horaFin;
                 nuevoEventoLi.innerHTML = `
@@ -113,10 +114,19 @@ function createEvents() {
             //Selecciono el li con el identificador del mes y año que corresponden a este evento
             var liMesAñadir = document.getElementById(idMes);
 
-            if (liMesAñadir !== null) {              
+            if (liMesAñadir != null) {              
               //Seleccionas la lista de ese mes en la que se añaden sus elementos y añado el elemento
               var ulDentroLi = liMesAñadir.querySelector('ul');
               ulDentroLi.appendChild(elementLI);
+              
+              //Haces un que ocurra algo cuando se clica ese boton
+              let idButton = "Button-" + elementLI.id;
+              document.getElementById(idButton).addEventListener('click', function () {
+                //console.log('Botón clicado. ID del evento:', idButton);
+                buttonClick();
+              });
+
+
             }
           }
           
@@ -143,3 +153,8 @@ function createEvents() {
         console.error(error);
       });
   });
+
+
+function buttonClick(){
+
+}
