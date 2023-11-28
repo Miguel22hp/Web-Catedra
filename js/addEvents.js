@@ -159,14 +159,15 @@ function createEvents() {
 function buttonClick(elementLI){
   document.getElementById("RealBody").style.opacity = 0.5;
   //document.getElementById("RealBody").style.position = fixed;
+  
 
   const popup = document.createElement('div');
   popup.className = 'popupEventos';
   //popup.innerHTML = '<p>Contenido del popup</p><button onclick="closePopup()">Cerrar</button>';
-  let titlePopUp = document.createElement('h6');
-  titlePopUp.className = "titlePopUp";
-  titlePopUp.textContent = elementLI.dataset.titulo;
-  popup.appendChild(titlePopUp);
+
+
+  let divButton = document.createElement('div');
+  divButton.className = "divButtonClosePopUp";
 
   let buttonClose = document.createElement('button');
   buttonClose.className = "buttonClosePopUp";
@@ -174,7 +175,27 @@ function buttonClick(elementLI){
     closePopup(); 
   });
   buttonClose.textContent = "x";
-  popup.appendChild(buttonClose)
+  divButton.appendChild(buttonClose);
+  popup.appendChild(divButton);
+
+  let titlePopUp = document.createElement('h6');
+  titlePopUp.className = "titlePopUp";
+  titlePopUp.textContent = elementLI.dataset.titulo;
+  popup.appendChild(titlePopUp);
+
+  let fecha = document.createElement("p");
+  fecha.textContent = elementLI.dataset.fecha;
+  popup.appendChild(fecha);
+
+  let hora = document.createElement("p");
+  hora.textContent = elementLI.dataset.horaInicio + " - " + elementLI.dataset.horaFin + " Europe/Madrid";
+  popup.appendChild(hora);
+
+  let descripcion = document.createElement("p");
+  descripcion.className = "descripcionEventoPopUp";
+  descripcion.textContent = elementLI.dataset.descripcion;
+  popup.appendChild(descripcion);
+
 
   document.body.appendChild(popup);
 
