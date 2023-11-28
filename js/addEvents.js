@@ -123,7 +123,7 @@ function createEvents() {
               let idButton = "Button-" + elementLI.id;
               document.getElementById(idButton).addEventListener('click', function () {
                 //console.log('Botón clicado. ID del evento:', idButton);
-                buttonClick();
+                buttonClick(elementLI);
               });
 
 
@@ -155,6 +155,36 @@ function createEvents() {
   });
 
 
-function buttonClick(){
+function buttonClick(elementLI){
+  document.getElementById("RealBody").style.opacity = 0.5;
+  const popup = document.createElement('div');
+  popup.className = 'popupEventos';
+  popup.innerHTML = '<p>Contenido del popup</p><button onclick="closePopup()">Cerrar</button>';
+  document.body.appendChild(popup);
 
+  // Centrar el popup en la pantalla
+  /*
+  const topPosition = window.innerHeight / 2 - popup.offsetHeight / 2;
+  //console.log()
+  const leftPosition = window.innerWidth / 2 - popup.offsetWidth / 2;
+  popup.style.top = `${topPosition}px`;
+  popup.style.left = `${leftPosition}px`; 
+  // Establecer el tamaño del popup en 85x85
+  popup.style.width = '85%';
+  popup.style.height = '85%';*/
+
+  
+}
+
+// Función para cerrar el popup
+function closePopup() {
+  // Restaurar la opacidad del documento
+  document.getElementById("RealBody").style.opacity = 1;
+
+
+  // Eliminar el popup
+  const popup = document.querySelector('.popupEventos');
+  if (popup) {
+    document.body.removeChild(popup);
+  }
 }

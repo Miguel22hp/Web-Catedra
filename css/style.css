@@ -830,19 +830,28 @@ body h2, body h3{
     border-radius: 5px; /*Redondear los bordes*/
 }
 
+/*Popup del evento*/
+.popupEventos{
+    height: 85%;
+    width: 85%;
+    /*Coloca en el centro de la pantalla y no se mueve*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*Diseño*/
+    background-color:rgba(0, 67, 121, 1);
+    z-index: 1001;
+    
+
+ 
+}
 
 
-/*WHERE TO FIND US*/
-.containerBodyWhereToFindUs p{
-    padding-left: 10px;
-    padding-bottom: 15px;
-}
-.contactMap {
-    margin: 0 auto;
-    text-align: center; /* Alinea el contenido del div al centro */
-    padding-bottom: 20px;
-}
-/*NEWS*/
+
+
+
 /*NEWS*/
 .containerBodyNews {
     padding-top: 20px;
@@ -930,12 +939,23 @@ body h2, body h3{
     .extraNewsInfo {
         height: fit-content;
     }
+
     /*WHERETOFINDUS*/
     .containerBodyWhereToFindUs {
         padding-top: 20px;
     }
     .whereToFindUsParagraph {
         margin-left: 6%;
+    }
+
+    .containerBodyWhereToFindUs p{
+        padding-left: 10px;
+        padding-bottom: 15px;
+    }
+    .contactMap {
+        margin: 0 auto;
+        text-align: center; /* Alinea el contenido del div al centro */
+        padding-bottom: 20px;
     }
 
     /*FOOTER*/
