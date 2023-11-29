@@ -1,15 +1,13 @@
 const headerContainer = document.getElementById("ContainerHeader");
 var oldHeaderContainerHeigh = headerContainer.offsetHeight;
 
-const navigationHeader = document.getElementById("NavigationHeader");
-
 const hamburguerMenu = document.getElementById('HamburguerMenu');
 const superiorLine = document.getElementById('SuperiorLine');
 const middleLine = document.getElementById('MiddleLine');
 const oldMiddleLine = middleLine.style.display;
 const inferiorLine = document.getElementById('InferiorLine');
 
-const navHeader = document.getElementById("NavigationHeaderUl");
+const navigationHeader = document.getElementById("NavigationHeader");
 const links = navigationHeader.querySelectorAll("li a");
 
 const title = document.getElementById("MainTitle");
