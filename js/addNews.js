@@ -26,7 +26,6 @@ function createNews() {
                 const descripcion = aNew.descripcion;
                 const imagen1 = aNew.imagen_source;
                 const imagen = routeImages + imagen1;
-                console.log(imagen);
                 const link = aNew.link_noticia;
                 const descp_img = aNew.descripcion_imagen;
 
@@ -107,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     createNews()
       .then(news => {
-        
         //Añadir los eventos a su correspondiente posición en el calendario de eventos, y que no se muestren si la fecha actual es posterior a su fecha
         news.forEach((elementLI)=> {
           const listaNews = document.getElementById("NewsList");
