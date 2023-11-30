@@ -732,11 +732,38 @@ body h2, body h3{
     background-color: #004379;
     margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
 }
-.eventsFrame::-webkit-scrollbar
-{
-    width: 0;
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.eventsFrame::-webkit-scrollbar {
+    -webkit-appearance: none;
 }
+
+.eventsFrame::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.eventsFrame::-webkit-scrollbar-button:increment,.eventsFrame::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.eventsFrame::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.eventsFrame::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #004379;
+}
+
+.eventsFrame::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
 .yearEvents, .monthsEvents, .monthsEventsList{
     list-style-type: none;
 }
