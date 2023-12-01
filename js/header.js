@@ -45,12 +45,12 @@ function initializeVariables() {
 function setupEventListeners(variables) {
   variables.links.forEach(link => {
       link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const href = this.getAttribute('href');
-          const targetElement = document.querySelector(href);
-          const targetPosition = targetElement.offsetTop;
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const targetElement = document.querySelector(href);
+        const targetPosition = targetElement.offsetTop;
 
-          variables.superiorLine.style.transform = "rotate(0deg)";
+        variables.superiorLine.style.transform = "rotate(0deg)";
         variables.middleLine.style.transform = "translateX(0%)";
         variables.inferiorLine.style.transform = "rotate(0deg)";
         variables.navigationHeader.style.opacity = "0";
@@ -75,6 +75,7 @@ function HamburguerMenu(variables) {
 
 function HeaderWidth(variables) {
   if (window.innerWidth < 1248) {
+      variables.
       variables.title.style.display = "none";
   } else {
       variables.headerContainer.style.backgroundColor = "#004379";
@@ -118,7 +119,7 @@ function toggleHamburguerMenu(variables) {
     setTimeout(() => {
       variables.navigationHeader.style.opacity = "1";
       variables.navigationHeader.style.maxHeight = "100%";
-    }, 150);
+    }, 200);
   } else {
       variables.superiorLine.style.transform = "rotate(0deg)";
       variables.middleLine.style.transform = "translateX(0%)";
