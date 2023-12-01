@@ -1001,6 +1001,42 @@ body h2, body h3{
         height: fit-content;
     }
 
+    .newsStructureMobile{
+        display: flex;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        
+        flex-direction: row;
+    }
+
+    .newsStructureMobile li{
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        margin: 0;
+        flex-basis: calc(50% - 5%); /* Establece el ancho de cada elemento */
+        margin-right: 5%;
+    }
+
+    .newsStructureMobile li h3{
+        font-size: 16px;
+        color: #004379;
+        padding: 0;
+        margin: 0;
+        margin: auto;
+        margin: 9%;
+    }
+
+    .newsStructureMobile li p{
+        font-size: 12px;
+        margin: 9%;
+    }
+    .newsImagesMobile{
+        width: 80%;
+        height: 60%; 
+        margin: auto; /* Centra la imagen horizontal y verticalmente */
+    }
+
     /*WHERETOFINDUS*/
     .containerBodyWhereToFindUs {
         padding-top: 20px;
