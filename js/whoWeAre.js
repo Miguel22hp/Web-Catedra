@@ -10,6 +10,9 @@ const oldLogoUPM = LogoAdaptUPM.style.display;
 const LogoAdaptInnova = document.getElementById("LogoAdaptInnova");
 const oldLogoInnova = LogoAdaptInnova.style.display;
 
+const LogoAdaptCated = document.getElementById("LogoAdaptCated");
+const oldLogoCated = LogoAdaptCated.style.display;
+
 const Intro = document.getElementById("IntroductionContainer");
 
 const slogan = document.getElementById("Slogan");
@@ -53,6 +56,7 @@ function hoverOutInnova(){
 // If the screen is bigger than 1248px text will not be shown.
 function WhoWeAreWidth() {
   if (window.innerWidth < 1248) {
+    LogoAdaptCated.style.display = "none";
     LogoAdaptInnova.style.display = "none";
     LogoAdaptUPM.style.display = "none";
 
@@ -66,6 +70,7 @@ function WhoWeAreWidth() {
   }
   else
   {
+    LogoAdaptCated.style.display = oldLogoCated || "";
     LogoAdaptInnova.style.display = oldLogoInnova || "";
     LogoAdaptUPM.style.display = oldLogoUPM || "";
 

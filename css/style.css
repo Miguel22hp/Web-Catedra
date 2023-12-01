@@ -35,6 +35,11 @@ body h2, body h3{
     transition: top 0.3s;
 }
 
+#LogoVersionMovile {
+    /*Display*/
+    display: none;
+}
+
 /*NAVIGATION HEADER TITLE SEPARATOR*/
 #SeparatorTitle {
     /*Position*/
@@ -50,7 +55,7 @@ body h2, body h3{
     border-color: #F4B429;
 }
 /*NAVIGATION HEADER MAIN TITLE*/
-#MainTitle {
+#TitleContainer {
     /*Position*/
     margin-top: 0;
     padding-left: 0;
