@@ -1,7 +1,10 @@
 let prevScrollPos = window.scrollY;
 const navbar = document.getElementById("ContainerHeader");
+const oldNavbar = navbar.style.top;
+const logoMovileVersion = document.getElementById("LogoVersionMovile");
+const title = document.getElementById("MainTitle");
+const oldTitle = title.style.display;
 const navigationHeader = document.getElementById("NavigationHeader");
-const navHeader = document.getElementById("NavigationHeaderUl");
 const links = navigationHeader.querySelectorAll("li a");
 const oldNav = navigationHeader.style.display;
 
@@ -11,7 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
       const targetElement = document.querySelector(this.getAttribute('href'));
       const targetPosition = targetElement.offsetTop;
-      const duration = 1000; // Duración de la animación en milisegundos (puedes ajustarla)
+      const duration = 1000; 
 
       window.scrollTo({
           top: targetPosition,
@@ -35,14 +38,21 @@ window.onscroll = function() {
 // When the users screen width is less than 1248px, hide the navbar-menu
 function HeaderWidth() {
     if (window.innerWidth < 1248) {
-      navHeader.style.display = "none";
+      logoMovileVersion.style.display = "block";
+      logoMovileVersion.style.width = "20%";
+      logoMovileVersion.style.paddingLeft = "10px";
+      logoMovileVersion.style.paddingTop = "10px";
+      logoMovileVersion.style.paddingBottom = "0px";
+      navbar.style.backgroundColor = "grey";
+      title.style.display = "none";
+      navigationHeader.style.display = "none";
     }
     else
     {
-        navHeader.style.padding = "0px";
-        navHeader.style.left = "0px";
-        navHeader.style.display = "flex"; 
-        navHeader.style.justifyContent = "space-around";
+      navbar.style.backgroundColor = "#004379";
+      logoMovileVersion.style.display = "none";
+      title.style.display = oldTitle;
+      navigationHeader.style.display = oldNav;
     }
 }
 
@@ -60,16 +70,6 @@ links.forEach(link => {
     link.style.color = "white"; 
   });
 });
-
-function HeaderWidth() {  
-  if (window.innerWidth < 1248) {
-    navigationHeader.style.display = "none";
-  }
-  else
-  {
-    navigationHeader.style.display = oldNav || "";
-  }
-}
 
 window.addEventListener("resize", HeaderWidth);
 document.addEventListener('DOMContentLoaded', HeaderWidth);
