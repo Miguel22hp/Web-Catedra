@@ -10,7 +10,9 @@ function loadHeaderAndInitialize() {
           initializeHeader();
       }
   };
-  xhr.open("GET", "html/header.html", true);
+
+
+  xhr.open("GET", "http://127.0.0.1:5501/html/header.html", true);
   xhr.send();
 }
 
@@ -35,10 +37,11 @@ function initializeVariables() {
   const navigationHeader = document.getElementById("NavigationHeader");
   const links = navigationHeader.querySelectorAll("li a");
   const title = document.getElementById("MainTitle");
-  console.log(oldHeaderContainerHeight);
+  const movileVersion = document.getElementById("LogoVersionMovile");
+
   return { 
       headerContainer, hamburguerMenu, superiorLine, middleLine, 
-      inferiorLine, navigationHeader, links, title, oldHeaderContainerHeight 
+      inferiorLine, navigationHeader, links, title, oldHeaderContainerHeight, movileVersion
   };
 }
 
@@ -46,9 +49,7 @@ function setupEventListeners(variables) {
   variables.links.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        const href = this.getAttribute('href');
-        const targetElement = document.querySelector(href);
-        const targetPosition = targetElement.offsetTop;
+        var href = this.getAttribute('href');
 
         variables.superiorLine.style.transform = "rotate(0deg)";
         variables.middleLine.style.transform = "translateX(0%)";
@@ -60,9 +61,9 @@ function setupEventListeners(variables) {
           variables.navigationHeader.style.maxHeight = "0";
           variables.headerContainer.style.transition = "height 0.75s";
           variables.headerContainer.style.height = "1vh"; 
-        }, 50); 
 
-          smoothScrollTo(targetPosition, 1000);
+          window.location.href = href;
+        }, 750); 
       });
   });
 }
@@ -75,32 +76,11 @@ function HamburguerMenu(variables) {
 
 function HeaderWidth(variables) {
   if (window.innerWidth < 1248) {
-      variables.
-      variables.title.style.display = "none";
+      
   } else {
       variables.headerContainer.style.backgroundColor = "#004379";
       variables.title.style.display = "block";
   }
-}
-
-function smoothScrollTo(endY, duration) {
-  const startY = window.scrollY;
-  const distanceY = endY - startY - 60;
-  let startTime = null;
-
-  function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const timeElapsed = timestamp - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-
-      window.scrollTo(0, startY + distanceY * progress);
-
-      if (timeElapsed < duration) {
-          window.requestAnimationFrame(step);
-      }
-  }
-
-  window.requestAnimationFrame(step);
 }
 
 function toggleHamburguerMenu(variables) {
