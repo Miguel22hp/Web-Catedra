@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function handleButtonClick(direction)
         {
-            var actualExAlumni = document.querySelector(".exAlumni");
+            var actualExAlumni = document.querySelector(".exAlumniMobile");
             var id = actualExAlumni.dataset.id;
             var newId;
 
