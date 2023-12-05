@@ -35,7 +35,7 @@ function initializeVariables() {
   const middleLine = document.getElementById('MiddleLine');
   const inferiorLine = document.getElementById('InferiorLine');
   const navigationHeader = document.getElementById("NavigationHeader");
-  const links = navigationHeader.querySelectorAll("li a");
+  const links = navigationHeader.querySelectorAll("li");
   const title = document.getElementById("MainTitle");
   const movileVersion = document.getElementById("LogoVersionMovile");
 
@@ -48,8 +48,12 @@ function initializeVariables() {
 function setupEventListeners(variables) {
   variables.links.forEach(link => {
       link.addEventListener('click', function(e) {
+        
+        var anchor = this.querySelector('a');
+        if (!anchor) return;
+
         e.preventDefault();
-        var href = this.getAttribute('href');
+        var href = anchor.getAttribute('href');
 
         variables.superiorLine.style.transform = "rotate(0deg)";
         variables.middleLine.style.transform = "translateX(0%)";
