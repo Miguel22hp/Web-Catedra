@@ -12,12 +12,15 @@ function loadHeaderAndInitialize() {
   };
 
 
-  xhr.open("GET", "http://127.0.0.1:5501/html/header.html", true);
+  xhr.open("GET", "/html/header.html", true);
   xhr.send();
 }
 
 function initializeHeader() {
   const variables = initializeVariables();
+
+  variables.headerContainer.style.transition = "height 0.75s";
+
 
   setupEventListeners(variables);
   HamburguerMenu(variables);
@@ -35,38 +38,32 @@ function initializeVariables() {
   const middleLine = document.getElementById('MiddleLine');
   const inferiorLine = document.getElementById('InferiorLine');
   const navigationHeader = document.getElementById("NavigationHeader");
-  const links = navigationHeader.querySelectorAll("li");
+  const oldNavigationHeader = navigationHeader.style.display;
+  const navigationHeaderMovilerVersion = document.getElementById("NavigationHeaderMovileVersion");
+  const oldNavigationHeaderMovilerVersion = navigationHeaderMovilerVersion.style.display;
+  const links = navigationHeaderMovilerVersion.querySelectorAll("li");
   const title = document.getElementById("MainTitle");
   const movileVersion = document.getElementById("LogoVersionMovile");
 
   return { 
       headerContainer, hamburguerMenu, superiorLine, middleLine, 
-      inferiorLine, navigationHeader, links, title, oldHeaderContainerHeight, movileVersion
+      inferiorLine, navigationHeader, oldNavigationHeader, navigationHeaderMovilerVersion, oldNavigationHeaderMovilerVersion, links, title, oldHeaderContainerHeight, movileVersion
   };
 }
 
 function setupEventListeners(variables) {
   variables.links.forEach(link => {
       link.addEventListener('click', function(e) {
-        
-        var anchor = this.querySelector('a');
-        if (!anchor) return;
-
-        e.preventDefault();
-        var href = anchor.getAttribute('href');
-
         variables.superiorLine.style.transform = "rotate(0deg)";
         variables.middleLine.style.transform = "translateX(0%)";
         variables.inferiorLine.style.transform = "rotate(0deg)";
-        variables.navigationHeader.style.opacity = "0";
-        variables.navigationHeader.style.transition = "opacity 0.75s";
+        variables.navigationHeaderMovilerVersion.style.opacity = "0";
+        variables.navigationHeaderMovilerVersion.style.transition = "opacity 0.75s";
 
         setTimeout(() => {
-          variables.navigationHeader.style.maxHeight = "0";
+          variables.navigationHeaderMovilerVersion.style.maxHeight = "0";
           variables.headerContainer.style.transition = "height 0.75s";
           variables.headerContainer.style.height = "1vh"; 
-
-          window.location.href = href;
         }, 750); 
       });
   });
@@ -79,16 +76,21 @@ function HamburguerMenu(variables) {
 }
 
 function HeaderWidth(variables) {
-  if (window.innerWidth < 1248) {
+  if (window.innerWidth < 990) {
+    variables.hamburguerMenu.style.display = "block";
+    variables.navigationHeader.style.display = "none";
       
   } else {
-      variables.headerContainer.style.backgroundColor = "#004379";
-      variables.title.style.display = "block";
+    variables.hamburguerMenu.style.display = "none";
+    variables.navigationHeader.style.display = variables.oldNavigationHeader;
+    variables.headerContainer.style.backgroundColor = "#004379";
+    variables.title.style.display = "block";
   }
 }
 
 function toggleHamburguerMenu(variables) {
-  if (variables.navigationHeader.style.opacity === "0" || variables.navigationHeader.style.opacity === "") {
+  if (variables.navigationHeaderMovilerVersion.style.opacity === "0" || variables.navigationHeaderMovilerVersion.style.opacity === "") {
+    document.body.style.overflow = "hidden";
     variables.hamburguerMenu.style.transform = "translateX(-5px)";
     variables.superiorLine.style.transform = "rotate(45deg) translateX(14px)";
     variables.superiorLine.style.transition = "transform 0.5s";
@@ -97,22 +99,26 @@ function toggleHamburguerMenu(variables) {
     variables.inferiorLine.style.transform = "rotate(-45deg) translateX(14px)";
     variables.inferiorLine.style.transition = "transform 0.5s";
 
+    
+    setTimeout(() => {
     variables.headerContainer.style.transition = "height 0.75s";
     variables.headerContainer.style.height = "100vh";
+    }, 50);
 
     setTimeout(() => {
-      variables.navigationHeader.style.opacity = "1";
-      variables.navigationHeader.style.maxHeight = "100%";
+      variables.navigationHeaderMovilerVersion.style.opacity = "1";
+      variables.navigationHeaderMovilerVersion.style.maxHeight = "100%";
     }, 200);
   } else {
+      document.body.style.overflow = "auto";
       variables.superiorLine.style.transform = "rotate(0deg)";
       variables.middleLine.style.transform = "translateX(0%)";
       variables.inferiorLine.style.transform = "rotate(0deg)";
-      variables.navigationHeader.style.opacity = "0";
-      variables.navigationHeader.style.transition = "opacity 0.75s";
+      variables.navigationHeaderMovilerVersion.style.opacity = "0";
+      variables.navigationHeaderMovilerVersion.style.transition = "opacity 0.75s";
 
       setTimeout(() => {
-          variables.navigationHeader.style.maxHeight = "0";
+          variables.navigationHeaderMovilerVersion.style.maxHeight = "0";
           variables.headerContainer.style.transition = "height 0.75s";
           variables.headerContainer.style.height = "1vh"; 
       }, 50); 
