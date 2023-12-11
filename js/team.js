@@ -27,7 +27,7 @@ function teamWidth() {
         
         adaptPadding.style.padding= "10px"
 
-        //teamPhotos.style.display = "none"
+        teamPhotos.style.display = "none"
         verticalSeparator.style.display = "none";
 
         buttonRight.style.height = "500px";
@@ -45,7 +45,7 @@ function teamWidth() {
 
         adaptPadding.style.padding= "0px"
 
-        ///teamPhotos.style.display = oldTeamPhotos || "";
+        teamPhotos.style.display = oldTeamPhotos || "";
         verticalSeparator.style.display = oldVerticalSeparator || "";
 
         buttonRight.style.height = "600px";
