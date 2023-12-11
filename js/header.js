@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   loadHeaderAndInitialize();
+
 });
 
 function loadHeaderAndInitialize() {
@@ -124,4 +125,5 @@ function toggleHamburguerMenu(variables) {
       }, 50); 
   }
 }
+
 

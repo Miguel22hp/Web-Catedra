@@ -59,11 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Si el siguiente mes es en el próximo año, agrega un nuevo año.
         if (monthIndex === 11) {
             currentYear++;
-            //yearList = document.createElement("ul");
-            //yearList.className = "yearEvents";
-            //eventsFrame.appendChild(yearList);
             var yearItem = document.createElement("li");
             yearItem.id = currentYear;
+            var hr = document.createElement("hr");
+            hr.className = "eventsLine";
             yearList.appendChild(hr);
             yearList.appendChild(yearItem); // Añades el año que corresponda
             var monthlist = document.createElement("ul");

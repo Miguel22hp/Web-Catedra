@@ -42,10 +42,19 @@ function createEvents() {
                 nuevoEventoLi.dataset.fecha = fecha;
                 nuevoEventoLi.dataset.mes = mes;
                 nuevoEventoLi.dataset.dia = dia;
+                nuevoEventoLi.dataset.descripcion = descripcion;
+                nuevoEventoLi.dataset.titulo = titulo;
+                nuevoEventoLi.dataset.horaInicio = horaInicio;
+                nuevoEventoLi.dataset.horaFin = horaFin;
+                nuevoEventoLi.id = fecha+"-TI"+horaInicio+"-TF"+horaFin;
+                buttonId = "Button-" + fecha+"-TI"+horaInicio+"-TF"+horaFin;
                 nuevoEventoLi.innerHTML = `
-                <h5>${dia} ${mesLetra}</h5>
+                <h5>${titulo}</h5>
+                <p>${dia} ${mesLetra}</p>
                 <p class="hourEvents">${horaInicio}-${horaFin} Europe/Madrid</p>
-                <p>${descripcion}</p>
+                <div>
+                  <button class="eventsButton" id=${buttonId}>Ver más </button>
+                </div>
                 `;
     
                 eventosArray.push(nuevoEventoLi);
@@ -108,10 +117,19 @@ function createEvents() {
             //Selecciono el li con el identificador del mes y año que corresponden a este evento
             var liMesAñadir = document.getElementById(idMes);
 
-            if (liMesAñadir !== null) {              
+            if (liMesAñadir != null) {              
               //Seleccionas la lista de ese mes en la que se añaden sus elementos y añado el elemento
               var ulDentroLi = liMesAñadir.querySelector('ul');
               ulDentroLi.appendChild(elementLI);
+              
+              //Haces un que ocurra algo cuando se clica ese boton
+              let idButton = "Button-" + elementLI.id;
+              document.getElementById(idButton).addEventListener('click', function () {
+                //console.log('Botón clicado. ID del evento:', idButton);
+                buttonClick(elementLI);
+              });
+
+
             }
           }
           
@@ -128,8 +146,6 @@ function createEvents() {
               var ulDentroLi = liMesAñadir.querySelector('ul');
               ulDentroLi.appendChild(elementLI);
             }
-
-
           }*/
 
         });
@@ -138,3 +154,63 @@ function createEvents() {
         console.error(error);
       });
   });
+
+
+function buttonClick(elementLI){
+  document.getElementById("RealBody").style.opacity = 0.5;
+  //document.getElementById("RealBody").style.position = fixed;
+  
+
+  const popup = document.createElement('div');
+  popup.className = 'popupEventos';
+  //popup.innerHTML = '<p>Contenido del popup</p><button onclick="closePopup()">Cerrar</button>';
+
+
+  let divButton = document.createElement('div');
+  divButton.className = "divButtonClosePopUp";
+
+  let buttonClose = document.createElement('button');
+  buttonClose.className = "buttonClosePopUp";
+  buttonClose.addEventListener('click', function() {
+    closePopup(); 
+  });
+  buttonClose.textContent = "x";
+  divButton.appendChild(buttonClose);
+  popup.appendChild(divButton);
+
+  let titlePopUp = document.createElement('h6');
+  titlePopUp.className = "titlePopUp";
+  titlePopUp.textContent = elementLI.dataset.titulo;
+  popup.appendChild(titlePopUp);
+
+  let fecha = document.createElement("p");
+  fecha.textContent = elementLI.dataset.fecha;
+  popup.appendChild(fecha);
+
+  let hora = document.createElement("p");
+  hora.textContent = elementLI.dataset.horaInicio + " - " + elementLI.dataset.horaFin + " Europe/Madrid";
+  popup.appendChild(hora);
+
+  let descripcion = document.createElement("p");
+  descripcion.className = "descripcionEventoPopUp";
+  descripcion.textContent = elementLI.dataset.descripcion;
+  popup.appendChild(descripcion);
+
+
+  document.body.appendChild(popup);
+
+  
+}
+
+// Función para cerrar el popup
+function closePopup() {
+  // Restaurar la opacidad del documento
+  document.getElementById("RealBody").style.opacity = 1;
+
+
+  // Eliminar el popup
+  const popup = document.querySelector('.popupEventos');
+  if (popup) {
+    document.body.removeChild(popup);
+  }
+}
