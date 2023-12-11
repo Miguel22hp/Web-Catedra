@@ -13,7 +13,7 @@ function loadHeaderAndInitialize() {
   };
 
 
-  xhr.open("GET", "html/header.html", true);
+  xhr.open("GET", "header.html", true);
   xhr.send();
 }
 
