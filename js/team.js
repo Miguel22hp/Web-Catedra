@@ -1,5 +1,5 @@
-//const teamPhotos = document.getElementById("liTeamPhotosGroup"); TODO
-//const oldTeamPhotos = teamPhotos.style.display;
+const teamPhotos = document.getElementById("liTeamPhotosGroup"); TODO
+const oldTeamPhotos = teamPhotos.style.display;
 
 const verticalSeparator = document.getElementById("liVerticalSeparator");
 const oldVerticalSeparator = verticalSeparator.style.display;
