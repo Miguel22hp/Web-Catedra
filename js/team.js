@@ -1,4 +1,4 @@
-const teamPhotos = document.getElementById("liTeamPhotosGroup"); TODO
+const teamPhotos = document.getElementById("liTeamPhotosGroup");
 const oldTeamPhotos = teamPhotos.style.display;
 
 const verticalSeparator = document.getElementById("liVerticalSeparator");
