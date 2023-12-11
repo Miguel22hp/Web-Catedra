@@ -16,126 +16,6 @@ body h2, body h3{
     padding-left: 10px;
 }
 
-
-/******************************************/
-/*NAVIGATION HEADER*/
-#ContainerHeader {
-    /*Position*/
-    position: fixed; 
-    top: 0; 
-    z-index: 3;
-
-    /*Size*/
-    width: 100%;   
-
-    /*Color*/
-    background-color: #004379;
-
-    /*Animation*/
-    transition: top 0.3s;
-}
-
-#LogoVersionMovile {
-    /*Display*/
-    display: none;
-}
-
-/*NAVIGATION HEADER TITLE SEPARATOR*/
-#SeparatorTitle {
-    /*Position*/
-    height: 0.3vh;
-    margin: 0;
-    padding: 0;
-
-    /*Size*/
-    width: 50vh;
-
-    /*Color*/
-    background-color: #F4B429;
-    border-color: #F4B429;
-}
-/*NAVIGATION HEADER MAIN TITLE*/
-#TitleContainer {
-    /*Position*/
-    margin-top: 0;
-    padding-left: 0;
-
-    /*Display*/
-    display: flex;
-    justify-content: left;
-    
-    /*Text*/
-    list-style-type: none;
-}
-
-#MainTitle h1 {
-    /*Position*/
-    margin: 5px;
-
-    /*Color*/
-    color: #FFFFFF;
-
-    /*Text*/
-    text-align: left; 
-    list-style-type: none;  
-    font-size: 4vh;
-}
-
-
-/*NAVIGATION HEADER MENU*/
-/*HEADER NAVIGATION HEADER MENU*/
-#NavigationHeader ul {
-    /*Position*/
-    left: 0; 
-    padding: 0;
-
-    /*Display*/
-    display: flex; 
-    justify-content: space-around;
-
-    /*Text*/
-    list-style-type: none; 
-}
-/*HEADER NAVIGATION HEADER MENU LINKS*/
-#NavigationHeader ul li a {
-    /*Position*/
-    width: 220px;
-    height: 20px;
-
-    /*Color*/
-    color: white;
-    border-radius: 6px;
-
-    /*Display*/
-    display: block; 
-
-    /*Text*/
-    text-align: center;
-    text-decoration: none; 
-    font-weight: bold;
-
-}
-
-/*HEADER SEPARATORS OF THE NAVIGATION HEADER MENU*/
-#SeparatorUL {
-    /*Position*/
-    height: 18px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-/*HEADER SEPARATOR OF THE NAVIGATION HEADER MENU*/
-#SeparatorLI {
-    /*Position*/
-    margin-bottom: 2px;
-    margin-top: 0;
-
-    /*Size*/
-    width: 80%;
-
-    /*Color*/
-    border-color: #F4B429;
-    opacity: 0;
-}
 /******************************************/
 /*WHO WE ARE*/
 .containerBodyWhoWeAre {
@@ -164,7 +44,7 @@ body h2, body h3{
     width: 100%;
 
     /*Color*/
-    filter:brightness(0.3) blur(7px);
+    filter:brightness(0.5) blur(7px);
     opacity: 0.8;
 }
 
@@ -599,8 +479,10 @@ body h2, body h3{
 /******************************************/
 /*EXALUMNI*/
 .containerBodyUPM {
+    padding-top: 20px;
     margin-top: 5%;
 }
+
 .exAlumniInfoContainer{
     background-color: #004379;
     margin-right: 9%;

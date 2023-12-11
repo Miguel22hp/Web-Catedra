@@ -56,7 +56,6 @@ function hoverOutInnova(){
 // If the screen is bigger than 1248px text will not be shown.
 function WhoWeAreWidth() {
   if (window.innerWidth < 1248) {
-    LogoAdaptCated.style.display = "none";
     LogoAdaptInnova.style.display = "none";
     LogoAdaptUPM.style.display = "none";
 
@@ -70,7 +69,6 @@ function WhoWeAreWidth() {
   }
   else
   {
-    LogoAdaptCated.style.display = oldLogoCated || "";
     LogoAdaptInnova.style.display = oldLogoInnova || "";
     LogoAdaptUPM.style.display = oldLogoUPM || "";
 

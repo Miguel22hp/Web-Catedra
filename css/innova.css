@@ -1,0 +1,44 @@
+#ContainerInnova {
+    /*Position*/
+    margin-top: 90px;
+
+    /*Color*/
+    background-color: #ffffff; 
+    line-height: 1.6; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+h1 {
+    /*Position*/
+    padding-top: 5px;
+}
+
+section {
+    /*Position*/
+    margin: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px; 
+}
+
+.sectionTitles {
+    /*Color*/
+    color: #004379; 
+
+    /*Position*/
+    margin-bottom: 0.5em;
+}
+
+p {
+    /*Position*/
+    text-align: justify; 
+    margin-bottom: 1em;
+    padding-bottom: 10px;
+}
+
+iframe {
+    /*Color*/
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}

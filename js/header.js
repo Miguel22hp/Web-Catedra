@@ -1,75 +1,129 @@
-let prevScrollPos = window.scrollY;
-const navbar = document.getElementById("ContainerHeader");
-const oldNavbar = navbar.style.top;
-const logoMovileVersion = document.getElementById("LogoVersionMovile");
-const title = document.getElementById("MainTitle");
-const oldTitle = title.style.display;
-const navigationHeader = document.getElementById("NavigationHeader");
-const links = navigationHeader.querySelectorAll("li a");
-const oldNav = navigationHeader.style.display;
+document.addEventListener('DOMContentLoaded', function() {
+  loadHeaderAndInitialize();
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      const targetElement = document.querySelector(this.getAttribute('href'));
-      const targetPosition = targetElement.offsetTop;
-      const duration = 1000; 
-
-      window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-      });
-  });
 });
 
+function loadHeaderAndInitialize() {
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+          document.getElementById("ContainerHeader").innerHTML = this.responseText;
+          initializeHeader();
+      }
+  };
 
-// When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
-window.onscroll = function() {
-    const currentScrollPos = window.scrollY;
-    if (prevScrollPos > currentScrollPos) {
-        navbar.style.top = "0";
-    } else {
-        navbar.style.top = "-100px";
-    }
-    prevScrollPos = currentScrollPos;
-};
 
-// When the users screen width is less than 1248px, hide the navbar-menu
-function HeaderWidth() {
-    if (window.innerWidth < 1248) {
-      logoMovileVersion.style.display = "block";
-      logoMovileVersion.style.width = "20%";
-      logoMovileVersion.style.paddingLeft = "10px";
-      logoMovileVersion.style.paddingTop = "10px";
-      logoMovileVersion.style.paddingBottom = "0px";
-      navbar.style.backgroundColor = "grey";
-      title.style.display = "none";
-      navigationHeader.style.display = "none";
-    }
-    else
-    {
-      navbar.style.backgroundColor = "#004379";
-      logoMovileVersion.style.display = "none";
-      title.style.display = oldTitle;
-      navigationHeader.style.display = oldNav;
-    }
+  xhr.open("GET", "/html/header.html", true);
+  xhr.send();
 }
 
-// When hover over the links, It changes the color
-links.forEach(link => {
-  link.addEventListener("mouseover", () => {
-    link.style.transition = "opacity 0.5s ease-in-out";
-    link.style.opacity = "0.8";
-    link.style.color = "#F4B429";
-  });
-  
-  link.addEventListener("mouseout", () => {
-    link.style.transition = "opacity 0.5s ease-in-out";
-    link.style.opacity = "1";
-    link.style.color = "white"; 
-  });
-});
+function initializeHeader() {
+  const variables = initializeVariables();
 
-window.addEventListener("resize", HeaderWidth);
-document.addEventListener('DOMContentLoaded', HeaderWidth);
+  variables.headerContainer.style.transition = "height 0.75s";
+
+
+  setupEventListeners(variables);
+  HamburguerMenu(variables);
+  HeaderWidth(variables);
+
+  window.addEventListener("resize", () => HeaderWidth(variables));
+  window.addEventListener("resize", () => variables.oldHeaderContainerHeight = variables.headerContainer.offsetHeight);
+}
+
+function initializeVariables() {
+  const headerContainer = document.getElementById("ContainerHeader");
+  const oldHeaderContainerHeight = headerContainer.offsetHeight;
+  const hamburguerMenu = document.getElementById('HamburguerMenu');
+  const superiorLine = document.getElementById('SuperiorLine');
+  const middleLine = document.getElementById('MiddleLine');
+  const inferiorLine = document.getElementById('InferiorLine');
+  const navigationHeader = document.getElementById("NavigationHeader");
+  const oldNavigationHeader = navigationHeader.style.display;
+  const navigationHeaderMovilerVersion = document.getElementById("NavigationHeaderMovileVersion");
+  const oldNavigationHeaderMovilerVersion = navigationHeaderMovilerVersion.style.display;
+  const links = navigationHeaderMovilerVersion.querySelectorAll("li");
+  const title = document.getElementById("MainTitle");
+  const movileVersion = document.getElementById("LogoVersionMovile");
+
+  return { 
+      headerContainer, hamburguerMenu, superiorLine, middleLine, 
+      inferiorLine, navigationHeader, oldNavigationHeader, navigationHeaderMovilerVersion, oldNavigationHeaderMovilerVersion, links, title, oldHeaderContainerHeight, movileVersion
+  };
+}
+
+function setupEventListeners(variables) {
+  variables.links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        variables.superiorLine.style.transform = "rotate(0deg)";
+        variables.middleLine.style.transform = "translateX(0%)";
+        variables.inferiorLine.style.transform = "rotate(0deg)";
+        variables.navigationHeaderMovilerVersion.style.opacity = "0";
+        variables.navigationHeaderMovilerVersion.style.transition = "opacity 0.75s";
+
+        setTimeout(() => {
+          variables.navigationHeaderMovilerVersion.style.maxHeight = "0";
+          variables.headerContainer.style.transition = "height 0.75s";
+          variables.headerContainer.style.height = "1vh"; 
+        }, 750); 
+      });
+  });
+}
+
+function HamburguerMenu(variables) {
+  variables.hamburguerMenu.addEventListener('click', function() {
+      toggleHamburguerMenu(variables);
+  });
+}
+
+function HeaderWidth(variables) {
+  if (window.innerWidth < 990) {
+    variables.hamburguerMenu.style.display = "block";
+    variables.navigationHeader.style.display = "none";
+      
+  } else {
+    variables.hamburguerMenu.style.display = "none";
+    variables.navigationHeader.style.display = variables.oldNavigationHeader;
+    variables.headerContainer.style.backgroundColor = "#004379";
+    variables.title.style.display = "block";
+  }
+}
+
+function toggleHamburguerMenu(variables) {
+  if (variables.navigationHeaderMovilerVersion.style.opacity === "0" || variables.navigationHeaderMovilerVersion.style.opacity === "") {
+    document.body.style.overflow = "hidden";
+    variables.hamburguerMenu.style.transform = "translateX(-5px)";
+    variables.superiorLine.style.transform = "rotate(45deg) translateX(14px)";
+    variables.superiorLine.style.transition = "transform 0.5s";
+    variables.middleLine.style.transform = "translateX(200%)";
+    variables.middleLine.style.transition = "transform 0.5s";
+    variables.inferiorLine.style.transform = "rotate(-45deg) translateX(14px)";
+    variables.inferiorLine.style.transition = "transform 0.5s";
+
+    
+    setTimeout(() => {
+    variables.headerContainer.style.transition = "height 0.75s";
+    variables.headerContainer.style.height = "100vh";
+    }, 50);
+
+    setTimeout(() => {
+      variables.navigationHeaderMovilerVersion.style.opacity = "1";
+      variables.navigationHeaderMovilerVersion.style.maxHeight = "100%";
+    }, 200);
+  } else {
+      document.body.style.overflow = "auto";
+      variables.superiorLine.style.transform = "rotate(0deg)";
+      variables.middleLine.style.transform = "translateX(0%)";
+      variables.inferiorLine.style.transform = "rotate(0deg)";
+      variables.navigationHeaderMovilerVersion.style.opacity = "0";
+      variables.navigationHeaderMovilerVersion.style.transition = "opacity 0.75s";
+
+      setTimeout(() => {
+          variables.navigationHeaderMovilerVersion.style.maxHeight = "0";
+          variables.headerContainer.style.transition = "height 0.75s";
+          variables.headerContainer.style.height = "1vh"; 
+      }, 50); 
+  }
+}
+
+
