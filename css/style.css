@@ -496,7 +496,7 @@ body h2, body h3{
     text-align: center;
 }
 
-.exAlumniInfoContainer ul{
+.exAlumni{
     display: flex;
     flex-direction: row;
     background-color: #004379;
@@ -525,6 +525,7 @@ body h2, body h3{
 
 .exAlummniPhoto{
     margin-bottom: 10%;
+    width: 100%;
 }
 
 .personalInfoExAlumni{
@@ -550,6 +551,8 @@ body h2, body h3{
 .experienceInnova-TSNContainer{
     display: flex;
     align-items: center; /* Centra verticalmente los elementos hijos */
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .experienceInnova-TSN{
@@ -600,6 +603,43 @@ body h2, body h3{
     z-index: -1;
 }
 */
+/*Mobile exAlumni*/
+
+.exAlumniMobile{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+}
+
+.exAlumniPhotoContainerMobile, .experienceInnova-TSNContainerMobile, .personalInfoExAlumniMobile{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 1.25%;
+    margin-top: 1.25%;
+}
+
+.exAlumniContainerButtonsList{
+    height: 33%;
+    margin: 0;
+}
+
+.exAlummniPhotoMobile{
+    width: 100%;
+}
+
+.experienceInnova-TSNMobile{
+    color: #FFFFFF;
+}
+
+.personalInfoExAlumniMobile p{
+    color: #FFFFFF;
+}
+
+.personalInfoExAlumniMobile h4{
+    color: #F4B429;
+}
 
 /*LINEOFRESEARCH*/
 .containerBodyLineOfResearch {
