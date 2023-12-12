@@ -3,7 +3,7 @@ var currentIndex = 0;
 var isTransitioning = false;
 
 function loadTeamData() {
-    fetch('../js/team.json')
+    fetch('https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/main/json/team.json')
         .then(response => response.json())
         .then(data => {
             console.log(data);
