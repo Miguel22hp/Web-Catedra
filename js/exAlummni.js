@@ -1,4 +1,4 @@
-
+var tipoPantalla = -1;
 /**
  *  This function creates the ul with every single UPM former Student
  *  Every student gets an Id every time the function is loaded.
@@ -22,7 +22,6 @@ function createFormerStudent(){
                     // Acceder a la lista de exAlumnos
                     const exAlumnos = data.exAlumnos;
                     var idExAlummni = 0;
-                    //console.log("id del exAlumnos" + exAlumnos.)
 
                     exAlumnos.forEach(exAlumno => {
                         //structure where the former Student is going to be created
@@ -78,7 +77,6 @@ function createFormerStudent(){
                         //image.src = exAlumno.link_photo;
                         var imagesCompleted = routeImages + exAlumno.link_photo;
                         image.src = imagesCompleted;
-                        console.log(image.src);
                         photo.appendChild(image);
 
 
@@ -136,7 +134,6 @@ function createFormerStudentMobile(){
                     // Acceder a la lista de exAlumnos
                     const exAlumnos = data.exAlumnos;
                     var idExAlummni = 0;
-                    //console.log("id del exAlumnos" + exAlumnos.)
 
                     exAlumnos.forEach(exAlumno => {
                         //structure where the former Student is going to be created
@@ -192,7 +189,6 @@ function createFormerStudentMobile(){
                         //image.src = exAlumno.link_photo;
                         var imagesCompleted = routeImages + exAlumno.link_photo;
                         image.src = imagesCompleted;
-                        console.log(image.src);
                         photo.appendChild(image);
 
 
@@ -241,12 +237,16 @@ function createFormerStudentMobile(){
  * When the document is loaded, the former studen with id = 0 
  * appears on the board 
  */
+
 document.addEventListener("DOMContentLoaded", function () {
     let formerStudents;
     let buttonsIzq = [];
     let buttonsRight = [];
+    var infoExAlumni = document.getElementById("ExAlumniContainer");
+    infoExAlumni.innerHTML ='';
 
     if(window.innerWidth >= 1200){
+    tipoPantalla = 0;
     createFormerStudent()
         .then(students => {
             students.forEach(exStudent => {
@@ -305,13 +305,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var newId;
 
             if (direction === "left") {
-                console.log(id);
                 newId = id == 0 ? formerStudents.length - 1 : id - 1;
-                console.log(newId);
             } else {
-                console.log(id);
                 newId = id == formerStudents.length - 1 ? 0 : parseInt(id) + 1;
-                console.log(newId);
             }
 
             let continueLoop = true;
@@ -333,9 +329,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     else if(window.innerWidth < 1200)
     {
+        tipoPantalla = 1;
         createFormerStudentMobile()
         .then(students => {
-            console.log("MOVILLLL"); //BORRAR
             students.forEach(exStudent => {
                 var buttonizq1 = exStudent.querySelector(".buttonExAlumni");
                 var buttonright1 = exStudent.querySelector(".buttonRightExAlumni");
@@ -392,13 +388,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var newId;
 
             if (direction === "left") {
-                console.log(id);
                 newId = id == 0 ? formerStudents.length - 1 : id - 1;
-                console.log(newId);
             } else {
-                console.log(id);
                 newId = id == formerStudents.length - 1 ? 0 : parseInt(id) + 1;
-                console.log(newId);
             }
 
             let continueLoop = true;
@@ -418,12 +410,188 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
-        
-
 });
 
 
+// Agregar un evento para manejar cambios en el tamaño de la pantalla
+window.addEventListener('resize', handleResize);
 
+function handleResize() {
+    var infoExAlumni = document.getElementById("ExAlumniContainer");
+    infoExAlumni.innerHTML ='';
+    let formerStudents;
+    let buttonsIzq = [];
+    let buttonsRight = [];
 
+    if(window.innerWidth >= 1200 && tipoPantalla != 0){
+        tipoPantalla = 0;
+        var infoExAlumni = document.getElementById("ExAlumniContainer");
+        infoExAlumni.innerHTML ='';
+        createFormerStudent()
+            .then(students => {
+                students.forEach(exStudent => {
+                    var buttonizq1 = exStudent.querySelector(".buttonExAlumni");
+                    var buttonright1 = exStudent.querySelector(".buttonRightExAlumni");
+    
+                    if (buttonizq1) {
+                        buttonsIzq.push(buttonizq1);
+                    }
+    
+                    if (buttonright1) {
+                        buttonsRight.push(buttonright1);
+                    }
+                });
+    
+                formerStudents = students;
+                let continueLoop = true;
+                let index = 0;
+                var infoExAlumni = document.getElementById("ExAlumniContainer");
+    
+                while (continueLoop && index < students.length) {
+                    // Accede al estudiante actual utilizando students[index]
+                    const currentStudent = students[index];
+    
+                    if(currentStudent.dataset.id == 0)
+                    {
+                        continueLoop = false;
+                        infoExAlumni.appendChild(currentStudent);
+                    }
+    
+                    // Incrementa el índice para pasar al siguiente estudiante
+                    index++;
+                }
+    
+                buttonsIzq.forEach(buttonIzq => {
+                    buttonIzq.addEventListener("click", function () {
+                        handleButtonClick("left");
+                    });
+                });
+    
+                buttonsRight.forEach(buttonRight1 => {
+                    buttonRight1.addEventListener("click", function () {
+                        handleButtonClick("right");
+                    });
+                });
+    
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    
+            function handleButtonClick(direction)
+            {
+                var actualExAlumni = document.querySelector(".exAlumni");
+                var id = actualExAlumni.dataset.id;
+                var newId;
+    
+                if (direction === "left") {
+                    newId = id == 0 ? formerStudents.length - 1 : id - 1;
+                } else {
+                    newId = id == formerStudents.length - 1 ? 0 : parseInt(id) + 1;
+                }
+    
+                let continueLoop = true;
+                let index = 0;
+                var infoExAlumni = document.getElementById("ExAlumniContainer");
+    
+                while (continueLoop && index < formerStudents.length) {
+                    const currentStudent = formerStudents[index];
+    
+                    if (currentStudent.dataset.id == newId) {
+                        continueLoop = false;
+                        infoExAlumni.innerHTML = '';
+                        infoExAlumni.appendChild(currentStudent);
+                    }
+    
+                    index++;
+                }
+            }
+        }
+    else if(window.innerWidth < 1200 && tipoPantalla != 1)
+    {
+        tipoPantalla = 1;
+        var infoExAlumni = document.getElementById("ExAlumniContainer");
+        infoExAlumni.innerHTML ='';
+        createFormerStudentMobile()
+        .then(students => {
+            students.forEach(exStudent => {
+                var buttonizq1 = exStudent.querySelector(".buttonExAlumni");
+                var buttonright1 = exStudent.querySelector(".buttonRightExAlumni");
+
+                if (buttonizq1) {
+                    buttonsIzq.push(buttonizq1);
+                }
+
+                if (buttonright1) {
+                    buttonsRight.push(buttonright1);
+                }
+            });
+
+            formerStudents = students;
+            let continueLoop = true;
+            let index = 0;
+            var infoExAlumni = document.getElementById("ExAlumniContainer");
+
+            while (continueLoop && index < students.length) {
+                // Accede al estudiante actual utilizando students[index]
+                const currentStudent = students[index];
+
+                if(currentStudent.dataset.id == 0)
+                {
+                    continueLoop = false;
+                    infoExAlumni.appendChild(currentStudent);
+                }
+
+                // Incrementa el índice para pasar al siguiente estudiante
+                index++;
+            }
+
+            buttonsIzq.forEach(buttonIzq => {
+                buttonIzq.addEventListener("click", function () {
+                    handleButtonClick("left");
+                });
+            });
+
+            buttonsRight.forEach(buttonRight1 => {
+                buttonRight1.addEventListener("click", function () {
+                    handleButtonClick("right");
+                });
+            });
+
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+        function handleButtonClick(direction)
+        {
+            var actualExAlumni = document.querySelector(".exAlumniMobile");
+            var id = actualExAlumni.dataset.id;
+            var newId;
+
+            if (direction === "left") {
+                newId = id == 0 ? formerStudents.length - 1 : id - 1;
+            } else {
+                newId = id == formerStudents.length - 1 ? 0 : parseInt(id) + 1;
+            }
+
+            let continueLoop = true;
+            let index = 0;
+            var infoExAlumni = document.getElementById("ExAlumniContainer");
+
+            while (continueLoop && index < formerStudents.length) {
+                const currentStudent = formerStudents[index];
+
+                if (currentStudent.dataset.id == newId) {
+                    continueLoop = false;
+                    infoExAlumni.innerHTML = '';
+                    infoExAlumni.appendChild(currentStudent);
+                }
+
+                index++;
+            }
+        }
+    }
+}
 
 
