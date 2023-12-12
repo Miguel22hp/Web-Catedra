@@ -3,7 +3,7 @@ var currentIndex = 0;
 var isTransitioning = false;
 
 function loadTeamData() {
-    fetch('../json/team.json')
+    fetch('../js/team.json')
         .then(response => response.json())
         .then(data => {
             console.log(data);
