@@ -1,89 +1,17 @@
-var teamData = [
-    {
-        image: "images/People/Javier_Sanchez.png",
-        name: "Javier Sánchez Tirados",
-        description: "Alumno de la Universidad Politécnica de Madrid y becario de la Cátedra INNOVA-tsn UPM."
-    },
-    {
-        image: "images/People/Miguel_Hernando.png",
-        name: "Miguel Hernando Padilla",
-        description: "Alumno de la unIVersidad Politécnica de Madrid y becario de la Cátedra INNOVA-tsn UPM."
-    },
-    {
-        image: "images/People/Ana_Maria_Niño.png",
-        name: "Ana María Niño",
-        description: "Coordinadora de la Cátedra INNOVA-tsn UPM por parte de Innova-tsn."
-    },
-    {
-        image: "images/People/Begoña_Vega.png",
-        name: "Begoña Vega",
-        description: "Head of AI Models & Applications AI Solutions & Strategy en Innova-tsn."
-    },
-    {
-        image: "images/People/Jose_Ignacio_Bernaldo.png",
-        name: "Jose Ignacio Bernaldo",
-        description: "Advance Analytics Manager en Innova-tsn."
-    },
-    {
-        image: "images/People/Juan_Ignacio.png",
-        name: "Juan Ignacio",
-        description: "UK Country Manager & Global Head of AI en Innova-tsn."
-    },
-    {
-        image: "images/People/Mencía_Vega.png",
-        name: "Mencía Vega",
-        description: "Talento y Cultura en Innova-tsn."
-    },
-    {
-        image: "images/People/Rosario_Guerra.png",
-        name: "Rosario Guerra",
-        description: "Directora de la Cátedra INNOVA-tsn UPM por parte de Innova-tsn."
-    },
-    {
-        image: "images/People/Nuria.png",
-        name: "Nuria Estebas",
-        description: "Marketing  & Communication Manager en Innova-tsn."
-    },
-    {
-        image: "images/People/Jaime.png",
-        name: "Jaime Ramírez",
-        description: "Salud, eLearning y psicología en la UPM."
-    },
-    {
-        image: "images/People/Elena.png",
-        name: "Elena Villalba",
-        description: "Directora de la Cátedra INNOVA-tsn UPM por parte de la Universidad Politécnica de Madrid. Human-Computer Interaction/User Experience, personas mayores y salud  en la UPM."
-    },
-    {
-        image: "images/People/Cristian.png",
-        name: "Cristian Moral",
-        description: "Human-Computer Interaction/User Experience, Virtual Reality en la UPM."
-    },
-    {
-        image: "images/People/Angelica.png",
-        name: "Angélica de Antonio",
-        description: "Human-Computer Interaction/User Experience, Virtual Reality, eLearning y Psicología en la UPM."
-    },
-    {
-        image: "images/People/Jose_Maria.png",
-        name: "Jose María Barambones",
-        description: "Human-Computer Interaction/User Experience, Virtual Reality, Games and AI  en la UPM."
-    },
-    {
-        image: "images/People/Loic.png",
-        name: "Loic Martínez",
-        description: "Human-Computer Interaction/User Experience y accesibilidad en la UPM."
-    },
-    {
-        image: "images/People/Ricardo.png",
-        name: "Ricardo Imbert",
-        description: "Human-Computer Interaction/User Experience y agentes en la UPM."
-    },
-
-];
-
+var teamData = []
 var currentIndex = 0;
 var isTransitioning = false;
+
+function loadTeamData() {
+    fetch('../json/team.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            teamData = data;
+            updateContent();
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
+}
 
 function updateContent() {
     isTransitioning = true;
@@ -115,3 +43,5 @@ document.getElementById("ButtonRight").addEventListener("click", function () {
     currentIndex = (currentIndex + 1) % teamData.length;
     updateContent();
 });
+
+document.addEventListener('DOMContentLoaded', loadTeamData);
