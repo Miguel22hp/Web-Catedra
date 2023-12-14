@@ -19,7 +19,7 @@ const oldButtonLeft = buttonLeft.style.display;
 function teamWidth() {
 
 
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 990) {
 
         photos.style.height="520px";
         photos.style.maxWidth="80%";

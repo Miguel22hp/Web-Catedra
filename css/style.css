@@ -976,10 +976,38 @@ body h2, body h3{
         padding-left: 10px;
         padding-bottom: 15px;
     }
+
+    .contentWrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
     .contactMap {
+        width: 45%;
+        border-radius: 15px;
+        overflow: hidden; 
         margin: 0 auto;
-        text-align: center; /* Alinea el contenido del div al centro */
+        text-align: center; 
         padding-bottom: 20px;
+        height: 430px;
+    }
+
+    .videoContainer {
+        width: 45%;
+        border-radius: 15px;
+        overflow: hidden; 
+        margin: 0 auto;
+        text-align: center; 
+        padding-bottom: 20px;
+        height: 430px;
+    }
+    
+    .embeddedVideo {
+        object-fit: fill;
+        object-position: 0 -750px;
+        border-radius: 15px;
+        margin: 0 auto;
     }
 
     /*FOOTER*/
