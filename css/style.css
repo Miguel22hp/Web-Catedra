@@ -983,7 +983,17 @@ body h2, body h3{
         margin-bottom: 20px;
     }
     
-    .contactMap, .videoContainer {
+    .contactMap {
+        width: 45%;
+        border-radius: 15px;
+        overflow: hidden; 
+        margin: 0 auto;
+        text-align: center; 
+        padding-bottom: 20px;
+        height: 430px;
+    }
+
+    .videoContainer {
         width: 45%;
         border-radius: 15px;
         overflow: hidden; 
