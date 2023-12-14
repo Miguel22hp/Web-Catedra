@@ -992,16 +992,6 @@ body h2, body h3{
         padding-bottom: 20px;
         height: 430px;
     }
-
-    .videoContainer {
-        width: 45%;
-        border-radius: 15px;
-        overflow: hidden; 
-        margin: 0 auto;
-        text-align: center; 
-        padding-bottom: 20px;
-        height: 430px;
-    }
     
     .embeddedVideo {
         object-fit: fill;
