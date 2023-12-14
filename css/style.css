@@ -1060,7 +1060,9 @@ body h2, body h3{
 
     .containerSocialMediaElements{
         width: 100%;
-        display: flex; 
+        @media (min-width: 650px) {
+            display: flex; 
+        }
         list-style: none;
         justify-content: start;
         padding: 0;
