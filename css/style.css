@@ -294,8 +294,8 @@ body h2, body h3{
 /* Estilo del tooltip */
 .tooltip {
     position: absolute;
-    /*background-color: #EEEEEE;*/
-    background-color: #004379;
+    background-color: #FFFFFF;
+    /*background-color: #004379;*/
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -322,7 +322,9 @@ body h2, body h3{
 }
 
 .tooltip p {
-    color: #FFFFFF;
+    color: #004379;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .tooltip::-webkit-scrollbar {
@@ -342,7 +344,7 @@ body h2, body h3{
 
 .highlightY{
     font-weight: bold;
-    color: #F4B429;
+    /*0color: #F4B429;*/
     font-size: 20px;
 }
 
