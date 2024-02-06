@@ -241,6 +241,10 @@ body h2, body h3{
 
 /******************************************/
 /*OUR PURPOSE*/
+.disapearTitle {
+    font-size: 0;
+}
+
 .containerBodyOurPurpose {
     padding-top: 20px;
     background-color: white
