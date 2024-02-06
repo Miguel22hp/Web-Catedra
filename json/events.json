@@ -19,6 +19,36 @@
         "hora_fin": "14:00",
         "titulo": "Electricity Market Transformation with Digitalization and AI: Session 2",
         "descripcion": "Redefining the Electricity Market Agent's Experience through Digitalization and AI. Estudiantes del máster MUID-HCID. Session 2."
+      },
+      {
+        "fecha": "2024-06-26",
+        "anio": 2024,
+        "mes": 6,
+        "dia": 26,
+        "hora_inicio": "",
+        "hora_fin": "",
+        "titulo": "Make IT",
+        "descripcion": ""
+      },
+      {
+        "fecha": "2024-03-09",
+        "anio": 2024,
+        "mes": 3,
+        "dia": 9,
+        "hora_inicio": "",
+        "hora_fin": "",
+        "titulo": "RootedCON",
+        "descripcion": ""
+      },
+      {
+        "fecha": "2024-03-18",
+        "anio": 2024,
+        "mes": 3,
+        "dia": 22,
+        "hora_inicio": "",
+        "hora_fin": "",
+        "titulo": "Try IT!",
+        "descripcion": ""
       }
     ]
   }
