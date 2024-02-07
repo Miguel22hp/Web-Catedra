@@ -1072,7 +1072,7 @@ body h2, body h3{
         list-style: none;
         justify-content: center;
         align-items: center;
-        padding: 0;
+        padding: ;
         width: 100%;
     }
 
@@ -1090,9 +1090,6 @@ body h2, body h3{
 
     .containerSocialMediaElements{
         width: 100%;
-        @media (min-width: 650px) {
-            display: flex; 
-        }
         list-style: none;
         justify-content: start;
         padding: 0;
@@ -1110,6 +1107,16 @@ body h2, body h3{
 
     .LogoIcons2{
         width: 70px;
+    }
+
+    @media (max-width: 500px) {
+        .LogoIcons1 {
+            display: none;
+        }
+        
+        .LogoIcons2 {
+            display: none;
+        }
     }
 
     .containerLinksElements{
