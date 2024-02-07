@@ -190,14 +190,11 @@ body h2, body h3{
     transition: opacity 0.5s ease-in-out;
 }
 
-/*WHO WE ARE INTROCUTION CONTAINER*/
+/*WHO WE ARE INTRODUCTION CONTAINER*/
 #IntroductionContainer {
     /*Position*/
     z-index: 2;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 90%;
-    position: absolute;
+    text-align: center;
 
     /*Color*/
     /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);*/
@@ -236,7 +233,7 @@ body h2, body h3{
 /*WHO WE ARE SLOGAN*/
 #Slogan{
     /*Position*/
-    padding-top:350px;
+    padding-top:180px;
     padding-bottom: 100px;
 
     @media (max-width: 650px) {
