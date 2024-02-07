@@ -45,6 +45,7 @@ function createFormerStudent(){
                         buttonRightLi.appendChild(buttonRight);
 
                         //Creating the personal info li
+                        /*
                         const personalInfo = document.createElement('li');
                         personalInfo.className = "personalInfoExAlumni";
                         const nombreExAlumno = document.createElement('h4');
@@ -58,6 +59,7 @@ function createFormerStudent(){
                         personalInfo.appendChild(nombreExAlumno);
                         personalInfo.appendChild(degree);
                         personalInfo.appendChild(position);
+                        */
 
 
                         //Creating the experience Innova
@@ -79,13 +81,29 @@ function createFormerStudent(){
                         image.src = imagesCompleted;
                         photo.appendChild(image);
 
+                        const personalInfo = document.createElement('div');
+                        personalInfo.className = "personalInfoExAlumni";
+                        const nombreExAlumno = document.createElement('h4');
+                        nombreExAlumno.textContent = exAlumno.nombre_Alumno;
+                        const degree = document.createElement('p')
+                        degree.className = "upmDegree";
+                        degree.textContent = exAlumno.titulo_UPM;
+                        const position = document.createElement('p')
+                        position.className = "positionInnova-TSN";
+                        position.textContent = exAlumno.posicion_Innova;
+                        personalInfo.appendChild(nombreExAlumno);
+                        personalInfo.appendChild(degree);
+                        personalInfo.appendChild(position);
+                        photo.appendChild(personalInfo);
+
 
 
                         //Adding in the correcto order the elements
                         ulExAlumni.appendChild(buttonLeftLi);
-                        ulExAlumni.appendChild(personalInfo);
-                        ulExAlumni.appendChild(experienceInnova);
+                        //ulExAlumni.appendChild(personalInfo);
                         ulExAlumni.appendChild(photo);
+                        ulExAlumni.appendChild(experienceInnova);
+                        
                         ulExAlumni.appendChild(buttonRightLi);
                         ulExAlumni.dataset.id = idExAlummni;
                         ulExAlumni.id = "FormerStudent"+idExAlummni;

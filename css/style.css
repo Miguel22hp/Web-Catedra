@@ -557,20 +557,20 @@ body h2, body h3{
 }
 
 .exAlumniPhotoContainer{
-    display: flex;
     align-items: center; /* Agrega esta línea para centrar verticalmente la imagen */
     justify-content: center;
 }
 
 .exAlummniPhoto{
-    margin-bottom: 10%;
-    width: 100%;
+    width: 70%;
+    height: 60%;
 }
 
 .personalInfoExAlumni{
     margin: 0;
     text-align: left;
     width: auto;
+    margin-bottom: 5%;
 }
 
 .personalInfoExAlumni h4{
