@@ -4,17 +4,25 @@
         "id": 0,
         "link_photo": "ExAlumni/Carmen_Romera.png",
         "nombre_Alumno": "Carmen Romera Navarro",
-        "titulo_UPM": "Ingeniera en tecnologías industriales de la UPM -2020",
+        "titulo_UPM": "Ingeniera en Tecnologías Industriales de la UPM -2020",
         "posicion_Innova": "Consultora – 3 años en Innova-TSN ",
         "experiencia": "Esta es mi primera experiencia laboral, ya que empecé a trabajar en Innova-tsn realizando las prácticas curriculares de mi Máster. Ha sido una experiencia muy enriquecedora. Poder trabajar codo con codo con tantos compañeros de tan amplia experiencia, y que siempre estén dispuestos a ayudarme a mejorar, sin duda, ha propiciado el impulso de mi carrera profesional. Además, es genial trabajar en una empresa que ofrece retos constantes para desarrollar todo tu potencial"
       },
       {
         "id": 1,
         "link_photo": "ExAlumni/Roberto_Doncel.png",
-        "nombre_Alumno": "Roberto Doncel Muñoz ",
+        "nombre_Alumno": "Roberto Doncel Muñoz",
         "titulo_UPM": "Ingeniero Técnico en Topografía de la UPM -2014 ",
-        "posicion_Innova": "Consultor  – 1 año en Innova-TSN",
+        "posicion_Innova": "Consultor – 1 año en Innova-TSN",
         "experiencia": "Trabajar en Innova-tsn me ha permitido abrirme camino en el ámbito de los datos. Mi formación académica ya incluía el conocimiento de los datos geoposicionados, pero aquí he ampliado mis habilidades técnicas en el tratamiento de distintos tipos de datos. A veces ha requerido reconvertirse, exponiéndote a nuevas nuevos proyectos que requieren investigar y adaptar tu pensamiento a la problemática del negocio. Además, a nivel técnico me ha permitido conocer nuevas tecnologías de vanguardia"
+      },
+      {
+        "id": 2,
+        "link_photo": "ExAlumni/.png",
+        "nombre_Alumno": "Sandra Prieto Sainz",
+        "titulo_UPM": "Ingeniera Técnica en Informática de Gestión",
+        "posicion_Innova": "Administrador y Desarrollo del Salesforce  – 5 años y medio en Innova-TSN",
+        "experiencia": "Durante estos años he estado ampliando mi conocimiento trabajando con un gran equipo. Innova incentiva la realización de certificaciones y favorece el desarrollo de mi carrera profesional. El contacto con el resto de los colaboradores de la empresa es positivo, con ganas de ayudar y cooperar cuando se necesita. Además, la empresa se ha adaptado a los nuevos tiempos y ahora tenemos jornada mixta presencial y de teletrabajo, con flexibilidad en el horario"
       }
     ]
   }
