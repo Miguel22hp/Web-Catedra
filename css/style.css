@@ -550,6 +550,7 @@ body h2, body h3{
     list-style-type: none;
     margin-left: 2%;
     margin-right: 2%;
+    
 }
 
 .experienceInnova-TSNContainer, .personalInfoExAlumni, .exAlumniPhotoContainer{
@@ -559,16 +560,18 @@ body h2, body h3{
 .exAlumniPhotoContainer{
     align-items: center; /* Agrega esta línea para centrar verticalmente la imagen */
     justify-content: center;
+    height: 100%;
 }
 
 .exAlummniPhoto{
-    width: 70%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
 }
 
 .personalInfoExAlumni{
     margin: 0;
-    text-align: left;
+    text-align: center;
     width: auto;
     margin-bottom: 5%;
 }
@@ -577,10 +580,12 @@ body h2, body h3{
     color:#F4B429 ;
     font-weight: bold;
     font-size: 18px;
+    text-align: center;
 }
 
 .upmDegree{
     font-weight: bold;
+    text-align: center;
 }
 
 .positionInnova-TSN{
@@ -628,20 +633,6 @@ body h2, body h3{
 
 }
 
-/*
-.containerBodyUPM ul li p{
-    margin-left: 15px;
-}
-
-#bck_Exalumni{
-    background-color: #004379;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    box-sizing: border-box;
-    z-index: -1;
-}
-*/
 /*Mobile exAlumni*/
 
 .exAlumniMobile{
