@@ -2,7 +2,7 @@
     "exAlumnos": [
       {
         "id": 0,
-        "link_photo": "ExAlumni/Carmen_Romera.png",
+        "link_photo": "ExAlumni/Carmen_Romera_Nube.png",
         "nombre_Alumno": "Carmen Romera Navarro",
         "titulo_UPM": "Ingeniera en Tecnologías Industriales de la UPM -2020",
         "posicion_Innova": "Consultora – 3 años en Innova-TSN ",
@@ -10,7 +10,7 @@
       },
       {
         "id": 1,
-        "link_photo": "ExAlumni/Roberto_Doncel.png",
+        "link_photo": "ExAlumni/Roberto_Doncel_Nube.png",
         "nombre_Alumno": "Roberto Doncel Muñoz",
         "titulo_UPM": "Ingeniero Técnico en Topografía de la UPM -2014 ",
         "posicion_Innova": "Consultor – 1 año en Innova-TSN",
@@ -18,7 +18,7 @@
       },
       {
         "id": 2,
-        "link_photo": "ExAlumni/.png",
+        "link_photo": "ExAlumni/Sonia_Prieto_Nube.png",
         "nombre_Alumno": "Sandra Prieto Sainz",
         "titulo_UPM": "Ingeniera Técnica en Informática de Gestión",
         "posicion_Innova": "Administrador y Desarrollo del Salesforce  – 5 años y medio en Innova-TSN",
