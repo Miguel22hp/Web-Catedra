@@ -945,12 +945,8 @@ body h2, body h3{
     margin: auto; /* Centra la imagen horizontal y verticalmente */
   }
 
-  .newsStructure li p{
-    font-weight: bold;
-    }
-
     .dateNews{
-        /*color: #F4B429;*/
+        font-weight: bold;
     }
     .newsStructure li h3{
         color: #004379;
