@@ -147,6 +147,7 @@ function createMobileNews(){
                  const nuevoEventoLi = document.createElement("li");
                  const enlace = document.createElement("a");
                  enlace.href = link; //asocias al enlace el link al que debe llegar
+                 enlace.target = "_blank";
                  nuevoEventoLi.appendChild(enlace);
                  //Creas un div y una lista desordeanada (ul) para estructurar la noticia dentro del enlace
                  const div1 = document.createElement("div");
