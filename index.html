@@ -151,32 +151,17 @@
 
                 <section id="Team" class="containerBodyTeam">
                     <h2 class="sectionTitles" data-aos="fade-right">Equipo</h2>
-                    <ul>
-                        <li id="liTeamPhotosGroup" data-aos="fade-right">
-                            <img id="TeamPhotosGroup" src="images/Grupo.jpg" alt="Foto del equipo completo">
-                            <figcaption id="TeamPhotosGroupFig">
-                                <h3>Equipo Cátedra INNOVA-tsn UPM</h3>
-                            </figcaption>
-                        </li>
-                        <li id="liVerticalSeparator" data-aos="fade-right"></li>
-                        <li id="liTeamPhotosPerson" data-aos="fade-right">
-                            <ul id="liTeamPhotosPersonPaddingAdapt">
-                                <li><button id="ButtonLeft"><</button></li>
-                                <li id="AdaptPeople">
-                                    <img id="TeamPhotosPerson" src="images/People/Javier_Sanchez.png" alt="Foto de un miembro del equipo">
-                                    <figcaption id="TeamPhotosPersonFig">
-                                        <h3>Javier Sánchez Tirados</h3>
-                                        <hr>
-                                        <p>Alumno de la Universidad Politécnica de Madrid y becario de la Cátedra INNOVA-tsn UPM.</p>
-                                    </figcaption>
-                                </li>
-                                <li><button id="ButtonRight">></button></li>
-                            </ul>
-                            <script src="js/people.js"></script>
-                        </li> 
-                    </ul>
 
-                    <script src="js/team.js"></script>
+                
+                    <section id="TeamSection"></section>
+                    <script>
+                        fetch('team.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('TeamSection').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el contenido:', error));
+                    </script>
                     
                     <section id="Exalumni" class="containerBodyUPM">
                         <h3 class="subSectionTitle">Experiencias</h3>
@@ -276,5 +261,9 @@
         <script>
             AOS.init();
         </script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>
