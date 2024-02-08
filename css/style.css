@@ -941,10 +941,10 @@ body h2, body h3{
   
   .newsImages{
     width: 80%;
-    height: 80%; 
+    height: 80%;
     margin: auto; /* Centra la imagen horizontal y verticalmente */
-    
   }
+
   .newsStructure li p{
     font-weight: bold;
     }
@@ -995,8 +995,33 @@ body h2, body h3{
     }
     .newsImagesMobile{
         width: 80%;
-        height: 60%; 
+        height: 60%;
         margin: auto; /* Centra la imagen horizontal y verticalmente */
+    }
+
+    /* Estilos adicionales para tamaños específicos de pantalla utilizando Media Queries */
+    @media screen and (min-width: 751px) and (max-width: 950px) {
+        .newsImagesMobile {
+            width: 70%;
+            height: 60%;
+            /* Agrega tus estilos específicos para el rango de 751px a 1200px aquí */
+        }
+    }
+
+    @media screen and (min-width: 951px) and (max-width: 1100px) {
+        .newsImagesMobile {
+            width: 60%;
+            height: 60%;
+            /* Agrega tus estilos específicos para el rango de 751px a 1200px aquí */
+        }
+    }
+
+    @media screen and (min-width: 1101px) and (max-width: 1200px) {
+        .newsImagesMobile {
+            width: 50%;
+            height: 60%;
+            /* Agrega tus estilos específicos para el rango de 751px a 1200px aquí */
+        }
     }
 
     /*WHERETOFINDUS*/
