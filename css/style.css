@@ -212,7 +212,7 @@ body h2, body h3{
     }
 
     @media (max-width: 650px) {
-        color: #000000;
+        color: black;
     }
 }
 
@@ -493,14 +493,6 @@ body h2, body h3{
 
 }
 
-#ButtonLeftExAlumni{
-
-}
-
-#ButtonRightExAlumni{
-
-}
-
 /*Mobile exAlumni*/
 
 .exAlumniMobile{
@@ -544,7 +536,6 @@ body h2, body h3{
     padding-top: 20px;
 }
 
-/*EVENTS*/
 /*EVENTS*/
 .containerBodyEvents {
     padding-top: 20px;
