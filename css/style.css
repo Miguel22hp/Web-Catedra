@@ -303,7 +303,7 @@ body h2, body h3{
 }
 
 /* Estilo del tooltip */
-.tooltip {
+.tooltip1 {
     position: absolute;
     background-color: #FFFFFF;
     /*background-color: #004379;*/
@@ -318,6 +318,12 @@ body h2, body h3{
     left: 0;
     right: 0;
     width: 100%;
+    overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+    align-items: center;
+    padding: 0;
+    display: flex;
+
+
     @media (max-width: 500px) {
         height: 100%;
     }
@@ -325,27 +331,28 @@ body h2, body h3{
         
         height: 105%;
     }
-    overflow-y: auto; /* Agrega un scroll vertical si es necesario */
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    padding: 0;
 }
 
-.tooltip p {
+
+.tooltip1 p {
     color: #004379;
     margin-right: 5%;
     margin-left: 5%;
-    font-size: 18px;
+    font-size: 15px;
 }
 
-.tooltip::-webkit-scrollbar {
+.tooltip1::-webkit-scrollbar {
     width: 0;
 }
 
 /* Estilo del tooltip cuando se pasa el cursor sobre la imagen */
-.image-container:hover .tooltip {
+.image-container:hover .tooltip1 {
     visibility: visible; /* Mostrar el tooltip */
+    opacity: 1;
+}
+
+.image-container:hover .purposeTitle {
+    visibility:hidden; /* Mostrar el tooltip */
     opacity: 1;
 }
 
@@ -357,7 +364,7 @@ body h2, body h3{
 .highlightY{
     font-weight: bold;
     /*0color: #F4B429;*/
-    font-size: 19px;
+    font-size: 18px;
 }
 
 
