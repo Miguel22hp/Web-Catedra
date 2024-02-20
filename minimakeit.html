@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Make IT!</title>
+  <!-- Añade la referencia a Bootstrap aquí -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .bg-image {
+      background-image: url('/images/makeitupm/bck.jpg'); /* Reemplaza con tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
+      color: white;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* Organiza el contenido en columna */
+    }
+
+    /*FOOTER*/
+    .containerFooter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color:#004379;
+        color: white;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        box-sizing: border-box;
+        /*padding: 20px;*/   
+    }
+
+    .footerInfo{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        /*padding: ;*/
+        width: 100%;
+    }
+
+    .footerInfo li{
+        width: 30%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .footerInfo li p a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .containerSocialMediaElements{
+        width: 100%;
+        list-style: none;
+        justify-content: start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .socialMediaElementsIcons{
+        width: 50px;
+        height: 50px;
+    }
+
+    .LogoIcons1{
+        width: 150px;
+    }
+
+    .LogoIcons2{
+        width: 70px;
+    }
+
+    @media (max-width: 500px) {
+        .LogoIcons1 {
+            display: none;
+        }
+        
+        .LogoIcons2 {
+            display: none;
+        }
+    }
+
+    .containerLinksElements{
+        text-align: center;
+    }
+
+
+    .footerInfo li p{
+        padding-top: 15px;
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <header id="ContainerHeader"></header>
+  <script src="js/header.js"></script>
+
+  <div class="bg-image">
+      <div class="overlay">
+        <h1 style="font-size: 70px;">Mini MakeIt !</h1>
+        <p class="lead">Día 9 de Marzo</p>
+      </div>
+  </div>    
+
+
+  <footer id="footer" class="containerFooter">
+    <ul class="footerInfo">
+        <li>
+            <p>
+                © 2023 Cátedra Innova-TSN UPM. All rights reserved.
+            </p>
+        </li>
+
+        <li>
+            <img src="images/logos/BarraPolit.svg" alt="Imagen referente a Logo UPM" class="LogoIcons1">
+        </li>
+
+        <li class="containerLinksElements">
+            <p>
+                <a href="">Aviso legal</a> | 
+                <a href="">Privacidad & Cookies</a> |
+                <a href="">Protección de Datos</a>
+            </p>
+        </li>
+
+        <li>
+            <img src="images/logos/innova.png" alt="Imagen referente a Logo Innova" class="LogoIcons2">
+        </li>
+
+        <li>
+            <!-- redes sociales -->
+            <ul class="containerSocialMediaElements">
+                <li>
+                    <figure>
+                        <a href="https://www.instagram.com/innovatsn/" target="_blank"><img class="socialMediaElementsIcons" src="images/footer/icons8-instagram.svg" alt="Imagen del logo de Instagram"></a>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="mailto:miguel.hernando.padilla@alumnos.upm.es" target="_blank"><img class="socialMediaElementsIcons" src="images/footer/icons8-email-64.png" alt="Imagen del logo de correo electrónico"></a>
+                        <!--Sustituir este enlace por el correo de la práctica-->
+                    </figure>
+                </li>
+            </ul>
+        </li>
+    </ul>
+  </footer> 
+
+  <!-- Añade los scripts de Bootstrap al final del body para mejorar la carga de la página -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
