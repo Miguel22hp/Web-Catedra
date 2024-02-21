@@ -1,3 +1,23 @@
+/*INICIO*/
+.bg-image {
+    background-image: url('/images/makeitupm/bck.jpg'); /* Reemplaza con tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Organiza el contenido en columna */
+}
+
+
+/*Que hacemos*/
 #QueHacemosMiniMakeIT{
     margin: 5%;
 }
@@ -18,6 +38,7 @@
 
 .cardTitle{
     color: black;
+    text-align: center;
 
 }
 
@@ -28,5 +49,90 @@
 
 .iconoImage{
     height: 500px;
-    width: 300px;
+    
+}
+
+.card{
+    align-items: center;
+}
+
+#FotoE{
+    width: 87%;
+}
+
+
+
+ /*FOOTER*/
+ .containerFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#004379;
+    color: white;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    /*padding: 20px;*/   
+}
+
+.footerInfo{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    /*padding: ;*/
+    width: 100%;
+}
+
+.footerInfo li{
+    width: 30%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.footerInfo li p a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.containerSocialMediaElements{
+    width: 100%;
+    list-style: none;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+}
+
+.socialMediaElementsIcons{
+    width: 50px;
+    height: 50px;
+}
+
+.LogoIcons1{
+    width: 150px;
+}
+
+.LogoIcons2{
+    width: 70px;
+}
+
+@media (max-width: 500px) {
+    .LogoIcons1 {
+        display: none;
+    }
+    
+    .LogoIcons2 {
+        display: none;
+    }
+}
+
+.containerLinksElements{
+    text-align: center;
+}
+
+
+.footerInfo li p{
+    padding-top: 15px;
 }
