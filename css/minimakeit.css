@@ -1,0 +1,32 @@
+#QueHacemosMiniMakeIT{
+    margin: 5%;
+}
+
+.fila2QueHacemosRooted{
+    align-items: center;
+    justify-content: center;
+}
+
+.row{
+    margin-bottom: 3%;
+}
+
+.enlaceQueHacemosRooted{
+    text-decoration: none;
+    color: black;
+}
+
+.cardTitle{
+    color: black;
+
+}
+
+.enlaceQueHacemosRooted:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.iconoImage{
+    height: 500px;
+    width: 300px;
+}
