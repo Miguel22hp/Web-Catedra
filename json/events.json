@@ -19,6 +19,16 @@
         "hora_fin": "14:00",
         "titulo": "Electricity Market Transformation with Digitalization and AI: Session 2",
         "descripcion": "Redefining the Electricity Market Agent's Experience through Digitalization and AI. Estudiantes del máster MUID-HCID. Session 2."
+      },
+      {
+        "fecha": "2024-03-09",
+        "anio": 2024,
+        "mes": 3,
+        "dia": 9,
+        "hora_inicio": "10:00",
+        "hora_fin": "14:00",
+        "titulo": "Campamento MiniMakeIt en la RootedCon",
+        "descripcion": "Taller de robótica y programación para niños y niñas. RootedCon 2024."
       }
     ]
   }
