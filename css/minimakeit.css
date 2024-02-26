@@ -72,6 +72,20 @@
     color: #004379;
 }
 
+/*Recuerdos*/
+.containerImageMiniMakeIt{
+    background-color: #004379;
+}
+
+.imageMiniMakeIt{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 90%;
+    align-items: center;
+}
+
 /*Web Rooted*/
 #WebRooted {
     text-align: center;
