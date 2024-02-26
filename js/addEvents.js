@@ -157,7 +157,7 @@ function createEvents() {
 
 
 function buttonClick(elementLI){
-  //document.getElementById("RealBody").style.opacity = 0.5;
+  document.getElementById("RealBody").style.opacity = 0.5;
   //document.getElementById("RealBody").style.position = fixed;
   
 
@@ -205,7 +205,7 @@ function buttonClick(elementLI){
 // Función para cerrar el popup
 function closePopup() {
   // Restaurar la opacidad del documento
-  //document.getElementById("RealBody").style.opacity = 1;
+  document.getElementById("RealBody").style.opacity = 1;
 
 
   // Eliminar el popup
