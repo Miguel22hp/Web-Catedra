@@ -47,7 +47,7 @@
         "dia": 18,
         "hora_inicio": "12:30",
         "hora_fin": "14:20",
-        "titulo": "Taller Ingeniería de prompts: técnicas y estrategias para Large Language Models",
+        "titulo": "Ingeniería de prompts: técnicas y estrategias para Large Language Models",
         "descripcion": "En este taller, exploraremos cómo formular preguntas de manera que obtengas respuestas precisas y relevantes de los LLMs. A través de ejemplos prácticos y casos de uso reales, aprenderás a diseñar prompts eficientes para el desarrollo de aplicaciones, análisis de datos, o creación de contenido. Cubriremos conceptos clave como la estructuración de prompts, el uso de parámetros avanzados, y técnicas para refinar las respuestas obtenidas. Además, discutiremos estrategias para superar limitaciones y errores comunes.\n\n¡Únete para convertirte en un experto en ingeniería de prompts y llevar tus proyectos al siguiente nivel!"
       },
       {
@@ -57,7 +57,7 @@
         "dia": 20,
         "hora_inicio": "15:30",
         "hora_fin": "17:20",
-        "titulo": "Taller Cómo montar un departamento de ciberseguridad sin morir en el intento. Una perspectiva de Innova-tsn",
+        "titulo": "Cómo montar un departamento de ciberseguridad sin morir en el intento. Una perspectiva de Innova-tsn",
         "descripcion": "Durante el taller conocerás la visión de Ciberseguridad de Innova-tsn en el ciclo de vida del Dato y su aplicabilidad en los proyectos.\nEn esta jornada podrás conocer de forma práctica cómo es implantar un departamento de ciberseguridad en una empresa real con sus hitos clave y riesgos. Si te encomiendan crear un equipo de ciberseguridad en una organización ¿a qué retos te vas a enfrentar? ¿Cómo debes manejar los presupuestos y alinear las expectativas de Dirección con respecto a las necesidades técnicas?\nConoce las respuestas para asumir estos retos, de la mano de Innova-tsn."
       },
       {
@@ -67,7 +67,7 @@
         "dia": 21,
         "hora_inicio": "15:30",
         "hora_fin": "17:20",
-        "titulo": "Conferencia ¿Cómo será tu trabajo en proyectos de IA y Data? Perfiles más demandados en la consultoría",
+        "titulo": "¿Cómo será tu trabajo en proyectos de IA y Data? Perfiles más demandados en la consultoría",
         "descripcion": "En esta sesión te explicaremos las  tipologías de los proyectos de Data e Inteligencia Artificial, con una visión técnica y de gestión. Desde la experiencia  de Innova-tsn te llevaremos a conocer las habilidades, atributos y roles más demandados para el diseño e implementación de las soluciones tecnológicas que busquen solventar los retos del negocio.\n¿Ya pensaste qué tipo de perfil quieres construir para tu futuro?"
       }
 
