@@ -184,10 +184,12 @@ function buttonClick(elementLI){
   popup.appendChild(titlePopUp);
 
   let fecha = document.createElement("p");
+  fecha.className = "fechaEventoPopUp";
   fecha.textContent = elementLI.dataset.fecha;
   popup.appendChild(fecha);
 
   let hora = document.createElement("p");
+  hora.className = "horaEventoPopUp";
   hora.textContent = elementLI.dataset.horaInicio + " - " + elementLI.dataset.horaFin + " Europe/Madrid";
   popup.appendChild(hora);
 
