@@ -29,6 +29,47 @@
         "hora_fin": "14:00",
         "titulo": "Campamento MiniMakeIt en la RootedCon",
         "descripcion": "Taller de robótica y programación para niños y niñas. RootedCon 2024."
+      },
+      {
+        "fecha": "2024-03-18",
+        "anio": 2024,
+        "mes": 3,
+        "dia": 18,
+        "hora_inicio": "10:30",
+        "hora_fin": "17:20",
+        "titulo": "Comienzo del TryIt! 2024",
+        "descripcion": "El Try It! 2024 es el congreso tecnológico más grande de la UPM, con el objetivo de acercar las tendencias tecnológicas actuales a los participantes, así como ofrecer un contacto directo con las empresas más punteras. Desde Innova-tsn se ofrecerán ponencias, talleres, stands y competiciones."
+      },
+      {
+        "fecha": "2024-03-18",
+        "anio": 2024,
+        "mes": 3,
+        "dia": 18,
+        "hora_inicio": "12:30",
+        "hora_fin": "14:20",
+        "titulo": "Taller Ingeniería de prompts: técnicas y estrategias para Large Language Models",
+        "descripcion": "En este taller, exploraremos cómo formular preguntas de manera que obtengas respuestas precisas y relevantes de los LLMs. A través de ejemplos prácticos y casos de uso reales, aprenderás a diseñar prompts eficientes para el desarrollo de aplicaciones, análisis de datos, o creación de contenido. Cubriremos conceptos clave como la estructuración de prompts, el uso de parámetros avanzados, y técnicas para refinar las respuestas obtenidas. Además, discutiremos estrategias para superar limitaciones y errores comunes.\n\n¡Únete para convertirte en un experto en ingeniería de prompts y llevar tus proyectos al siguiente nivel!"
+      },
+      {
+        "fecha": "2024-03-20",
+        "anio": 2024,
+        "mes": 3,
+        "dia": 20,
+        "hora_inicio": "15:30",
+        "hora_fin": "17:20",
+        "titulo": "Taller Cómo montar un departamento de ciberseguridad sin morir en el intento. Una perspectiva de Innova-tsn",
+        "descripcion": "Durante el taller conocerás la visión de Ciberseguridad de Innova-tsn en el ciclo de vida del Dato y su aplicabilidad en los proyectos.\nEn esta jornada podrás conocer de forma práctica cómo es implantar un departamento de ciberseguridad en una empresa real con sus hitos clave y riesgos. Si te encomiendan crear un equipo de ciberseguridad en una organización ¿a qué retos te vas a enfrentar? ¿Cómo debes manejar los presupuestos y alinear las expectativas de Dirección con respecto a las necesidades técnicas?\nConoce las respuestas para asumir estos retos, de la mano de Innova-tsn."
+      },
+      {
+        "fecha": "2024-03-21",
+        "anio": 2024,
+        "mes": 3,
+        "dia": 21,
+        "hora_inicio": "15:30",
+        "hora_fin": "17:20",
+        "titulo": "Conferencia ¿Cómo será tu trabajo en proyectos de IA y Data? Perfiles más demandados en la consultoría",
+        "descripcion": "En esta sesión te explicaremos las  tipologías de los proyectos de Data e Inteligencia Artificial, con una visión técnica y de gestión. Desde la experiencia  de Innova-tsn te llevaremos a conocer las habilidades, atributos y roles más demandados para el diseño e implementación de las soluciones tecnológicas que busquen solventar los retos del negocio.\n¿Ya pensaste qué tipo de perfil quieres construir para tu futuro?"
       }
+
     ]
   }
