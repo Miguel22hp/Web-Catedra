@@ -623,6 +623,10 @@ body h2, body h3{
     color: #F4B429;
     font-weight: bold;
 }
+.yearEvents{
+    margin-top: 1.5%;
+}
+
 /*How to style de months*/
 .monthsEvents li h4{
     font-size: 18px;
@@ -654,7 +658,6 @@ body h2, body h3{
     width: 100%;
     display: flex;
     justify-content: center;
-    /*position: absolute;*/
     padding-top: 3%;
     margin-bottom: 3%;
     
