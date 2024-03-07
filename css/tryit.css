@@ -42,3 +42,10 @@
     text-align: right;
     padding-right: 2.5%;
 }
+
+.posterConferencia{
+    background-color: #004379;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
