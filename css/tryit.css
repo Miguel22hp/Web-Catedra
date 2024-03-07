@@ -7,8 +7,9 @@
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
-    color: white;
+    /*background-color: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
+    background-color: rgba(148, 148, 148, 0.5); /* Capa oscura semitransparente */
+    color: black;
     height: 100%;
     display: flex;
     justify-content: center;
