@@ -1,3 +1,11 @@
+.sectionTitles{
+    padding-left: 6%;
+    color: #004379;
+    font-size: 40px;
+    margin-bottom: 0.5%;
+}
+
+
 /*INICIO*/
 .bg-image {
     background-image: url('/images/'); /* Reemplaza con tu imagen de fondo */
@@ -7,7 +15,6 @@
 }
 
 .overlay {
-    /*background-color: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
     background-color: rgba(148, 148, 148, 0.5); /* Capa oscura semitransparente */
     color: black;
     height: 100%;
@@ -15,4 +22,23 @@
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Organiza el contenido en columna */
+}
+
+/*NUESTRA PARTICIPACIÓN*/
+.daysLine{
+    border-color: #F4B429; /*Color de las lineas que separan meses y años*/
+}
+
+.purposeTitle{
+    color: #004379;
+}
+
+.leftTitle{
+    text-align: left;
+    padding-left: 2.5%;
+}
+
+.rightTitle{
+    text-align: right;
+    padding-right: 2.5%;
 }
