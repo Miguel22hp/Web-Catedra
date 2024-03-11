@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Try IT!</title>
     <link rel="stylesheet" href="./css/tryit.css">
-    <!-- Añade la referencia a Bootstrap aquí -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" href="images/CatedraLogo_sinLetras.svg">
 </head>
 <body>
     <header id="ContainerHeader"></header>
@@ -16,14 +16,15 @@
     <section id="InicioTryIt">
         <div class="bg-image">
             <div class="overlay">
-                <h1 style="font-size: 70px;">Try It!</h1>
-                <p class="lead">Del 18 al 22 de Marzo estaremos en la ETSIINF!</p>
+                <h1 style="font-size: 120px; z-index: 2;">Try It!</h1>
+                <p class="lead" style="text-align: center; z-index: 2;">Del 18 al 22 de Marzo estaremos en la <a href="">ETSIINF!</a></p>
             </div>
         </div>
     </section> 
 
     <section id="NuestraParticipacionTryIT">
         <h2 class="sectionTitles">Nuestra Participación</h2>
+        <hr class="daysLine">
         <div id="Lunes">
             <h3 class="purposeTitle leftTitle">Lunes</h3>
             <!--
@@ -192,6 +193,7 @@
               </div>
             </div>
          </div>
+         <!--
         <hr class="daysLine">
         <div id="Viernes">
             <h3 class="purposeTitle leftTitle">Viernes</h3>
@@ -217,8 +219,68 @@
                 </div>
               </div>
         </div>
+        -->
     </section>
 
+    <section id="InscripcionTryIt" style="margin-top: 80px; margin-bottom: 50px;">
+      <h2 class="sectionTitles">Inscríbete</h2>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="card" style="max-width: 50rem; margin: auto;">
+              <img src="https://tryit.upm.es/img/imagotipo_claro_2.png" class="card-img-top" alt="...">
+              <div class="card-body" style="background-color: #004379;">
+                <p class="card-text" >Si quieres participar en nuestras charlas inscríbete desde la página oficial del TryIt!</p>
+                <a href="https://tryit.upm.es/" class="btn btn-secondary">Página oficial del Try It!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer id="footer" class="containerFooter">
+      <ul class="footerInfo">
+          <li>
+              <p>
+                  © 2023 Cátedra Innova-TSN UPM. All rights reserved.
+              </p>
+          </li>
+
+          <li>
+              <img src="images/logos/BarraPolit.svg" alt="Imagen referente a Logo UPM" class="LogoIcons1">
+          </li>
+
+          <li class="containerLinksElements">
+              <p>
+                  <a href="">Aviso legal</a> | 
+                  <a href="">Privacidad & Cookies</a> |
+                  <a href="">Protección de Datos</a>
+              </p>
+          </li>
+
+          <li>
+              <img src="images/logos/innova.png" alt="Imagen referente a Logo Innova" class="LogoIcons2">
+          </li>
+
+          <li>
+              <!-- redes sociales -->
+              <ul class="containerSocialMediaElements">
+                  <li>
+                      <figure>
+                          <a href="https://www.instagram.com/innovatsn/" target="_blank"><img class="socialMediaElementsIcons" src="images/footer/icons8-instagram.svg" alt="Imagen del logo de Instagram"></a>
+                      </figure>
+                  </li>
+                  <li>
+                      <figure>
+                          <a href="mailto:miguel.hernando.padilla@alumnos.upm.es" target="_blank"><img class="socialMediaElementsIcons" src="images/footer/icons8-email-64.png" alt="Imagen del logo de correo electrónico"></a>
+                          <!--Sustituir este enlace por el correo de la práctica-->
+                      </figure>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+  </footer> 
     
     
 </body>

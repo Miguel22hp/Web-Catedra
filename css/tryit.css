@@ -8,15 +8,26 @@
 
 /*INICIO*/
 .bg-image {
-    background-image: url('/images/'); /* Reemplaza con tu imagen de fondo */
+    background-image: url('/images/tryit/bck.jpg'); /* Reemplaza con tu imagen de fondo */;
     background-size: cover;
     background-position: center;
     height: 100vh;
+    z-index: 1;
 }
+
+.bg-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad aquí */
+  }
 
 .overlay {
     background-color: rgba(148, 148, 148, 0.5); /* Capa oscura semitransparente */
-    color: black;
+    color: white;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -25,6 +36,11 @@
 }
 
 /*NUESTRA PARTICIPACIÓN*/
+#NuestraParticipacionTryIT{
+    padding-top: 3%;
+}
+
+
 .daysLine{
     border-color: #F4B429; /*Color de las lineas que separan meses y años*/
 }
@@ -155,3 +171,78 @@
     color: #F4B429;
     margin: 0;
 }*/
+
+    /*FOOTER*/
+    .containerFooter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color:#004379;
+        color: white;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        box-sizing: border-box;
+        /*padding: 20px;*/   
+    }
+
+    .footerInfo{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        /*padding: ;*/
+        width: 100%;
+    }
+
+    .footerInfo li{
+        width: 30%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .footerInfo li p a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .containerSocialMediaElements{
+        width: 100%;
+        list-style: none;
+        justify-content: start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .socialMediaElementsIcons{
+        width: 50px;
+        height: 50px;
+    }
+
+    .LogoIcons1{
+        width: 150px;
+    }
+
+    .LogoIcons2{
+        width: 70px;
+    }
+
+    @media (max-width: 500px) {
+        .LogoIcons1 {
+            display: none;
+        }
+        
+        .LogoIcons2 {
+            display: none;
+        }
+    }
+
+    .containerLinksElements{
+        text-align: center;
+    }
+
+
+    .footerInfo li p{
+        padding-top: 15px;
+    }
