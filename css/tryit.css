@@ -8,7 +8,7 @@
 
 /*INICIO*/
 .bg-image {
-    background-image: url('/images/tryit/bck.jpg'); /* Reemplaza con tu imagen de fondo */;
+    background-image: url('/images/tryit/portadaTryIt.jpeg'); /* Reemplaza con tu imagen de fondo */;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -171,6 +171,25 @@
     color: #F4B429;
     margin: 0;
 }*/
+
+.textoStandInnova{
+    margin: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    font-size: 24px;
+    color: #004379;
+}
+
+/*Inscribete*/
+#TextoTryIT{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    color: #004379;
+}
 
     /*FOOTER*/
     .containerFooter{
