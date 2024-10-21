@@ -47,14 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
         var monthEventsList = document.createElement("ul");
         monthEventsList.className = "monthsEventsList";
         monthItem.appendChild(monthEventsList);
-        //monthlist.appendChild(hr);
-
-        if(monthIndex === 10)
-        {
-            var hr = document.createElement("hr");
-            hr.className = "eventsLine";
-            monthlist.appendChild(hr);
-        }
 
         // Si el siguiente mes es en el próximo año, agrega un nuevo año.
         if (monthIndex === 11) {
