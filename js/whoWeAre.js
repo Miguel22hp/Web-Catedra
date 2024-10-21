@@ -42,16 +42,7 @@ function clickInnova() {
   }
   requestAnimationFrame(animate);
 }
-  
-// When the user HoverOut the text, It hides.
-function hoverOutInnova(){
-  var PopUp = document.getElementById("InnovaKnowMoreText");
 
-  PopUp.addEventListener("mouseleave", function(){
-      PopUp.style.opacity = 0;
-      PopUp.style.zIndex = "-1";
-  });
-}
 
 // If the screen is bigger than 1248px text will not be shown.
 function WhoWeAreWidth() {
