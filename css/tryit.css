@@ -135,42 +135,6 @@
     margin: 0;
     text-align: center;
 }
-/*
-.colDescription{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
-.colDescription p{
-    padding: 4%;
-    margin: 0;
-    text-align: center;
-}
-
-.colFotoConferenciante{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-
-}
-
-.colFotoConferenciante img{
-    padding: 9%;
-    padding-bottom: 3%;
-    /*border: 5px solid #F4B429;*//*
-}
-
-.colFotoConferenciante p{
-    margin-left: 9%;
-}
-
-.confNombreConferenciante{
-    color: #F4B429;
-    margin: 0;
-}*/
 
 .textoStandInnova{
     margin: 3%;
