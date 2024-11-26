@@ -44,24 +44,6 @@ function createFormerStudent(){
                         buttonRight.textContent = ">";
                         buttonRightLi.appendChild(buttonRight);
 
-                        //Creating the personal info li
-                        /*
-                        const personalInfo = document.createElement('li');
-                        personalInfo.className = "personalInfoExAlumni";
-                        const nombreExAlumno = document.createElement('h4');
-                        nombreExAlumno.textContent = exAlumno.nombre_Alumno;
-                        const degree = document.createElement('p')
-                        degree.className = "upmDegree";
-                        degree.textContent = exAlumno.titulo_UPM;
-                        const position = document.createElement('p')
-                        position.className = "positionInnova-TSN";
-                        position.textContent = exAlumno.posicion_Innova;
-                        personalInfo.appendChild(nombreExAlumno);
-                        personalInfo.appendChild(degree);
-                        personalInfo.appendChild(position);
-                        */
-
-
                         //Creating the experience Innova
                         const experienceInnova = document.createElement('li');
                         experienceInnova.className = "experienceInnova-TSNContainer";
@@ -95,8 +77,6 @@ function createFormerStudent(){
                         personalInfo.appendChild(degree);
                         personalInfo.appendChild(position);
                         photo.appendChild(personalInfo);
-
-
 
                         //Adding in the correcto order the elements
                         ulExAlumni.appendChild(buttonLeftLi);
