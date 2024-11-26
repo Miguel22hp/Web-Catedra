@@ -135,7 +135,9 @@
     margin: 0;
     text-align: center;
 }
-
+#stands{
+    margin-bottom: 4%;
+}
 .textoStandInnova{
     margin: 3%;
     padding-top: 3%;
@@ -147,6 +149,28 @@
     color: #004379;
 }
 
+/*Recuerdos*/
+#Recuerdos{
+    background-color: #004379; 
+    
+}
+
+.containerCarousel{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+#Recuerdos h2{
+    align-self: start;
+    color: #F4B429; 
+    font-size: 40px; 
+    padding: 0.75%;
+    padding-left: 6%;
+}
+
 /*Inscribete*/
 #TextoTryIT{
     padding-top: 1%;
@@ -155,77 +179,78 @@
     color: #004379;
 }
 
-    /*FOOTER*/
-    .containerFooter{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color:#004379;
-        color: white;
-        width: 100%;
-        margin: 0;
-        position: relative;
-        box-sizing: border-box;
-        /*padding: 20px;*/   
+/*FOOTER*/
+.containerFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#004379;
+    color: white;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    /*padding: 20px;*/   
+}
+
+.footerInfo{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    /*padding: ;*/
+    width: 100%;
+}
+
+.footerInfo li{
+    width: 30%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.footerInfo li p a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.containerSocialMediaElements{
+    width: 100%;
+    list-style: none;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+}
+
+.socialMediaElementsIcons{
+    width: 50px;
+    height: 50px;
+}
+
+.LogoIcons1{
+    width: 150px;
+}
+
+.LogoIcons2{
+    width: 70px;
+}
+
+@media (max-width: 500px) {
+    .LogoIcons1 {
+        display: none;
     }
-
-    .footerInfo{
-        display: flex;
-        list-style: none;
-        justify-content: center;
-        align-items: center;
-        /*padding: ;*/
-        width: 100%;
+    
+    .LogoIcons2 {
+        display: none;
     }
+}
 
-    .footerInfo li{
-        width: 30%;
-        margin-right: 5%;
-        margin-left: 5%;
-    }
-
-    .footerInfo li p a{
-        color: white;
-        text-decoration: none;
-    }
+.containerLinksElements{
+    text-align: center;
+}
 
 
-    .containerSocialMediaElements{
-        width: 100%;
-        list-style: none;
-        justify-content: start;
-        padding: 0;
-        margin: 0;
-    }
+.footerInfo li p{
+    padding-top: 15px;
+}
 
-    .socialMediaElementsIcons{
-        width: 50px;
-        height: 50px;
-    }
-
-    .LogoIcons1{
-        width: 150px;
-    }
-
-    .LogoIcons2{
-        width: 70px;
-    }
-
-    @media (max-width: 500px) {
-        .LogoIcons1 {
-            display: none;
-        }
-        
-        .LogoIcons2 {
-            display: none;
-        }
-    }
-
-    .containerLinksElements{
-        text-align: center;
-    }
-
-
-    .footerInfo li p{
-        padding-top: 15px;
-    }

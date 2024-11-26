@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/tryit.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="icon" href="images/CatedraLogo_sinLetras.svg">
+    <link rel="stylesheet" href="css/carr.css">
 </head>
 <body>
     <header id="ContainerHeader"></header>
@@ -207,6 +208,20 @@
       </div>
     </section>
 
+    <section id="Recuerdos"> 
+      <h2 class="sectionTitles">Recuerdos</h2>
+      <div id="ContainerCarouselTryIT" class="containerCarousel">
+        <script>
+          fetch('carousel.html')
+          .then(response => response.text())
+          .then(html => {
+              document.getElementById('ContainerCarouselTryIT').innerHTML = html;
+          })
+          .catch(error => console.error('Error al cargar el contenido:', error));
+      </script>
+      </div>
+    </section>
+
     <section id="InscripcionTryIt" style="margin-top: 80px; margin-bottom: 50px;">
       <h2 class="sectionTitles">Inscríbete</h2>
       <div class="container">
@@ -268,6 +283,6 @@
       </ul>
   </footer> 
     
-    
+  <script src="js/script.js"></script>
 </body>
 </html>
