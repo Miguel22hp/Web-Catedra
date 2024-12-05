@@ -20,6 +20,10 @@ body h2, body h3{
     width: 100%;
 }
 
+body section{
+    margin-bottom: 2.5%;
+}
+
 /******************************************/
 /*WHO WE ARE*/
 .containerBodyWhoWeAre {
