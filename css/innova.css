@@ -43,6 +43,30 @@ iframe {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
+/* Contenedor del iframe */
+.iframe-container {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 2000px; /* Altura fija para el iframe */
+    overflow: hidden;
+}
+
+/* Estilo del iframe */
+.iframe-element {
+    width: 100%;
+    height: 100%;
+    border: none;
+    grid-area: 1 / 1 / 2 / 2; /* Se superpone en la misma celda */
+}
+
+/* Estilo del enlace */
+.iframe-link {
+    grid-area: 1 / 1 / 2 / 2; /* Ocupa el mismo espacio que el iframe */
+    text-decoration: none;
+    background: transparent; /* Transparente para no cubrir visualmente */
+    z-index: 10; /* Captura clics sobre el iframe */
+}
 
 .containerFooter{
     display: flex;
