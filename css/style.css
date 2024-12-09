@@ -375,6 +375,10 @@ body section{
 
 /******************************************/
 /*TEAM*/
+#Team {
+    margin-bottom: 0;
+}
+
 .containerBodyTeam {
     /*Position*/
     padding-top: 20px;
@@ -382,18 +386,14 @@ body section{
 }
 
 /*TEAM CONTAINER*/
-.containerBodyTeam ul {
-    /*Position*/
-    /*padding-top: 30px;/*TODO:*/
-    padding-left: 0px;
-
-    /*Display*/
+#KnowWhatWeDo {
     display: flex;
-    justify-content: space-around;
-
-    /*Text*/
-    text-align: center;
-    list-style-type: none; /*Erase the dots of the begginning*/
+    justify-content: center;
+    align-items: center;
+    padding: 1.5%;
+    background-color: #004379; 
+    border-radius: 10px 10px 10px;
+    max-height: 700px;
 }
 
 /******************************************/

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Equipo y Carrusel Modificado</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/carr.css">
+
   <style>
     .carousel-caption {
       bottom: 0;
@@ -50,11 +52,48 @@
 
   <div class="row">
     <!--TODO: Añadir carrousel de imágenes de los miembros del equipo -->
-    <div class="col-md-8 img-container pb-5" style="background-color: #004379; padding-bottom: 10px; border-radius: 10px 10px 10px; max-height: 700px;">
-      <h2 style="color: white;">Equipo de la cátedra Innova-tsn UPM</h2>
-      <img src="images/Grupo.jpg" alt="Foto de Equipo" class="img-fluid" style="border-radius: 10px;">
+    <div id="KnowWhatWeDo" class="col-md-8 img-container">
+      <div class="carousel-P">
+        <div class="carousel-inner-P">
+            <div class="carousel-item-P active">
+                <img src="/images/tryit/recuerdos/team.png" alt="Imagen del equipo de Innova en el Try IT">
+                
+            </div>
+            
+            <div class="carousel-item-P">
+                <img src="/images/tryit/recuerdos/barahona.JPG" alt="Imagen de Ignacio Barahona ">
+            </div>
+            
+            <div class="carousel-item-P">
+                <img src="/images/tryit/recuerdos/tryit.JPG" alt="Imagen de conferencia de Innova-tsn">
+            </div>
+            
+            <div class="carousel-item-P">
+                <img src="/images/tryit/recuerdos/baloncesto.png" alt="Imagen del equipo de Baloncesto Innova-tsn Leganés">
+            </div>
+            <div class="carousel-item-P">
+                <img src="/images/tryit/recuerdos/conf.JPG" alt="Imagen de una de las conferencias de Innova-tsn en el Try IT">
+            </div>
+            <div class="carousel-item-P">
+                <img src="/images/tryit/recuerdos/equipo.JPG" alt="Imagen de miembros del equipo de Innova-tsn en el Try IT">
+            </div>
+            <div class="carousel-item-P">
+                <img src="/images/tryit/recuerdos/ljgyjmt.png" alt="Imagen de una de las conferencias realizadas acerca de como montar un taller de ciberseguridad">
+            </div>
+            <div class="carousel-item-P">
+                <img src="/images/tryit/recuerdos/rollups.png" alt="Imagen del stand de Innova-tsn">
+            </div>
+            <div class="carousel-item-P">
+                <img src="/images/tryit/recuerdos/tryit2024.jpeg" alt="Imagen de Innova-tsn en el salón de actos">
+            </div>
+        </div>
+        <!--
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+        -->
+      </div>
     </div>
-    <div class="col-md-4 pb-5 pt-5">
+    <div class="col-md-4">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" style="background-color: #004379;">
             <div class="carousel-item active">
@@ -150,11 +189,11 @@
             </div>
         </div>
         
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <!--TODO: Cambiarlo a botones-->
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Anterior</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <!--TODO: Cambiarlo a botones-->
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Siguiente</span>
         </a>
@@ -162,10 +201,5 @@
     </div>
   </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>
