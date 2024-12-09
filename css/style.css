@@ -390,10 +390,23 @@ body section{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5%;
     background-color: #004379; 
     border-radius: 10px 10px 10px;
-    max-height: 700px;
+    min-height: 500px;
+    max-height: 600px; /*TODO: Reducir un poco cuando toque lo de las fotos*/
+    margin-bottom: 3%;
+}
+
+.whatWeDoCaption {
+    margin: 0;
+    padding: 1.5%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
 
 /******************************************/
