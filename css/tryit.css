@@ -73,7 +73,7 @@
 
 .columnaInfo p{
     padding-left: 3%;
-
+    padding-right: 3%;
 }
 
 .confFecha, .confUbi, .confHora{
@@ -99,6 +99,8 @@
     margin-bottom: 1%;
     text-align: center;
     margin-top: 4%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 
 .columnaFoto{
