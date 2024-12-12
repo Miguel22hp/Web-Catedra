@@ -8,12 +8,13 @@
 
 /*INICIO*/
 .bg-image {
-    background-image: url('images/tryit/recuerdos/tryit2024.jpeg'); /* Reemplaza con tu imagen de fondo */;
+    background-image: url('/Web-Catedra/images/tryit/recuerdos/tryit2024.jpeg'); /* Reemplaza con tu imagen de fondo */;
     background-size: cover;
     background-position: center;
     height: 100vh;
     z-index: 1;
 }
+
 
 .bg-image::before {
     content: '';
