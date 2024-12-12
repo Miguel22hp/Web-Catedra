@@ -20,7 +20,7 @@
     .carousel-item img {
       object-fit: cover;
       min-height: 500px; 
-      max-height: 500px;
+      max-height: 550px;
     }
     .img-container {
       text-align: center; 
@@ -33,7 +33,7 @@
       display: inline-block; 
       max-width: 100%;
       min-height: 500px;
-      max-height: 600px;
+      max-height: 550px;
       object-fit: cover;
       border-radius: 10px;
     }
@@ -44,11 +44,25 @@
     p {
         font-size: 14px;    
     }
+
+    #CatedraTeam {
+      background-color: #004379; 
+      border-radius: 10px 10px 10px;
+      min-height: 500px;
+      max-height: 550px; /*TODO: Reducir un poco cuando toque lo de las fotos*/
+      margin-bottom: 3%;
+      padding: 0;
+    }
+
+    .gap {
+      width: 3%;
+    }
+
   </style>
 </head>
 <body style="background-color: #004379;">
 
-<div class="container-fluid " style="padding-top: 20px; margin-left: 1.5%;">
+<div class="container-fluid " style="padding-top: 20px; margin-left: 1.5%; padding-left: 3%;">
 
   <div class="row" >
     <div id="KnowWhatWeDo" class="col-md-8">
@@ -114,8 +128,10 @@
         -->
       </div>
     </div>
-    <div class="col-md-4">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div class="gap">
+      </div>
+    <div id="CatedraTeam" class="col-md-3">
+      <div id="CarouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" style="background-color: #004379;">
             <div class="carousel-item active">
                 <img src="images/People/Miguel_Hernando.png" class="d-block w-100" alt="Foto 2">
