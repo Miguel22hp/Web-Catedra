@@ -569,7 +569,6 @@ body section{
     width: 90%; /* width of the div */
     height: 400px; /* height of the div */
     overflow: auto; /* Allows to scroll in the div */
-    background-color: #EEEEEE;
     background-color: #004379;
     margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -974,6 +973,10 @@ body section{
         padding-bottom: 20px;
         height: 430px;
     }
+
+    .contactMap iframe {
+        border-radius: 10px;
+    }
     
     .embeddedVideo {
         object-fit: fill;
@@ -988,29 +991,19 @@ body section{
 
     .roomImages {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1%;
         margin: 5%;
+        margin-top: 1%;
+        margin-bottom: 3%;
     }
 
     .roomImages img {
         object-fit: cover;
-        border: 2px solid#004379;
-    }
-
-    .roomImagesUp {
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
         width: 100%;
         height: auto;
         border-radius: 10px;
-    }
-
-    .roomImagesDown {
-        max-height: 600px;
-        grid-column: span 2;
-        width: 80%;
-        height: auto;
-        border-radius: 10px;
-        margin: 0 auto;
     }
 
     /*FOOTER*/
@@ -1024,7 +1017,6 @@ body section{
         margin: 0;
         position: relative;
         box-sizing: border-box;
-        /*padding: 20px;*/   
     }
 
     .footerInfo{
@@ -1032,7 +1024,6 @@ body section{
         list-style: none;
         justify-content: center;
         align-items: center;
-        /*padding: ;*/
         width: 100%;
     }
 
