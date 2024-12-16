@@ -34,7 +34,7 @@
 .containerRooted h3{
     color:#F4B429;
     margin-left: 3%;
-    margin-top: 1%;
+    margin-top: 10px;
 }
 
 #InfoRooted {
@@ -148,6 +148,41 @@
 
 .purposeTitle{
     color: #004379;
+}
+/*Datos*/
+.containerDatos{
+    position: relative;
+    background-color: #004379;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 0.3%;
+    overflow: hidden; /* Asegura que los hijos no se desborden */
+    color: white;
+}
+
+.sectionData{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.sectionData h3{
+    color: #F4B429;
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+.sectionData p{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.sectionData ul{
+    margin-left: 3%;
+}
+
+#InscripcionMakeIT a{
+    margin-left: 3%;
+
 }
 
 /*Web Rooted*/
