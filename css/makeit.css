@@ -17,6 +17,7 @@
 }
 
 /*Rooted*/
+
 #Rooted{
     margin-top: 5%;
     margin-bottom: 2%;
@@ -95,6 +96,22 @@
     border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+    .containerRooted {
+        grid-template-columns: 1fr; /* Los elementos se apilan */
+        grid-gap: 2%; /* Ajusta el espacio entre ellos */
+    }
+
+    #InfoRooted, #FotosRooted {
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    #InfoRooted p {
+        font-size: 1rem; /* Reduce el tamaño de la fuente */
+        margin-left: 5%; /* Ajusta los márgenes */
+        margin-right: 5%;
+    }
+}
 /*Que hacemos*/
 #QueHacemosMakeIT{
     margin: 1%;
