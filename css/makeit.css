@@ -1,6 +1,6 @@
 /*INICIO*/
 .bg-image {
-    background-image: url('/images/makeitupm/bck-1.jpg'); /* Reemplaza con tu imagen de fondo */
+    background-image: url('/images/makeitupm/fondo.jpeg'); /* Reemplaza con tu imagen de fondo */
     background-size: cover;
     background-position: center;
     height: 100vh;
