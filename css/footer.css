@@ -1,3 +1,10 @@
+p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
 .footerInfo{
     display: flex;
     list-style: none;
@@ -6,7 +13,8 @@
     width: 100%;
     padding: 0;
     padding-bottom: 0.5%;
-
+    padding-top: 0.5%;
+    margin: 0;
 }
 
 .footerInfo li{
@@ -42,12 +50,7 @@
     }
 }
 
-.containerSocialMediaElements{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: start;
-    padding: 0;
+.containerSocialMedia figure {
     margin: 0;
 }
 
