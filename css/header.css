@@ -1,6 +1,6 @@
 /*NAVIGATION HEADER*/
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif !important;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -36,12 +36,34 @@ body{
 
 #MainTitle {
     /*Position*/
-    font-size: 15px;
     margin-top: 0;
     padding-left: 20px;
     
     /*Text*/
     color: white;
+}
+
+#MainTitle h1 {
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    #MainTitle h1 {
+        font-size: 32px;
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 480px) {
+    #MainTitle h1 {
+        font-size: 24px;
+    }
 }
 
 #LogoVersionMovile{
