@@ -1,3 +1,140 @@
+
+    /*
+    .img-container {
+        text-align: center; 
+        margin-bottom: 20px;
+        background-color: #004379; 
+        padding-bottom: 10px; 
+        border-radius: 10px; 
+    }
+    .img-container img {
+        display: inline-block; 
+        max-width: 100%;
+        min-height: 500px;
+        max-height: 550px;
+        object-fit: cover;
+        border-radius: 10px;
+    }*/
+    #CatedraTeam {
+        background-color: #004379; 
+        border-radius: 10px 10px 10px;
+        min-height: 500px;
+        max-height: 550px; /*TODO: Reducir un poco cuando toque lo de las fotos*/
+        margin-bottom: 3%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    #CarouselExampleIndicators {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .carousel-inner-Team {
+        display: flex; /* Layout the slides in a row */
+        transition: transform 2s ease-in-out; 
+        will-change: transform; 
+        width: 100%; 
+        height: 100%;
+    }
+
+    .carouselTeamItem {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .carouselTeamItem img {
+        object-fit: cover;
+        min-height: 400px;
+        max-height: 450px;
+        max-width: 95%;
+        border-radius: 10px;
+    }
+
+    .carouselTeamItem figcaption {
+        padding-top: 2%;
+        padding-bottom: 1%;
+    }
+
+    .carouselTeamItem figcaption h5 {
+        color: #F4B429;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .carouselTeamItem figcaption p {
+        color: white;
+        margin: 0;
+    }
+/*
+    .carouselTeamItem {
+        flex: 0 0 100%; /* Ensures each slide takes up 100% of the container width */
+        /*height: 100%; /* Ensure the slides fill the container's height */
+        /*text-align: center;
+        border-radius: 10px; 
+    }
+
+    .carouselTeamItem img {
+        object-fit: cover;
+        min-height: 500px; 
+        max-height: 550px;
+    }*/
+
+    /*.carousel-caption {
+        bottom: 0;
+        background: #004379;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 10px 10px 0 0;
+        color: white; 
+        border: 2px solid #F4B429;
+        position: absolute;
+    }*/
+
+
+
+    p {
+        font-size: 14px;    
+    }
+
+  .gap {
+    width: 3%;
+  }
+
+  button.carousel-prev-Team, button.carousel-next-Team {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  button.carousel-prev-Team {
+    left: 10px;
+  }
+
+  button.carousel-next-Team {
+    right: 10px;
+  }
+
+
 .carousel-P {
     position: relative;
     width: 90%;
@@ -29,28 +166,3 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
-/**
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-button.prev {
-    left: 10px;
-}
-
-button.next {
-    right: 10px;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-
-}*/
