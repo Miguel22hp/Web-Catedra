@@ -1,10 +1,9 @@
 let currentIndexTeam = 0;
+let carouselInterval;
 
 function showSlideTeam(indexTeam) {
     const slidesTeam = document.querySelectorAll('.carouselTeamItem');
     const totalSlidesTeam = slidesTeam.length;
-    console.log("Empieza");
-    console.log(currentIndexTeam);
 
     // Asegurarse de que el índice esté dentro del rango
     if (indexTeam >= totalSlidesTeam) {
@@ -26,10 +25,32 @@ function showSlideTeam(indexTeam) {
     document.querySelector('.carousel-inner-Team').style.transform = `translateX(${offsetTeam}%)`;
 }
 
-// Configurar el carrusel para avanzar automáticamente cada 7 segundos
-setInterval(() => nextSlideTeam(), 7000);
-
 // Función para pasar al siguiente slide
 function nextSlideTeam() {
+    console.log("Next");
     showSlideTeam(currentIndexTeam + 1);
 }
+
+//Reiniciar el intervalo del carousel
+function startCarouselInterval() {
+    clearInterval(carouselInterval);
+    carouselInterval = setInterval(() => nextSlideTeam(), 7000);
+}
+
+// Función para pasar al slide anterior
+function prevSlideTeam() {
+    console.log("Prev");
+    showSlideTeam(currentIndexTeam - 1);
+}
+
+document.getElementById('PrevButtonTeam').addEventListener('click', () => {
+    prevSlideTeam();
+    startCarouselInterval();
+});
+
+document.getElementById('NextButtonTeam').addEventListener('click', () => {
+    nextSlideTeam();
+    startCarouselInterval(); 
+});
+// Iniciar el intervalo cuando la página se carga
+startCarouselInterval();

@@ -122,6 +122,12 @@
                         .then(response => response.text())
                         .then(html => {
                             document.getElementById('TeamSection').innerHTML = html;
+
+                            const script = document.createElement('script');
+                            script.src = 'js/carouselTeam.js';
+                            script.type = 'text/javascript';
+                            script.defer = true; // Asegura que se ejecute después del HTML
+                            document.body.appendChild(script); // Lo añade al DOM
                         })
                         .catch(error => console.error('Error al cargar el contenido:', error));
                     </script>
@@ -202,11 +208,11 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="js/carouselTeam.js"></script>
+        <!--<script src="js/carouselTeam.js"></script>-->
         <script src="js/carousel.js"></script>
         <script src="js/eventsYearMonths.js"></script>
         <script src="js/addEvents.js"></script>
         <script src="js/addNews.js"></script>
-        <script src="js/exAlummni.js"></script>
+        <!--<script src="js/exAlummni.js"></script>-->
     </body>
 </html>
