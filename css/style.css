@@ -666,6 +666,7 @@ body section{
     font-size: 12px;
     margin-right: 3%;
     font-weight: normal;
+    text-align: left;
 }
 
 .events div{
