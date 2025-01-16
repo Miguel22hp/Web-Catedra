@@ -1,20 +1,4 @@
 
-    /*
-    .img-container {
-        text-align: center; 
-        margin-bottom: 20px;
-        background-color: #004379; 
-        padding-bottom: 10px; 
-        border-radius: 10px; 
-    }
-    .img-container img {
-        display: inline-block; 
-        max-width: 100%;
-        min-height: 500px;
-        max-height: 550px;
-        object-fit: cover;
-        border-radius: 10px;
-    }*/
     #CatedraTeam {
         background-color: #004379; 
         border-radius: 10px 10px 10px;
@@ -79,32 +63,6 @@
         color: white;
         margin: 0;
     }
-/*
-    .carouselTeamItem {
-        flex: 0 0 100%; /* Ensures each slide takes up 100% of the container width */
-        /*height: 100%; /* Ensure the slides fill the container's height */
-        /*text-align: center;
-        border-radius: 10px; 
-    }
-
-    .carouselTeamItem img {
-        object-fit: cover;
-        min-height: 500px; 
-        max-height: 550px;
-    }*/
-
-    /*.carousel-caption {
-        bottom: 0;
-        background: #004379;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-radius: 10px 10px 0 0;
-        color: white; 
-        border: 2px solid #F4B429;
-        position: absolute;
-    }*/
-
-
 
     p {
         font-size: 14px;    
