@@ -155,6 +155,16 @@
 
                         </ul>
                     </div>
+                
+                    
+                    <script>
+                        fetch('news.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('News').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el contenido:', error));
+                    </script>
                 </section>
 
                 <section id="WhereToFindUs" data-aos="fade-right" data-aos-duration="2000" class="containerBodyWhereToFindUs">
@@ -208,11 +218,10 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!--<script src="js/carouselTeam.js"></script>-->
         <script src="js/carousel.js"></script>
         <script src="js/eventsYearMonths.js"></script>
         <script src="js/addEvents.js"></script>
-        <script src="js/addNews.js"></script>
+        <!--<script src="js/addNews.js"></script>-->
         <!--<script src="js/exAlummni.js"></script>-->
     </body>
 </html>
