@@ -1,0 +1,149 @@
+.newsContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.newsTitle {
+    padding-left: 9%;
+}
+
+.listNewsContainer, .socialMediaContainer {
+    margin-bottom: 2%;
+}
+
+@media (max-width: 800px) {
+    .newsContainer {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto; 
+    }
+
+    .listNewsContainer,
+    .socialMediaContainer {
+        width: 100%; 
+    }
+}
+
+.listNews {
+   width: 100%;
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-top: 5%;
+}
+
+
+.news{
+    color: black;
+    background-color: #F4B429;
+    width: 95%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-height: 450 px;
+    margin-bottom: 2.5%;
+    
+}
+
+.linkNews {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.75fr 1fr;
+    text-decoration: none;
+    color: black;
+}
+
+.linkNews:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.infoNews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1%;
+    padding-left: 1.5%;
+    text-align: center;
+}
+
+.newTitle {
+    color: #004379;
+    padding: 0;
+    margin: 0;
+    padding-top: 1.5%;
+}
+
+.newsDate {
+    padding-top: 1.5%;
+    font-weight: bold;
+}
+
+.newsImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsImages {
+    width: 95%;
+    height: 95%;
+    max-height: 200px;
+}
+
+
+.listSocialMedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.socialMedia {
+    width: 95%;
+    background-color: #F4B429;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+.linkSocialMedia {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}  
+
+.linkSocialMedia:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.socialMediaImageImages {
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    padding: 4%;
+}
+
+.socialMediaTitle {
+    color: #004379;
+    padding: 0;
+    margin: 0;
+    padding-top: 1.5%;
+    font-size: 18px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.socialMediaDate {
+    padding-top: 1.5%;
+    font-size: 13px;
+    font-weight: bold;
+}
