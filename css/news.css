@@ -91,6 +91,21 @@
     max-height: 200px;
 }
 
+@media (max-width: 950px) {
+    .newTitle {
+        font-size: 15px;
+    }
+
+    .newsImage {
+        max-height: 150px;
+        margin: 2%;
+    }
+
+    .newsDate {
+        font-size: 12px;
+    }
+}
+
 
 .listSocialMedia {
     display: flex;
