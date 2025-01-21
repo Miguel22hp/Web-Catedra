@@ -1,0 +1,40 @@
+.exAlumniSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.exAlumniContainer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 0.1fr 4fr 0.1fr;
+    background-color: #004379;
+}
+
+.exAlumniCardsContainer {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.exAlummniCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%; /* Cada tarjeta ocupa todo el contenedor */
+    flex-shrink: 0; /* Evita que las tarjetas se reduzcan */
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.cardActive {
+    opacity: 1;
+}
+
+.imagesCardExAlumni {
+    width: 60%;
+    height: 65%;
+}
+
+.exAlumniBtn {
+    z-index: 10;
+}
