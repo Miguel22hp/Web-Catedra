@@ -9,6 +9,9 @@
     display: grid;
     grid-template-columns: 0.1fr 4fr 0.1fr;
     background-color: #004379;
+    align-items: center;
+    gap: 10px;
+    padding: 0 3%; /* Añade padding dentro del contenedor a los lados*/
 }
 
 .exAlumniCardsContainer {
@@ -69,4 +72,13 @@
 
 .exAlumniBtn {
     z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 30% 50%; /* Padding adicional a los lados */
+    cursor: pointer;
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
