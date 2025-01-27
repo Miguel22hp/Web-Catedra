@@ -26,6 +26,38 @@
     opacity: 0;
 }
 
+.exAlumniCardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombreExAlumni {
+    font-weight: bold;
+    color: #F4B429;
+}
+
+.tituloExAlumni, .cargoExAlumni {
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0.3%;
+}
+
+.exAlumniText {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+    padding-left: 3%;
+}
+
+.exAlumniText p {
+    text-align: center;
+}
+
+
 .cardActive {
     opacity: 1;
 }
