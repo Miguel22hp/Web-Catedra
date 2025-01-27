@@ -15,13 +15,11 @@ function showCard(index) {
 }
 
 prevBtn.addEventListener('click', () => {
-    console.log("CCCC");
     currentIndexExAlumni = (currentIndexExAlumni > 0) ? currentIndexExAlumni - 1 : cards.length - 1;
     showCard(currentIndexExAlumni);
 });
 
 nextBtn.addEventListener('click', () => {
-    console.log("BBBBB");
     currentIndexExAlumni = (currentIndexExAlumni < cards.length - 1) ? currentIndexExAlumni + 1 : 0;
     showCard(currentIndexExAlumni);
 });

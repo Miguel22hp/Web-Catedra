@@ -34,11 +34,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
 }
 
 .nombreExAlumni {
     font-weight: bold;
     color: #F4B429;
+    padding-top: 0.8%;
 }
 
 .tituloExAlumni, .cargoExAlumni {
@@ -46,6 +49,11 @@
     margin-bottom: 0;
     padding-bottom: 0.3%;
 }
+
+.nombreExAlumni, .tituloExAlumni, .cargoExAlumni {
+    text-align: center;
+}
+
 
 .exAlumniText {
     color: white;
@@ -59,7 +67,6 @@
 .exAlumniText p {
     text-align: center;
 }
-
 
 .cardActive {
     opacity: 1;
@@ -81,4 +88,83 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 860px) {
+
+    .exAlumniContainer {
+        grid-template-columns: 1fr; /* Elimina columnas para una sola fila */
+        gap: 17%; 
+        width: 100%;
+    }
+
+    .exAlumniCardsContainer {
+        flex-direction: row; /* Mantén las tarjetas en fila para el slider */
+        overflow-x: scroll; /* Permite scroll horizontal si es necesario */
+        scroll-snap-type: x mandatory; /* Snap entre tarjetas para mejor experiencia móvil */
+        -webkit-overflow-scrolling: touch; /* Suaviza el scroll en iOS */
+        gap: 10px;
+        scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+        scrollbar-width: auto;
+    }
+
+    .exAlummniCard {
+        flex-shrink: 0;
+        width: 100%; /* Tarjeta ocupa casi todo el ancho disponible */
+        scroll-snap-align: center; /* Alinea la tarjeta en el centro al hacer scroll */
+        margin: 0 auto; /* Centra las tarjetas */
+        opacity: 1; /* Asegúrate de que todas sean visibles */
+    }
+
+    .exAlummniCardInfo p{
+        margin-top: 3%;
+        text-align: center;
+    }
+
+    .exAlumniBtn {
+        display: none; /* Oculta los botones de navegación en pantallas pequeñas */
+    }
+}
+
+@media  (max-width: 680px){
+    .exAlumniContainer {
+        grid-template-columns: 1fr; /* Elimina columnas para una sola fila */
+        gap: 17%; 
+        width: 100%;
+    }
+
+    .exAlumniCardsContainer {
+        flex-direction: row; /* Mantén las tarjetas en fila para el slider */
+        overflow-x: scroll; /* Permite scroll horizontal si es necesario */
+        scroll-snap-type: x mandatory; /* Snap entre tarjetas para mejor experiencia móvil */
+        -webkit-overflow-scrolling: touch; /* Suaviza el scroll en iOS */
+        gap: 10px;
+        scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+        scrollbar-width: auto;
+    }
+
+    .exAlummniCard {
+        grid-template-columns: 1fr;
+        flex-shrink: 0;
+        width: 100%; /* Tarjeta ocupa casi todo el ancho disponible */
+        scroll-snap-align: center; /* Alinea la tarjeta en el centro al hacer scroll */
+        margin: 0 auto; /* Centra las tarjetas */
+        opacity: 1; /* Asegúrate de que todas sean visibles */
+    }
+
+    .exAlumniText {
+        display: none;
+    }
+
+    .exAlumniBtn {
+        display: none; /* Oculta los botones de navegación en pantallas pequeñas */
+    }
+
+    .nombreExAlumni {
+        font-size: 12px;
+    }
+
+    .tituloExAlumni, .cargoExAlumni {
+        font-size: 11px;
+    }
 }
