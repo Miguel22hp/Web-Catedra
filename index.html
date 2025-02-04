@@ -132,14 +132,21 @@
                         .catch(error => console.error('Error al cargar el contenido:', error));
                     </script>
                     </section>
-                    <!--
                     <section id="Exalumni" class="containerBodyUPM">
-                        <h3 class="subSectionTitle">Experiencias</h3>
-                        <div class="exAlumniInfoContainer" id="ExAlumniContainer">
-                            
-                        </div>
-                    </section>     
-                     -->
+                        <script>
+                            fetch('exalumni.html')
+                            .then(response => response.text())
+                            .then(html => {
+                                document.getElementById('Exalumni').innerHTML = html;
+                                
+                                const script = document.createElement('script');
+                                script.src = 'js/exalumni.js';
+                                script.defer = true; // Asegura que se ejecute después del HTML
+                                document.body.appendChild(script); // Lo añade al DOM
+                            })
+                            .catch(error => console.error('Error al cargar el contenido:', error));
+                        </script>
+                    </section>
                 </section>
                
                 <section id="Events" data-aos="fade-right" class="containerBodyEvents">
@@ -221,7 +228,5 @@
         <script src="js/carousel.js"></script>
         <script src="js/eventsYearMonths.js"></script>
         <script src="js/addEvents.js"></script>
-        <!--<script src="js/addNews.js"></script>-->
-        <!--<script src="js/exAlummni.js"></script>-->
     </body>
 </html>

@@ -5,6 +5,12 @@
     font-size: 40px;
 }
 
+.subSectionTitle{
+    color: #004379;
+    font-size: 32px;
+    padding-left: 6%;
+}
+
 body{
     font-family: 'Inter', sans-serif !important;
     margin: 0;
@@ -322,15 +328,23 @@ body section{
 }
 
 .containerBodyOurPurpose ul li{
-    @media (max-width: 500px) {
+    
+    @media (max-width: 1180px) {
+
+        width: calc(50% - 20px); 
+    }
+
+    @media (max-width: 750px) {
         width: 100%;
         margin-bottom: 2%;
       }
+
       
 }
 
 
 .purposeTitle{
+    padding-top: 3%;
     color: #004379;
 }
 
@@ -339,22 +353,23 @@ body section{
     position: relative; /* Importante para posicionar el tooltip */
     display: inline-block; /* Para que el tooltip abarque solo el tamaño de la imagen */
     
-    @media (max-width: 500px) {
+    @media (max-width: 750px) {
         width: 100%;
+        max-height: 300px;
         margin: 0;
     }
-    @media (min-width: 501px) {
+    @media (min-width: 751px) {
         
         height: 290px;
         width: 290px;
     }
+    margin-bottom: 12%;
 }
 
 /* Estilo del tooltip */
 .tooltip1 {
     position: absolute;
     background-color: #FFFFFF;
-    /*background-color: #004379;*/
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -377,7 +392,7 @@ body section{
     }
     @media (min-width: 501px) {
         
-        height: 105%;
+        height: 115%;
     }
 }
 
@@ -404,14 +419,31 @@ body section{
     opacity: 1;
 }
 
+.image-container:focus-within .tooltip1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.image-container:focus-within .purposeTitle {
+    visibility: hidden;
+    opacity: 1;
+}
+
 .iconsOurPurpose{
     height: 90%;
     width: 90%;
+    max-width: 100%; /* Asegura que el icono no sea más grande que su contenedor */
+    box-sizing: border-box; /* Asegura que los márgenes/paddings no afecten el tamaño */
+    
+    @media (max-width: 750px) {
+        max-height: 290px;
+        max-width: 290px;
+        margin-bottom: 2%;
+    }
 }
 
 .highlightY{
     font-weight: bold;
-    /*0color: #F4B429;*/
     font-size: 18px;
 }
 
@@ -426,176 +458,6 @@ body section{
     /*Position*/
     padding-top: 20px;
     margin-left: -10px;
-}
-
-/*TEAM CONTAINER*/
-#KnowWhatWeDo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #004379; 
-    border-radius: 10px 10px 10px;
-    min-height: 500px;
-    max-height: 550px; 
-    margin-bottom: 3%;
-}
-
-.whatWeDoCaption {
-    margin: 0;
-    padding: 1.5%;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    overflow-wrap: break-word;
-    width: 100%;
-    height: fit-content;
-}
-
-/******************************************/
-/*EXALUMNI*/
-.exAlumniInfoContainer{
-    background-color: #004379;
-    margin-right: 9%;
-    margin-left: 9%;
-}
-
-.subSectionTitle{
-    color: #004379;
-    font-size: 32px;
-    padding-left: 6%;
-}
-
-.exAlumni{
-    display: flex;
-    flex-direction: row;
-    background-color: #004379;
-    color: #FFFFFF;
-    font-size: 16px;
-    margin: 0;
-    height: 100%;
-}
-
-
-.exAlumniInfoContainer ul li{
-    list-style-type: none;
-    margin-left: 2%;
-    margin-right: 2%;
-    
-}
-
-.experienceInnova-TSNContainer, .personalInfoExAlumni, .exAlumniPhotoContainer{
-    width: 30%;
-}
-
-.exAlumniPhotoContainer{
-    align-items: center; /* Agrega esta línea para centrar verticalmente la imagen */
-    justify-content: center;
-    height: 100%;
-}
-
-.exAlummniPhoto{
-    width: 100%;
-    height: 100%;
-    margin-top: 5%;
-}
-
-.personalInfoExAlumni{
-    margin: 0;
-    text-align: center;
-    width: auto;
-    margin-bottom: 5%;
-    margin-top: 5%;
-}
-
-.personalInfoExAlumni h4{
-    color:#F4B429 ;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-}
-
-.upmDegree{
-    font-weight: bold;
-    text-align: center;
-}
-
-.positionInnova-TSN{
-    font-weight: bold;
-}
-
-.experienceInnova-TSNContainer{
-    display: flex;
-    align-items: center; /* Centra verticalmente los elementos hijos */
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.experienceInnova-TSN{
-    margin-top: 0;
-    font-style: italic;
-}
-
-.buttonRightLi, .buttonLeftLi {
-    display: flex;
-    align-items: center;
-}
-
-.buttonExAlumni
-{
-    height: 50%;
-
-    font-size: 300%;
-    color: white;
-
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-    background-color: #0a5a9c;
-
-    border-color: #004379;
-    border-radius: 5px;
-    border-width: 1.5px;
-
-}
-
-/*Mobile exAlumni*/
-
-.exAlumniMobile{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    
-}
-
-.exAlumniPhotoContainerMobile, .experienceInnova-TSNContainerMobile, .personalInfoExAlumniMobile{
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-bottom: 1.25%;
-    margin-top: 1.25%;
-}
-
-.exAlumniContainerButtonsList{
-    height: 33%;
-    margin: 0;
-}
-
-.exAlummniPhotoMobile{
-    width: 100%;
-}
-
-.experienceInnova-TSNMobile{
-    color: #FFFFFF;
-}
-
-.personalInfoExAlumniMobile p{
-    color: #FFFFFF;
-}
-
-.personalInfoExAlumniMobile h4{
-    color: #F4B429;
 }
 
 /*LINEOFRESEARCH*/
