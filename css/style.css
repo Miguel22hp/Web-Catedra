@@ -5,6 +5,12 @@
     font-size: 40px;
 }
 
+.subSectionTitle{
+    color: #004379;
+    font-size: 32px;
+    padding-left: 6%;
+}
+
 body{
     font-family: 'Inter', sans-serif !important;
     margin: 0;
