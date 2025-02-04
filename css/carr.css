@@ -56,11 +56,13 @@
         color: #F4B429;
         font-weight: bold;
         margin: 0;
+        padding: 0 1%;
     }
 
     .carouselTeamItem figcaption p {
         color: white;
         margin: 0;
+        padding: 0 2%;
     }
 
     p {
@@ -117,9 +119,36 @@
 }
 
 .carousel-item-P img {
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
+    width: auto;
+    height: auto;
+    max-height: 85%;
+    object-fit: scale-down;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+
+}
+
+#KnowWhatWeDo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #004379; 
+    min-height: 500px;
+    max-height: 550px; 
+    margin-bottom: 3%;
+}
+
+.whatWeDoCaption {
+    margin: 0;
+    padding: 1.5%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: fit-content;
 }
