@@ -7,11 +7,10 @@ let currentIndexExAlumni = 0;
 
 function showCard(index) {
     cards.forEach(card => card.classList.remove('cardActive'));
+    cards[index].classList.add('cardActive');
 
     const offset = -index * 100; // Move by 100% per card
     cardsContainer.style.transform = `translateX(${offset}%)`;
-    
-    cards[index].classList.add('cardActive');
 }
 
 prevBtn.addEventListener('click', () => {

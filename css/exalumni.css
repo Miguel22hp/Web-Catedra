@@ -18,6 +18,8 @@
     display: flex;
     width: 100%;
     position: relative;
+    transition: transform 2s ease-in-out;
+    will-change: transform;
 }
 
 .exAlummniCard {
@@ -25,8 +27,8 @@
     grid-template-columns: 1fr 1fr;
     width: 100%; /* Cada tarjeta ocupa todo el contenedor */
     flex-shrink: 0; /* Evita que las tarjetas se reduzcan */
-    transition: transform 0.5s ease-in-out;
-    opacity: 0;
+    opacity: 0; 
+    transition: opacity 1s; /* Añade transición de opacidad */
 }
 
 .exAlumniCardInfo {
