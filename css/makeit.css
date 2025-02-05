@@ -151,10 +151,30 @@
 
 .iconoImage{
     padding: 15px;
-    max-width: 250px;
-    min-width: 250px;
-    max-height: 250px;
-    min-height: 250px;
+    width: 250px;
+    height: 250px;
+}
+
+#OtherActivities {
+    text-align: center;
+    @media (max-width: 1560px) {
+        font-size: 1.5rem;
+    }
+    @media (max-width: 1130px) {
+        font-size: 1.25rem;
+    }
+    @media (max-width: 860px) {
+        font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+}
+
+.iconoImageActivities{
+    padding: 15px;
+    width: 100px;
+    height: 100px;
 }
 
 .card{
