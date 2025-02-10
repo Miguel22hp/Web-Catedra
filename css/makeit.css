@@ -1,6 +1,6 @@
 /*INICIO*/
 .bg-image {
-    background-image: url('/images/makeitupm/fondo.jpeg'); /* Reemplaza con tu imagen de fondo */
+    background-image: url('/images/makeitupm/TitleBack.jpeg'); /* Reemplaza con tu imagen de fondo */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -96,7 +96,7 @@
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
     .containerRooted {
         grid-template-columns: 1fr; /* Los elementos se apilan */
         grid-gap: 2%; /* Ajusta el espacio entre ellos */
@@ -110,6 +110,10 @@
         font-size: 1rem; /* Reduce el tamaño de la fuente */
         margin-left: 5%; /* Ajusta los márgenes */
         margin-right: 5%;
+    }
+
+    #FotosRooted {
+        margin-bottom: 5%; /* Ajusta el margen superior */
     }
 }
 /*Que hacemos*/
