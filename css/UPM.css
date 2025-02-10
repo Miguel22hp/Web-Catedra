@@ -43,6 +43,29 @@ iframe {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
+.iframe-container {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 2000px; /* Altura fija para el iframe */
+    overflow: hidden;
+}
+
+/* Estilo del iframe */
+.iframe-element {
+    width: 100%;
+    height: 100%;
+    border: none;
+    grid-area: 1 / 1 / 2 / 2; /* Se superpone en la misma celda */
+}
+
+.iframe-link {
+    grid-area: 1 / 1 / 2 / 2; /* Ocupa el mismo espacio que el iframe */
+    text-decoration: none;
+    background: transparent; /* Transparente para no cubrir visualmente */
+    z-index: 10; /* Captura clics sobre el iframe */
+}
+
 .containerFooter{
     display: flex;
     justify-content: space-between;
@@ -54,49 +77,4 @@ iframe {
     position: relative;
     box-sizing: border-box;
     /*padding: 20px;*/   
-}
-
-.footerInfo{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    padding: 0;
-    width: 100%;
-}
-
-.footerInfo li{
-    width: 30%;
-    margin-right: 5%;
-    margin-left: 5%;
-}
-
-.footerInfo li p a{
-    color: white;
-    text-decoration: none;
-}
-
-
-.containerSocialMediaElements{
-    width: 100%;
-    @media (min-width: 650px) {
-        display: flex; 
-    }
-    list-style: none;
-    justify-content: start;
-    padding: 0;
-    margin: 0;
-}
-
-.socialMediaElementsIcons{
-    width: 50px;
-    height: 50px;
-}
-
-.containerLinksElements{
-    text-align: center;
-}
-
-
-.footerInfo li p{
-    padding-top: 15px;
 }
