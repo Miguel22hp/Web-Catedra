@@ -132,21 +132,6 @@ function createEvents() {
 
             }
           }
-          
-          /*const fecha = elementLI.dataset.fecha;
-          if(hoy <= fecha)
-          {            
-            var idMes = elementLI.dataset.anio + "-" + (elementLI.dataset.mes);
-
-            //Selecciono el li con el identificador del mes y año que corresponden a este evento
-            var liMesAñadir = document.getElementById(idMes);
-
-            if (liMesAñadir !== null) {              
-              //Seleccionas la lista de ese mes en la que se añaden sus elementos y añado el elemento
-              var ulDentroLi = liMesAñadir.querySelector('ul');
-              ulDentroLi.appendChild(elementLI);
-            }
-          }*/
 
         });
       })
