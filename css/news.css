@@ -121,10 +121,10 @@
 .socialMediaImage {
     margin: 0 14%;
     margin-top: 2%;
-    border: 10px solid #004379;
+    border: 10px solid #F4B429;
     border-bottom: 0;
-    border-radius: 10px 10px 0 0;
-    background-color: #004379;
+    border-radius: 15px;
+    background-color: #F4B429;
 }
 
 .socialMediaImageImages {
@@ -154,7 +154,8 @@
     grid-template-columns: 0.5fr 2.8fr;
     grid-template-rows: auto; 
     margin: 2% 10%;
-    margin-top: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-color: #004379;
     border-radius: 10px;
     height: auto;
@@ -170,9 +171,7 @@
 }
 
 #TallerLiderazgoFoto {
-    width: 160px;
+    width: 100%;
     height: auto;
-    max-height: 160px;
-    object-fit: contain;
-    margin: 10px;
+    border-radius: 10px;
 }
