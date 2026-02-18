@@ -12,6 +12,7 @@
     align-items: center;
     gap: 10px;
     padding: 0 3%; /* Añade padding dentro del contenedor a los lados*/
+    border-radius: 10px;
 }
 
 .exAlumniCardsContainer {

@@ -478,6 +478,7 @@ body section{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
     scrollbar-width: auto;
+    border-radius: 10px;
 }
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
