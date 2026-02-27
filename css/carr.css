@@ -123,6 +123,27 @@
     padding-top: 1.5%;
 }
 
+button.carousel-prev-KnowWhatWeDo, button.carousel-next-KnowWhatWeDo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+button.carousel-prev-KnowWhatWeDo {
+    left: 10px;
+}
+button.carousel-next-KnowWhatWeDo {
+    right: 10px;
+}
+
+
 .carousel-inner-P {
     display: flex;
     transition: transform 2s ease-in-out;
