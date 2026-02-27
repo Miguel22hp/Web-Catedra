@@ -1,14 +1,15 @@
 
     #CatedraTeam {
-        background-color: #004379; 
-        min-height: 500px;
-        max-height: 550px; /*TODO: Reducir un poco cuando toque lo de las fotos*/
-        margin-bottom: 3%;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-        border-radius: 10px;
+           background-color: #004379; 
+           min-height: 500px;
+           max-height: 550px;
+           margin-bottom: 3%;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           overflow: hidden;
+           border-radius: 10px;
     }
 
     #CarouselExampleIndicators {
@@ -22,24 +23,42 @@
     }
 
     .carousel-inner-Team {
-        display: flex; /* Layout the slides in a row */
-        transition: transform 2s ease-in-out; 
-        will-change: transform; 
-        width: 100%; 
-        height: 100%;
+           display: flex;
+           transition: transform 2s ease-in-out;
+           will-change: transform;
+           width: 100%;
+           height: 100%;
+           align-items: center;
     }
 
     .carouselTeamItem {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-shrink: 0;
+            margin: 0 auto;
     }
 
+        @media (max-width: 860px) {
+            #CatedraTeam {
+                min-height: 300px;
+                max-height: 350px;
+                padding: 0 8px;
+            }
+            .carousel-inner-Team {
+                flex-direction: column;
+                align-items: center;
+            }
+            .carouselTeamItem img {
+                min-height: 180px;
+                max-height: 220px;
+                width: 100%;
+            }
+        }
     .carouselTeamItem img {
         object-fit: cover;
         min-height: 400px;
