@@ -297,7 +297,7 @@ body section{
     /*Position*/
     padding-top: 11%;
     padding-bottom: 4%;
-    margin-top: 10%;
+    margin-top: 18%;
 
     @media (max-width: 650px) {
         padding-top: 80px;
