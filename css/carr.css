@@ -71,7 +71,7 @@
     }
 
   .gap {
-    width: 3%;
+    width: 7.2%;
   }
 
   button.carousel-prev-Team, button.carousel-next-Team {
@@ -137,6 +137,7 @@
     min-height: 500px;
     max-height: 550px; 
     margin-bottom: 3%;
+    margin-left: 9px;
     border-radius: 10px;
 }
 

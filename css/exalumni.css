@@ -2,22 +2,25 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .exAlumniContainer {
-    width: 90%;
     display: grid;
     grid-template-columns: 0.1fr 4fr 0.1fr;
     background-color: #004379;
     align-items: center;
     gap: 10px;
-    padding: 0 3%; /* Añade padding dentro del contenedor a los lados*/
+    padding: 0 3%;
     border-radius: 10px;
+    margin-left: 18px;
+    min-width: 1136px;
 }
 
 .exAlumniCardsContainer {
     display: flex;
     width: 100%;
+    min-height: 400px;
     position: relative;
     transition: transform 2s ease-in-out;
     will-change: transform;
@@ -26,10 +29,11 @@
 .exAlummniCard {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%; /* Cada tarjeta ocupa todo el contenedor */
-    flex-shrink: 0; /* Evita que las tarjetas se reduzcan */
-    opacity: 0; 
-    transition: opacity 1s; /* Añade transición de opacidad */
+    width: 100%;
+    min-height: 300px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .exAlumniCardInfo {
@@ -46,12 +50,14 @@
     color: #F4B429;
     padding-top: 0.8%;
     margin: 0;
+    font-size: 1.8rem;
 }
 
 .tituloExAlumni, .cargoExAlumni {
     color: white;
     margin-bottom: 0;
     padding-bottom: 0.3%;
+    font-size: 1.2rem; /* Increased size */
 }
 
 .cargoExAlumni{

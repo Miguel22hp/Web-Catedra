@@ -1,21 +1,28 @@
 /* WEB THINGS (Doesn't matter the section)*/
+/* Import Manrope font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 .sectionTitles{
     padding-left: 6%;
+    padding-top: 1%;
     color: #004379;
     font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 4px;
 }
 
 .subSectionTitle{
     color: #004379;
     font-size: 32px;
     padding-left: 6%;
+    font-weight: bold;
 }
 
 body{
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Manrope', sans-serif !important;
     margin: 0;
     padding: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 body h2, body h3{
@@ -24,10 +31,16 @@ body h2, body h3{
 
 .containerBody{
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 32px;
+    box-sizing: border-box;
 }
 
 body section{
-    margin-bottom: 2.5%;
+    margin-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /******************************************/
@@ -109,8 +122,7 @@ body section{
 /*WHO WE ARE LOGOS*/
 .containerBodyWhoWeAre ul {
     /*Position*/
-    padding: 0;
-    margin-bottom: 0;
+    margin-bottom: 80px;
 
     /*Display*/
     display: flex;    
@@ -233,11 +245,11 @@ body section{
 /*WHO WE ARE LOGOCATEDRA*/
 #LogoCatedra{
     /*Position*/
-    margin-top: -10%;
-    margin-left: -25%;
+    margin-top: -5%; /* Adjusted to lower the logo */
+    /*margin-left: -25%;*/
 
     /*Size*/
-    width: 150%;
+    width: 100%;
 
     /*Animation*/
     transition: opacity 0.5s ease-in-out;
@@ -253,7 +265,7 @@ body section{
 #Introduction {
     /*Position*/
     z-index: 2;
-    padding: 20px;
+    padding: 0px;
 
     /*Text*/
     text-align: center;
@@ -278,13 +290,14 @@ body section{
     margin-bottom: 0;
 
     /*Color*/
-    border-bottom: 5px solid #004379;
+    /*border-bottom: 5px solid #004379;*/
 }
 /*WHO WE ARE SLOGAN*/
 #Slogan{
     /*Position*/
-    padding-top:180px;
-    padding-bottom: 100px;
+    padding-top:50px;
+    padding-bottom: 4%;
+    margin-top: 10%;
 
     @media (max-width: 650px) {
         padding-top: 80px;
@@ -344,8 +357,9 @@ body section{
 
 
 .purposeTitle{
-    padding-top: 3%;
+    padding-top: 10%;
     color: #004379;
+    font-weight: bold;
 }
 
 .image-container {
@@ -360,8 +374,8 @@ body section{
     }
     @media (min-width: 751px) {
         
-        height: 290px;
-        width: 290px;
+        height: 250px;
+        width: 250px;
     }
     margin-bottom: 12%;
 }
@@ -470,7 +484,7 @@ body section{
     padding-top: 20px;
 }
 .eventsFrame{
-    width: 90%; /* width of the div */
+    /*width: 90%;  width of the div */
     height: 400px; /* height of the div */
     overflow: auto; /* Allows to scroll in the div */
     background-color: #004379;
@@ -926,7 +940,7 @@ body section{
         position: relative;
         box-sizing: border-box;
     }
-    
+
 
 
 
