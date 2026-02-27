@@ -70,7 +70,7 @@ body section{
 
     /*Size*/
     width: 100%;
-
+    
     /*Color*/
     filter:brightness(0.5) blur(7px);
     opacity: 0.8;
@@ -245,7 +245,7 @@ body section{
 /*WHO WE ARE LOGOCATEDRA*/
 #LogoCatedra{
     /*Position*/
-    margin-top: -5%; /* Adjusted to lower the logo */
+    margin-top: 15%; /* Adjusted to lower the logo */
     /*margin-left: -25%;*/
 
     /*Size*/
@@ -295,7 +295,7 @@ body section{
 /*WHO WE ARE SLOGAN*/
 #Slogan{
     /*Position*/
-    padding-top:50px;
+    padding-top: 11%;
     padding-bottom: 4%;
     margin-top: 10%;
 
