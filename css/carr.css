@@ -124,17 +124,18 @@
 }
 
 button.carousel-prev-KnowWhatWeDo, button.carousel-next-KnowWhatWeDo {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    opacity: 0.85;
-    transition: opacity 0.2s;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    font-size: 2rem !important;
+    opacity: 0.85 !important;
+    transition: opacity 0.2s !important;
 }
 button.carousel-prev-KnowWhatWeDo {
     left: 10px;
