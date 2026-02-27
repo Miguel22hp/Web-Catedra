@@ -136,7 +136,10 @@ button.carousel-prev-KnowWhatWeDo, button.carousel-next-KnowWhatWeDo {
     font-size: 2rem !important;
     opacity: 0.85 !important;
     transition: opacity 0.2s !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
 }
+
 button.carousel-prev-KnowWhatWeDo {
     left: 10px;
 }
