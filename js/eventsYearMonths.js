@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Define cuántos meses adelante se añadirán.
-    var monthsToAdd = 4;  // Cambia el número de meses según tus necesidades.
+    var monthsToAdd = 1;  // Cambia el número de meses según tus necesidades.
 
     // Nombres de los meses.
     var meses = [

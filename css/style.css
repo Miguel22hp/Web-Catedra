@@ -519,7 +519,9 @@ body section{
 }
 .eventsFrame{
     /*width: 90%;  width of the div */
-    height: 400px; /* height of the div */
+    min-height: 100px; /* minimum height */
+    max-height: 500px; /* maximum height before scroll */
+    height: auto; /* dynamic height based on content */
     overflow: auto; /* Allows to scroll in the div */
     background-color: #004379;
     margin: 0 auto;
@@ -527,6 +529,7 @@ body section{
     scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
     scrollbar-width: auto;
     border-radius: 10px;
+    padding-bottom: 20px;
 }
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/

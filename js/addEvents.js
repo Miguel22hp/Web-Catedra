@@ -1,5 +1,5 @@
 function createEvents() {
-    const jsonFile = 'https://raw.githubusercontent.com/Miguel22hp/Web-Catedra/main/json/events.json';
+    const jsonFile = 'json/events.json';
   
     return new Promise((resolve, reject) => {
       const eventosArray = []; // Array para almacenar los eventos
