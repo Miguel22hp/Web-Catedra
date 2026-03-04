@@ -1,10 +1,10 @@
 
     #CatedraTeam {
            background-color: #004379; 
-           min-height: 500px;
-           max-height: 550px;
+           height: auto;
+           min-height: 450px;
            margin-bottom: 3%;
-           padding: 0;
+           padding: 20px 0;
            display: flex;
            justify-content: center;
            align-items: center;
@@ -45,25 +45,27 @@
 
         @media (max-width: 860px) {
             #CatedraTeam {
-                min-height: 300px;
-                max-height: 350px;
-                padding: 0 8px;
+                min-height: 280px;
+                padding: 15px 8px;
             }
             .carousel-inner-Team {
                 flex-direction: column;
                 align-items: center;
             }
             .carouselTeamItem img {
-                min-height: 180px;
-                max-height: 220px;
-                width: 100%;
+                width: 60%;
+                max-width: 200px;
+                aspect-ratio: 4/5;
+                height: auto;
             }
         }
     .carouselTeamItem img {
         object-fit: cover;
-        min-height: 400px;
-        max-height: 450px;
-        max-width: 95%;
+        object-position: center center;
+        width: 80%;
+        max-width: 280px;
+        aspect-ratio: 4/5;
+        height: auto;
         border-radius: 10px;
     }
 
@@ -90,7 +92,7 @@
     }
 
   .gap {
-    width: 7.2%;
+    width: 6.2%;
   }
 
   button.carousel-prev-Team, button.carousel-next-Team {

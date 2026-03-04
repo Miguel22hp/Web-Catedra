@@ -937,11 +937,11 @@ body section{
         border-radius: 10px;
     }
     
-    .embeddedVideo {
-        object-fit: fill;
-        object-position: 0 -750px;
-        border-radius: 15px;
-        margin: 0 auto;
+    .locationImg {
+        width: 90%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 10px;
     }
 
     #WhereToFindUs h3 {
