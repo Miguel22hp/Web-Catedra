@@ -45,18 +45,33 @@
 
         @media (max-width: 860px) {
             #CatedraTeam {
-                min-height: 280px;
+                min-height: 320px;
                 padding: 15px 8px;
             }
-            .carousel-inner-Team {
-                flex-direction: column;
-                align-items: center;
-            }
             .carouselTeamItem img {
-                width: 60%;
-                max-width: 200px;
+                width: 65%;
+                max-width: 220px;
                 aspect-ratio: 4/5;
                 height: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #CatedraTeam {
+                min-height: 260px;
+                padding: 10px 5px;
+            }
+            .carouselTeamItem img {
+                width: 55%;
+                max-width: 160px;
+                aspect-ratio: 4/5;
+                height: auto;
+            }
+            .carouselTeamItem figcaption h5 {
+                font-size: 13px;
+            }
+            .carouselTeamItem figcaption p {
+                font-size: 11px;
             }
         }
     .carouselTeamItem img {
@@ -155,7 +170,7 @@ button.carousel-next-KnowWhatWeDo {
     transition: transform 2s ease-in-out;
     will-change: transform; 
     align-items: stretch;
-    max-height: 600px;
+    max-height: 420px;
     width: 100%;
 }
 
@@ -180,8 +195,8 @@ button.carousel-next-KnowWhatWeDo {
     justify-content: center;
     align-items: center;
     background-color: #004379; 
-    min-height: 500px;
-    max-height: 550px; 
+    min-height: 400px;
+    max-height: 450px; 
     margin-bottom: 3%;
     margin-left: 9px;
     border-radius: 10px;
@@ -194,7 +209,7 @@ button.carousel-next-KnowWhatWeDo {
     border: none;
     box-shadow: none;
     color: white;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
     overflow-wrap: break-word;
